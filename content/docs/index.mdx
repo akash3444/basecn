@@ -3,11 +3,14 @@ title: Hello World
 description: Your first document
 ---
 
+import { Accordions, Accordion } from "fumadocs-ui/components/accordion";
+
 Welcome to the docs! You can start writing documents in `/content/docs`.
 
-## What is Next?
+<Accordions>
+<Accordion title="My Title" id="my-title">
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
-</Cards>
+My Content
+
+</Accordion>
+</Accordions>
