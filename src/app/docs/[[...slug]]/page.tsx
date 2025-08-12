@@ -1,13 +1,16 @@
-import { source } from '@/lib/source';
+import { Button } from "@/components/ui/button";
+import { source } from "@/lib/source";
+import { getMDXComponents } from "@/mdx-components";
+import { createRelativeLink } from "fumadocs-ui/mdx";
 import {
-  DocsPage,
   DocsBody,
   DocsDescription,
+  DocsPage,
   DocsTitle,
-} from 'fumadocs-ui/page';
-import { notFound } from 'next/navigation';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { getMDXComponents } from '@/mdx-components';
+} from "fumadocs-ui/page";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -20,8 +23,42 @@ export default async function Page(props: {
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <DocsTitle className="text-4xl">{page.data.title}</DocsTitle>
+      <DocsDescription className="mb-0 -mt-1">
+        {page.data.description}
+      </DocsDescription>
+      <div className="mb-8 flex items-center gap-2">
+        {page.data.docsLink && (
+          <Button
+            variant="secondary"
+            className="h-6 text-xs !px-2 gap-1.5"
+            asChild
+          >
+            <Link
+              href={page.data.docsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Docs <ArrowUpRight className="size-3" />
+            </Link>
+          </Button>
+        )}
+        {page.data.apiReferenceLink && (
+          <Button
+            variant="secondary"
+            className="h-6 text-xs !px-2 gap-1.5"
+            asChild
+          >
+            <Link
+              href={page.data.apiReferenceLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              API Reference <ArrowUpRight className="size-3" />
+            </Link>
+          </Button>
+        )}
+      </div>
       <DocsBody>
         <MDXContent
           components={getMDXComponents({
