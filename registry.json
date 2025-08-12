@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "floorui",
+  "homepage": "https://floorui.com",
   "items": [
     {
       "name": "avatar",
