@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group",
+  "type": "registry:ui",
+  "title": "Radio Group",
+  "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
+  "dependencies": [
+    "@base-ui-components/react",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/ui/radio-group.tsx",
+      "content": "import { Radio } from \"@base-ui-components/react/radio\";\nimport { RadioGroup as BaseRadioGroup } from \"@base-ui-components/react/radio-group\";\nimport { CircleIcon } from \"lucide-react\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction RadioGroup({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseRadioGroup>) {\n  return (\n    <BaseRadioGroup\n      data-slot=\"radio-group\"\n      className={cn(\"grid gap-3\", className)}\n      {...props}\n    />\n  );\n}\n\nfunction RadioGroupItem({\n  className,\n  ...props\n}: React.ComponentProps<typeof Radio.Root>) {\n  return (\n    <Radio.Root\n      data-slot=\"radio-group-item\"\n      className={cn(\n        \"border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 aspect-square size-4 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50\",\n        className\n      )}\n      {...props}\n    >\n      <Radio.Indicator\n        data-slot=\"radio-group-indicator\"\n        className=\"relative flex items-center justify-center\"\n      >\n        <CircleIcon className=\"fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2\" />\n      </Radio.Indicator>\n    </Radio.Root>\n  );\n}\n\nexport { RadioGroup, RadioGroupItem };\n",
+      "type": "registry:component"
+    }
+  ]
+}
