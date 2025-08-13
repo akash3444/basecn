@@ -117,6 +117,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A two-state button that can be either on or off.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
