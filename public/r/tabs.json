@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "type": "registry:ui",
+  "title": "Tabs",
+  "description": "A set of layered sections of content, known as tab panels, that are displayed one at a time.",
+  "dependencies": [
+    "@base-ui-components/react"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/ui/tabs.tsx",
+      "content": "import * as React from \"react\";\nimport { Tabs as BaseTabs } from \"@base-ui-components/react/tabs\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Tabs({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseTabs.Root>) {\n  return (\n    <BaseTabs.Root\n      data-slot=\"tabs\"\n      className={cn(\"flex flex-col gap-2\", className)}\n      {...props}\n    />\n  );\n}\n\nfunction TabsList({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseTabs.List>) {\n  return (\n    <BaseTabs.List\n      data-slot=\"tabs-list\"\n      className={cn(\n        \"relative z-0 inline-flex h-9 w-fit items-center justify-center p-1 bg-muted rounded-md\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction TabsTrigger({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseTabs.Tab>) {\n  return (\n    <BaseTabs.Tab\n      data-slot=\"tabs-trigger\"\n      className={cn(\n        \"data-[selected]:text-foreground hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction TabsContent({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseTabs.Panel>) {\n  return (\n    <BaseTabs.Panel\n      data-slot=\"tabs-content\"\n      className={cn(\"flex-1 outline-none\", className)}\n      {...props}\n    />\n  );\n}\n\nfunction TabsIndicator({\n  className,\n  ...props\n}: React.ComponentProps<typeof BaseTabs.Indicator>) {\n  return (\n    <BaseTabs.Indicator\n      data-slot=\"tabs-indicator\"\n      className={cn(\n        \"absolute -z-1 left-0 top-1/2 -translate-y-1/2 translate-x-[var(--active-tab-left)] w-[var(--active-tab-width)] h-[var(--active-tab-height)] rounded transition-[translate,width] duration-200 ease-in-out bg-white dark:bg-white/10 shadow\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent, TabsIndicator };\n",
+      "type": "registry:component"
+    }
+  ]
+}

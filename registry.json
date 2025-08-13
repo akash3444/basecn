@@ -91,6 +91,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "A set of layered sections of content, known as tab panels, that are displayed one at a time.",
+      "dependencies": ["@base-ui-components/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/tabs.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

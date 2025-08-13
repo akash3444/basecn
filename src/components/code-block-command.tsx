@@ -1,7 +1,13 @@
 import { config } from "@/config";
 import { CodeBlock } from "./code-block";
 import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/components/ui/tabs";
 
 const getInstallationCommand = (packageManager: string, component: string) => {
   switch (packageManager) {
@@ -23,19 +29,20 @@ const getRegistryUrl = (component: string) => {
 export function CodeBlockCommand({ component }: { component: string }) {
   return (
     <Tabs defaultValue="pnpm" className="[&_figure]:mt-0">
-      <TabsList className="font-mono">
+      <TabsList className="font-mono h-8">
         <TabsTrigger value="pnpm" className="font-normal leading-normal px-2.5">
-          <PnpmLogo className="w-4 h-4" /> pnpm
+          <PnpmLogo className="size-3.5" /> pnpm
         </TabsTrigger>
         <TabsTrigger value="npm" className="font-normal leading-normal px-2.5">
-          <NPMLogo className="w-4 h-4" /> npm
+          <NPMLogo className="size-4" /> npm
         </TabsTrigger>
         <TabsTrigger value="yarn" className="font-normal leading-normal px-2.5">
-          <YarnLogo className="w-4 h-4" /> yarn
+          <YarnLogo className="size-4" /> yarn
         </TabsTrigger>
         <TabsTrigger value="bun" className="font-normal leading-normal px-2.5">
-          <BunLogo className="w-4 h-4" /> bun
+          <BunLogo className="size-4" /> bun
         </TabsTrigger>
+        <TabsIndicator className="h-6 shadow-xs" />
       </TabsList>
 
       <TabsContent value="pnpm">

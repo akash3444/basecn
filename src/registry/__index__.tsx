@@ -85,4 +85,8 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/label-demo")),
     src: "src/components/demo/label-demo.tsx",
   },
+  "tabs-demo": {
+    component: React.lazy(() => import("@/components/demo/tabs-demo")),
+    src: "src/components/demo/tabs-demo.tsx",
+  },
 };

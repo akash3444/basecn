@@ -2,7 +2,13 @@ import { components } from "@/registry/__index__";
 import fs from "fs/promises";
 import path from "path";
 import { CodeBlock } from "./code-block";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsIndicator,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
 export default async function ComponentPreview({ name }: { name: string }) {
@@ -18,9 +24,10 @@ export default async function ComponentPreview({ name }: { name: string }) {
   return (
     <div className="not-prose">
       <Tabs defaultValue="preview">
-        <TabsList>
+        <TabsList className="h-8">
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="code">Code</TabsTrigger>
+          <TabsIndicator className="h-6 shadow-xs" />
         </TabsList>
         <TabsContent
           value="preview"
