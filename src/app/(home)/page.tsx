@@ -17,7 +17,7 @@ export default function HomePage() {
           a solid foundation to build modern and elegant interfaces with speed.
         </p>
         <Button className="mt-8" size="xl" asChild>
-          <Link href="/docs/components/avatar">
+          <Link href="/docs/components/accordion">
             Get Started <ArrowUpRight />
           </Link>
         </Button>

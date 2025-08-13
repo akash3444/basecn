@@ -15,6 +15,7 @@ export default function AccordionWithIcon() {
     >
       {accordionItems.map((item) => (
         <AccordionItem
+          key={item.value}
           value={item.value}
           className="last:border-b border rounded-md"
         >
