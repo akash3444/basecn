@@ -1,8 +1,8 @@
-# FloorUI
+# basecn
 
 A modern React component library offering beautifully designed, accessible  [shadcn/ui](https://ui.shadcn.com/) components built on top of [Base UI](https://base-ui.com/), with advanced examples and customization options.
 
-FloorUI extends the popular shadcn/ui components with enhanced functionality, additional variants, and comprehensive documentation. Each component comes with multiple examples showcasing different use cases and styling options.
+basecn extends the popular shadcn/ui components with enhanced functionality, additional variants, and comprehensive documentation. Each component comes with multiple examples showcasing different use cases and styling options.
 
 ## ✨ Features
 

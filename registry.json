@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "floorui",
-  "homepage": "https://floorui.com",
+  "name": "basecn",
+  "homepage": "https://basecn.dev",
   "items": [
     {
       "name": "accordion",
@@ -149,7 +149,7 @@
       "type": "registry:ui",
       "title": "Toggle Group",
       "description": "A set of two-state buttons that can be toggled on or off.",
-      "registryDependencies": ["http://localhost:3000/r/toggle.json"],
+      "registryDependencies": ["https://basecn.dev/r/toggle.json"],
       "dependencies": ["@base-ui-components/react", "class-variance-authority"],
       "files": [
         {

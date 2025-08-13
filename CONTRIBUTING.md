@@ -1,6 +1,6 @@
-# Contributing to FloorUI
+# Contributing to basecn
 
-Thank you for your interest in contributing to FloorUI! We welcome contributions from the community and are excited to see what you'll bring to the project.
+Thank you for your interest in contributing to basecn! We welcome contributions from the community and are excited to see what you'll bring to the project.
 
 ## 🚀 Getting Started
 
@@ -16,8 +16,8 @@ Before you begin, ensure you have the following installed:
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/your-username/floorui.git
-   cd floorui
+   git clone https://github.com/your-username/basecn.git
+cd basecn
 
 3. **Install dependencies**:
    ```bash
@@ -136,4 +136,4 @@ If you need help or have questions:
 3. **Open a discussion** on GitHub
 4. **Ask in pull request comments** for specific code questions
 
-Thank you for contributing to FloorUI! Your efforts help make this project better for everyone.
+Thank you for contributing to basecn! Your efforts help make this project better for everyone.

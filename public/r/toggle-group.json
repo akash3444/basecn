@@ -4,13 +4,8 @@
   "type": "registry:ui",
   "title": "Toggle Group",
   "description": "A set of two-state buttons that can be toggled on or off.",
-  "dependencies": [
-    "@base-ui-components/react",
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "http://localhost:3000/r/toggle.json"
-  ],
+  "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+  "registryDependencies": ["https://basecn.dev/r/toggle.json"],
   "files": [
     {
       "path": "src/registry/components/ui/toggle-group.tsx",
