@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/shadcn.css";
 @import "fumadocs-ui/css/preset.css";
 @import "tw-animate-css";
 
@@ -42,6 +42,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  /* Accordion */
   --animate-accordion-collapse: accordion-collapse var(--tw-duration, 200ms)
     ease-out;
   --animate-accordion-expand: accordion-expand var(--tw-duration, 200ms)
@@ -99,10 +100,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-  /* Fumadocs */
-  --color-fd-background: var(--background);
-  --color-fd-secondary: var(--secondary);
 }
 
 .dark {
