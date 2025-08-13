@@ -81,4 +81,8 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/checkbox-demo")),
     src: "src/components/demo/checkbox-demo.tsx",
   },
+  "label-demo": {
+    component: React.lazy(() => import("@/components/demo/label-demo")),
+    src: "src/components/demo/label-demo.tsx",
+  },
 };
