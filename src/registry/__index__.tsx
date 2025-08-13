@@ -97,4 +97,8 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/toggle-demo")),
     src: "src/components/demo/toggle-demo.tsx",
   },
+  "toggle-group-demo": {
+    component: React.lazy(() => import("@/components/demo/toggle-group-demo")),
+    src: "src/components/demo/toggle-group-demo.tsx",
+  },
 };

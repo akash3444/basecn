@@ -130,6 +130,20 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A set of two-state buttons that can be toggled on or off.",
+      "registryDependencies": ["http://localhost:3000/r/toggle.json"],
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/toggle-group.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
