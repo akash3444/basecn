@@ -47,4 +47,24 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/avatar-ring")),
     src: "src/components/demo/avatar-ring.tsx",
   },
+  "accordion-demo": {
+    component: React.lazy(() => import("@/components/demo/accordion-demo")),
+    src: "src/components/demo/accordion-demo.tsx",
+  },
+  "accordion-with-icon": {
+    component: React.lazy(
+      () => import("@/components/demo/accordion-with-icon")
+    ),
+    src: "src/components/demo/accordion-with-icon.tsx",
+  },
+  "accordion-tabs": {
+    component: React.lazy(() => import("@/components/demo/accordion-tabs")),
+    src: "src/components/demo/accordion-tabs.tsx",
+  },
+  "accordion-plus-minus-indicator": {
+    component: React.lazy(
+      () => import("@/components/demo/accordion-plus-minus-indicator")
+    ),
+    src: "src/components/demo/accordion-plus-minus-indicator.tsx",
+  },
 };

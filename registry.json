@@ -4,6 +4,43 @@
   "homepage": "https://floorui.com",
   "items": [
     {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "A set of collapsible panels with headings.",
+      "dependencies": ["@base-ui-components/react", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/accordion.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "cssVars": {
+        "theme": {
+          "--animate-accordion-collapse": "accordion-collapse var(--tw-duration, 200ms) ease-out",
+          "--animate-accordion-expand": "accordion-expand var(--tw-duration, 200ms) ease-out"
+        }
+      },
+      "css": {
+        "@keyframes accordion-collapse": {
+          "from": {
+            "height": "var(--accordion-panel-height, auto)"
+          },
+          "to": {
+            "height": "0"
+          }
+        },
+        "@keyframes accordion-expand": {
+          "from": {
+            "height": "0"
+          },
+          "to": {
+            "height": "var(--accordion-panel-height, auto)"
+          }
+        }
+      }
+    },
+    {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
