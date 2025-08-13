@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { Checkbox as BaseCheckbox } from "@base-ui-components/react/checkbox";
 import { CheckIcon } from "lucide-react";
