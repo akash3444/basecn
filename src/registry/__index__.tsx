@@ -67,4 +67,14 @@ export const components: Record<
     ),
     src: "src/components/demo/accordion-plus-minus-indicator.tsx",
   },
+  "alert-dialog-demo": {
+    component: React.lazy(() => import("@/components/demo/alert-dialog-demo")),
+    src: "src/components/demo/alert-dialog-demo.tsx",
+  },
+  "alert-dialog-with-icon": {
+    component: React.lazy(
+      () => import("@/components/demo/alert-dialog-with-icon")
+    ),
+    src: "src/components/demo/alert-dialog-with-icon.tsx",
+  },
 };
