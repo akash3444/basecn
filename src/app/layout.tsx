@@ -1,6 +1,7 @@
 import "@/app/global.css";
 import { cn } from "@/lib/utils";
 import { RootProvider } from "fumadocs-ui/provider";
+import { Metadata } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 
@@ -12,6 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 });
+
+export const metadata: Metadata = {
+  title: "shadcn/ui components powered by Base UI - basecn",
+  description: "shadcn/ui components powered by Base UI",
+};
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

@@ -81,6 +81,19 @@
       ]
     },
     {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Displays a form input field or a component that looks like an input field.",
+      "dependencies": ["@base-ui-components/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
