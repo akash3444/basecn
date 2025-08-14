@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "lint": "next lint",
     "dev": "next dev --turbo",
     "start": "next start",
     "postinstall": "fumadocs-mdx",

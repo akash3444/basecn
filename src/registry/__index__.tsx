@@ -3,7 +3,7 @@ import React from "react";
 export const components: Record<
   string,
   {
-    component: React.LazyExoticComponent<React.ComponentType<any>>;
+    component: React.LazyExoticComponent<React.ComponentType<unknown>>;
     src: string;
   }
 > = {
