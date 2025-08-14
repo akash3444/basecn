@@ -152,3 +152,22 @@
     @apply tracking-tight;
   }
 }
+
+/* Floating animation for component previews */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(-10px);
+  }
+  66% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+  -webkit-font-smoothing: antialiased;
+}

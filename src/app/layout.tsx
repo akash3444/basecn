@@ -10,8 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "shadcn/ui components powered by Base UI - basecn",
-  description: "shadcn/ui components powered by Base UI",
+  title: {
+    template: "%s - basecn",
+    default: "shadcn/ui components powered by Base UI - basecn",
+  },
+  description:
+    "Beautifully crafted shadcn/ui components powered by Base UI, providing a solid foundation to build modern and elegant interfaces with speed.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
