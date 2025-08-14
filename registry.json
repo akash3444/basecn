@@ -68,6 +68,19 @@
       ]
     },
     {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Displays a button or a component that looks like a button.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",

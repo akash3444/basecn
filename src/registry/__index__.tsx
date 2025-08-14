@@ -77,6 +77,10 @@ export const components: Record<
     ),
     src: "src/components/demo/alert-dialog-with-icon.tsx",
   },
+  "button-demo": {
+    component: React.lazy(() => import("@/components/demo/button-demo")),
+    src: "src/components/demo/button-demo.tsx",
+  },
   "checkbox-demo": {
     component: React.lazy(() => import("@/components/demo/checkbox-demo")),
     src: "src/components/demo/checkbox-demo.tsx",
