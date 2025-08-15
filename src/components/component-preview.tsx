@@ -16,7 +16,7 @@ export default async function ComponentPreview({ name }: { name: string }) {
 
   const code = await fs.readFile(path.join(process.cwd(), src), "utf-8");
 
-  const codeWithUpdatedImports = code.replace(
+  const codeWithUpdatedImports = code.replaceAll(
     "@/registry/components/ui/",
     "@/components/ui/"
   );
