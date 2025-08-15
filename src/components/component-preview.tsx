@@ -24,8 +24,12 @@ export default async function ComponentPreview({ name }: { name: string }) {
     <div className="not-prose">
       <Tabs defaultValue="preview">
         <TabsList className="h-8">
-          <TabsTrigger value="preview">Preview</TabsTrigger>
-          <TabsTrigger value="code">Code</TabsTrigger>
+          <TabsTrigger value="preview" className="data-[selected]:shadow-xs">
+            Preview
+          </TabsTrigger>
+          <TabsTrigger value="code" className="data-[selected]:shadow-xs">
+            Code
+          </TabsTrigger>
         </TabsList>
         <TabsContent
           value="preview"

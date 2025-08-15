@@ -29,16 +29,28 @@ export function CodeBlockCommand({ component }: { component: string }) {
   return (
     <Tabs defaultValue="pnpm" className="[&_figure]:mt-0">
       <TabsList className="font-mono h-8">
-        <TabsTrigger value="pnpm" className="font-normal leading-normal px-2.5">
+        <TabsTrigger
+          value="pnpm"
+          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
+        >
           <PnpmLogo className="size-3.5" /> pnpm
         </TabsTrigger>
-        <TabsTrigger value="npm" className="font-normal leading-normal px-2.5">
+        <TabsTrigger
+          value="npm"
+          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
+        >
           <NPMLogo className="size-4" /> npm
         </TabsTrigger>
-        <TabsTrigger value="yarn" className="font-normal leading-normal px-2.5">
+        <TabsTrigger
+          value="yarn"
+          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
+        >
           <YarnLogo className="size-4" /> yarn
         </TabsTrigger>
-        <TabsTrigger value="bun" className="font-normal leading-normal px-2.5">
+        <TabsTrigger
+          value="bun"
+          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
+        >
           <BunLogo className="size-4" /> bun
         </TabsTrigger>
       </TabsList>
