@@ -97,6 +97,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/label-demo")),
     src: "src/components/demo/label-demo.tsx",
   },
+  "popover-demo": {
+    component: React.lazy(() => import("@/components/demo/popover-demo")),
+    src: "src/components/demo/popover-demo.tsx",
+  },
   "radio-group-demo": {
     component: React.lazy(() => import("@/components/demo/radio-group-demo")),
     src: "src/components/demo/radio-group-demo.tsx",
