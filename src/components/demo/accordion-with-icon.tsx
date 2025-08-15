@@ -19,14 +19,15 @@ export default function AccordionWithIcon() {
           value={item.value}
           className="last:border-b border rounded-md"
         >
-          <AccordionTrigger className="p-3 text-base items-center">
-            <div className="flex items-center gap-2">
-              <item.icon className="size-5" />
+          <AccordionTrigger className="py-3 px-5 text-base items-center">
+            <div className="flex items-center gap-3">
+              <item.icon className="size-5 text-muted-foreground" />
               {item.title}
             </div>
           </AccordionTrigger>
-          <AccordionContent className="pl-7 flex flex-col gap-4 px-3">
+          <AccordionContent className="relative flex flex-col gap-4 px-5 pl-13">
             <p>{item.content}</p>
+            <div className="w-px h-full absolute left-7.5 inset-y-0 border-l border-dashed" />
           </AccordionContent>
         </AccordionItem>
       ))}

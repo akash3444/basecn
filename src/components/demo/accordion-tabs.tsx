@@ -8,7 +8,7 @@ import {
 export default function AccordionTabs() {
   return (
     <Accordion
-      className="w-full max-w-sm mx-auto space-y-2"
+      className="w-full max-w-md mx-auto space-y-2"
       defaultValue={[accordionItems[0].value]}
       openMultiple={false}
     >
@@ -18,10 +18,10 @@ export default function AccordionTabs() {
           value={item.value}
           className="last:border-b border rounded-md"
         >
-          <AccordionTrigger className="p-3 text-base items-center">
+          <AccordionTrigger className="py-3 px-5 text-base items-center">
             {item.title}
           </AccordionTrigger>
-          <AccordionContent className="flex flex-col gap-4 px-3">
+          <AccordionContent className="flex flex-col gap-4 px-5">
             <p>{item.content}</p>
           </AccordionContent>
         </AccordionItem>

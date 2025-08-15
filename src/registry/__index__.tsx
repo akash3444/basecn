@@ -61,6 +61,12 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/accordion-tabs")),
     src: "src/components/demo/accordion-tabs.tsx",
   },
+  "accordion-multiple-items-open": {
+    component: React.lazy(
+      () => import("@/components/demo/accordion-multiple-items-open")
+    ),
+    src: "src/components/demo/accordion-multiple-items-open.tsx",
+  },
   "accordion-plus-minus-indicator": {
     component: React.lazy(
       () => import("@/components/demo/accordion-plus-minus-indicator")
