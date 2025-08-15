@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card",
+  "type": "registry:ui",
+  "title": "Hover Card",
+  "description": "For sighted users to preview content available behind a link.",
+  "dependencies": [
+    "@base-ui-components/react"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/ui/hover-card.tsx",
+      "content": "import * as React from \"react\";\nimport { PreviewCard as BasePreviewCard } from \"@base-ui-components/react/preview-card\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction HoverCard({\n  ...props\n}: React.ComponentProps<typeof BasePreviewCard.Root>) {\n  return <BasePreviewCard.Root data-slot=\"hover-card\" {...props} />;\n}\n\nfunction HoverCardTrigger({\n  ...props\n}: React.ComponentProps<typeof BasePreviewCard.Trigger>) {\n  return <BasePreviewCard.Trigger data-slot=\"hover-card-trigger\" {...props} />;\n}\n\nfunction HoverCardPositioner({\n  sideOffset = 4,\n  ...props\n}: React.ComponentProps<typeof BasePreviewCard.Positioner>) {\n  return (\n    <BasePreviewCard.Portal data-slot=\"hover-card-portal\">\n      <BasePreviewCard.Positioner\n        data-slot=\"hover-card-positioner\"\n        sideOffset={sideOffset}\n        {...props}\n      />\n    </BasePreviewCard.Portal>\n  );\n}\n\nfunction HoverCardContent({\n  className,\n  ...props\n}: React.ComponentProps<typeof BasePreviewCard.Popup>) {\n  return (\n    <BasePreviewCard.Popup\n      data-slot=\"hover-card-content\"\n      className={cn(\n        \"bg-popover text-popover-foreground data-[open]:animate-in data-[closed]:animate-out data-[closed]:fade-out-0 data-[open]:fade-in-0 data-[closed]:zoom-out-95 data-[open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-64 origin-(--transform-origin) rounded-md border p-4 shadow-md outline-hidden\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { HoverCard, HoverCardTrigger, HoverCardContent, HoverCardPositioner };\n",
+      "type": "registry:component"
+    }
+  ]
+}

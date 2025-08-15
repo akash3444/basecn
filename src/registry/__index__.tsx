@@ -89,6 +89,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/dialog-demo")),
     src: "src/components/demo/dialog-demo.tsx",
   },
+  "hover-card-demo": {
+    component: React.lazy(() => import("@/components/demo/hover-card-demo")),
+    src: "src/components/demo/hover-card-demo.tsx",
+  },
   "input-demo": {
     component: React.lazy(() => import("@/components/demo/input-demo")),
     src: "src/components/demo/input-demo.tsx",

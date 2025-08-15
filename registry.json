@@ -107,6 +107,19 @@
       ]
     },
     {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "For sighted users to preview content available behind a link.",
+      "dependencies": ["@base-ui-components/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/hover-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
