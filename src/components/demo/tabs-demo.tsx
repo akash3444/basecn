@@ -1,7 +1,6 @@
 import {
   Tabs,
   TabsContent,
-  TabsIndicator,
   TabsList,
   TabsTrigger,
 } from "@/registry/components/ui/tabs";
@@ -17,7 +16,6 @@ export default function TabsDemo() {
         <TabsTrigger value="overview">Overview</TabsTrigger>
         <TabsTrigger value="projects">Projects</TabsTrigger>
         <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsIndicator className="shadow-xs" />
       </TabsList>
       <TabsContent
         value="overview"

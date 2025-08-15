@@ -4,7 +4,6 @@ import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
 import {
   Tabs,
   TabsContent,
-  TabsIndicator,
   TabsList,
   TabsTrigger,
 } from "@/registry/components/ui/tabs";
@@ -42,7 +41,6 @@ export function CodeBlockCommand({ component }: { component: string }) {
         <TabsTrigger value="bun" className="font-normal leading-normal px-2.5">
           <BunLogo className="size-4" /> bun
         </TabsTrigger>
-        <TabsIndicator className="h-6 shadow-xs" />
       </TabsList>
 
       <TabsContent value="pnpm">
