@@ -9,12 +9,12 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/components/ui/alert-dialog";
-import { buttonVariants } from "../ui/button";
+import { Button } from "@/registry/components/ui/button";
 
 export default function AlertDialogDemo() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className={buttonVariants({ variant: "outline" })}>
+      <AlertDialogTrigger render={<Button variant="outline" />}>
         Show Dialog
       </AlertDialogTrigger>
       <AlertDialogContent>

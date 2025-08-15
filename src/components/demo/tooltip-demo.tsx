@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/registry/components/ui/button";
 import {
   Tooltip,
   TooltipContent,

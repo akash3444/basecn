@@ -9,13 +9,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/components/ui/alert-dialog";
+import { Button } from "@/registry/components/ui/button";
 import { OctagonAlert } from "lucide-react";
-import { buttonVariants } from "../ui/button";
 
 export default function AlertDialogWithIcon() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className={buttonVariants({ variant: "outline" })}>
+      <AlertDialogTrigger render={<Button variant="outline" />}>
         Show Dialog
       </AlertDialogTrigger>
       <AlertDialogContent>
