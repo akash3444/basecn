@@ -171,6 +171,19 @@
       ]
     },
     {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
+      "dependencies": ["@base-ui-components/react", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/menubar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
