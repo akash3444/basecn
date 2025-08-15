@@ -1,3 +1,4 @@
+import { config } from "@/config";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { Bolt } from "lucide-react";
 
@@ -17,6 +18,7 @@ export const baseOptions: BaseLayoutProps = {
       </div>
     ),
   },
+  githubUrl: config.githubUrl,
   // see https://fumadocs.dev/docs/ui/navigation/links
   links: [],
 };
