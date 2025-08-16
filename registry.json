@@ -248,6 +248,19 @@
       ]
     },
     {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Displays a list of options for the user to pick from—triggered by a button.",
+      "dependencies": ["@base-ui-components/react", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/select.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
