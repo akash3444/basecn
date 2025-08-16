@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-beta.2",
+    "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
     "class-variance-authority": "^0.7.1",
@@ -24,6 +25,7 @@
     "next": "15.4.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
     "shadcn": "2.9.3-canary.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.0.17"

@@ -133,6 +133,19 @@
       ]
     },
     {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Renders a form built with React Hook Form.",
+      "dependencies": ["@base-ui-components/react", "react-hook-form"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "hover-card",
       "type": "registry:ui",
       "title": "Hover Card",
