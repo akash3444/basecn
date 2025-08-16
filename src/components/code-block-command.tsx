@@ -8,6 +8,25 @@ import {
   TabsTrigger,
 } from "@/registry/components/ui/tabs";
 
+const tabs = [
+  {
+    value: "pnpm",
+    icon: PnpmLogo,
+  },
+  {
+    value: "npm",
+    icon: NPMLogo,
+  },
+  {
+    value: "yarn",
+    icon: YarnLogo,
+  },
+  {
+    value: "bun",
+    icon: BunLogo,
+  },
+];
+
 const getInstallationCommand = (packageManager: string, component: string) => {
   switch (packageManager) {
     case "pnpm":
@@ -25,60 +44,37 @@ const getRegistryUrl = (component: string) => {
   return `${config.appUrl}/r/${component}.json`;
 };
 
-export function CodeBlockCommand({ component }: { component: string }) {
+export function CodeBlockCommand({
+  component,
+  isShadcnComponent: shadcnComponent,
+}: {
+  component: string;
+  isShadcnComponent?: boolean;
+}) {
+  const registryUrl = shadcnComponent ? component : getRegistryUrl(component);
+
   return (
     <Tabs defaultValue="pnpm" className="[&_figure]:mt-0">
       <TabsList className="font-mono h-8">
-        <TabsTrigger
-          value="pnpm"
-          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
-        >
-          <PnpmLogo className="size-3.5" /> pnpm
-        </TabsTrigger>
-        <TabsTrigger
-          value="npm"
-          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
-        >
-          <NPMLogo className="size-4" /> npm
-        </TabsTrigger>
-        <TabsTrigger
-          value="yarn"
-          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
-        >
-          <YarnLogo className="size-4" /> yarn
-        </TabsTrigger>
-        <TabsTrigger
-          value="bun"
-          className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
-        >
-          <BunLogo className="size-4" /> bun
-        </TabsTrigger>
+        {tabs.map((tab) => (
+          <TabsTrigger
+            key={tab.value}
+            value={tab.value}
+            className="font-normal leading-normal px-2.5 data-[selected]:shadow-xs"
+          >
+            <tab.icon className="size-4" /> {tab.value}
+          </TabsTrigger>
+        ))}
       </TabsList>
 
-      <TabsContent value="pnpm">
-        <CodeBlock
-          lang="bash"
-          code={getInstallationCommand("pnpm", getRegistryUrl(component)) || ""}
-        />
-      </TabsContent>
-      <TabsContent value="npm">
-        <CodeBlock
-          lang="bash"
-          code={getInstallationCommand("npm", getRegistryUrl(component)) || ""}
-        />
-      </TabsContent>
-      <TabsContent value="yarn">
-        <CodeBlock
-          lang="bash"
-          code={getInstallationCommand("yarn", getRegistryUrl(component)) || ""}
-        />
-      </TabsContent>
-      <TabsContent value="bun">
-        <CodeBlock
-          lang="bash"
-          code={getInstallationCommand("bun", getRegistryUrl(component)) || ""}
-        />
-      </TabsContent>
+      {tabs.map((tab) => (
+        <TabsContent key={tab.value} value={tab.value}>
+          <CodeBlock
+            lang="bash"
+            code={getInstallationCommand(tab.value, registryUrl) || ""}
+          />
+        </TabsContent>
+      ))}
     </Tabs>
   );
 }
