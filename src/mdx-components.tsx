@@ -11,8 +11,18 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     ...components,
     pre: ({ ref: _ref, className, ...props }) => (
-      <CodeBlock {...props}>
-        <Pre className={cn("text-sm", className)}>{props.children}</Pre>
+      <CodeBlock
+        data-line-numbers
+        className={cn(
+          "p-0 border-0", // figure
+          "[&>div:not(:has(pre))]:size-8 [&>div:not(:has(pre))]:rounded-md", // copy button
+          "[&>div:has(pre)]:py-4 [&>div:has(pre)]:border-0 [&>div:has(pre)]:max-h-[400px]" // pre container
+        )}
+        {...props}
+      >
+        <Pre className={cn("text-sm leading-[1.75]", className)}>
+          {props.children}
+        </Pre>
       </CodeBlock>
     ),
     CodeBlockCommand,

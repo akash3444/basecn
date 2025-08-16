@@ -171,3 +171,10 @@
   animation: float 6s ease-in-out infinite;
   -webkit-font-smoothing: antialiased;
 }
+
+.shiki:not(.not-fumadocs-codeblock *)[data-line-numbers] code .line {
+  padding-left: calc(var(--padding-left) + 10 * var(--spacing));
+}
+.shiki:not(.not-fumadocs-codeblock *)[data-line-numbers] code .line::after {
+  @apply left-2 text-right w-[4ch] pr-2;
+}

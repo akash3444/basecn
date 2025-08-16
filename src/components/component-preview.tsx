@@ -43,7 +43,7 @@ export default async function ComponentPreview({ name }: { name: string }) {
             code={codeWithUpdatedImports}
             className={cn(
               "bg-background p-0 overflow-hidden rounded-md",
-              "[&_pre]:text-sm [&_pre]:font-normal [&_pre_span]:leading-[1.8]",
+              "[&_pre]:text-sm [&_pre]:font-normal [&_pre_span]:leading-[1.75]",
               "[&>div:not(:has(pre))]:top-0 [&>div:not(:has(pre))]:right-0 [&>div:not(:has(pre))]:size-8",
               "[&>div:has(pre)]:rounded-md [&>div:has(pre)]:py-3 [&>div:has(pre)]:px-2 [&>div:has(pre)]:border-none [&>div:has(pre)]:max-h-[400px] [&>div:has(pre)]:min-h-[400px] my-0"
             )}
