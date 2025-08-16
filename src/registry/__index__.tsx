@@ -107,6 +107,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/dialog-demo")),
     src: "src/components/demo/dialog-demo.tsx",
   },
+  "dropdown-menu-demo": {
+    component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
+    src: "src/components/demo/dropdown-menu-demo.tsx",
+  },
   "form-demo": {
     component: React.lazy(() => import("@/components/demo/form-demo")),
     src: "src/components/demo/form-demo.tsx",
