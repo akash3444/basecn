@@ -33,7 +33,7 @@ export default async function ComponentPreview({ name }: { name: string }) {
         </TabsList>
         <TabsContent
           value="preview"
-          className="border rounded-lg p-2 min-h-[400px] max-h-[400px] flex items-center justify-center"
+          className="border rounded-lg p-2 min-h-[400px] max-h-[400px] flex items-center justify-center overflow-y-auto"
         >
           <Component />
         </TabsContent>

@@ -7,6 +7,10 @@ export const components: Record<
     src: string;
   }
 > = {
+  "aspect-ratio-demo": {
+    component: React.lazy(() => import("@/components/demo/aspect-ratio-demo")),
+    src: "src/components/demo/aspect-ratio-demo.tsx",
+  },
   "avatar-demo": {
     component: React.lazy(() => import("@/components/demo/avatar-demo")),
     src: "src/components/demo/avatar-demo.tsx",
