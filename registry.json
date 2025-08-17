@@ -80,6 +80,19 @@
       ]
     },
     {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Displays a badge or a component that looks like a badge.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/badge.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",

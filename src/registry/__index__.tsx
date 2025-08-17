@@ -87,6 +87,10 @@ export const components: Record<
     ),
     src: "src/components/demo/alert-dialog-with-icon.tsx",
   },
+  "badge-demo": {
+    component: React.lazy(() => import("@/components/demo/badge-demo")),
+    src: "src/components/demo/badge-demo.tsx",
+  },
   "button-demo": {
     component: React.lazy(() => import("@/components/demo/button-demo")),
     src: "src/components/demo/button-demo.tsx",
