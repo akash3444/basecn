@@ -28,14 +28,14 @@ export default async function Page(props: {
         {page.data.description}
       </DocsDescription>
       <div className="mb-8 flex items-center gap-2">
-        {page.data.docsLink && (
+        {page.data.links?.docs && (
           <Button
             variant="secondary"
             className="h-6 text-xs !px-2 gap-1.5"
             asChild
           >
             <Link
-              href={page.data.docsLink}
+              href={page.data.links.docs}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -43,14 +43,14 @@ export default async function Page(props: {
             </Link>
           </Button>
         )}
-        {page.data.apiReferenceLink && (
+        {page.data.links?.api && (
           <Button
             variant="secondary"
             className="h-6 text-xs !px-2 gap-1.5"
             asChild
           >
             <Link
-              href={page.data.apiReferenceLink}
+              href={page.data.links.api}
               target="_blank"
               rel="noopener noreferrer"
             >

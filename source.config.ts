@@ -11,8 +11,12 @@ import { z } from "zod";
 export const docs = defineDocs({
   docs: {
     schema: frontmatterSchema.extend({
-      docsLink: z.string().optional(),
-      apiReferenceLink: z.string().optional(),
+      links: z
+        .object({
+          docs: z.string().optional(),
+          api: z.string().optional(),
+        })
+        .optional(),
     }),
   },
   meta: {
