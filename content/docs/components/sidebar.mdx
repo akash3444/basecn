@@ -1,0 +1,23 @@
+---
+title: Sidebar
+description: A composable, themeable and customizable sidebar component.
+docsLink: https://ui.shadcn.com/docs/components/sidebar
+---
+
+import { cn } from "@/lib/utils";
+
+<div
+  className={cn(
+    // Make it absolute so it can fit in the preview tab content
+    "[&_[data-slot='sidebar-container']]:absolute!",
+    // Preview tab content
+    // Make the preview tab content relative so the sidebar can be absolute to it
+    "[&_[data-slot='tabs-content'][data-index='0']]:relative [&_[data-slot='tabs-content'][data-index='0']]:p-0 [&_[data-slot='tabs-content'][data-index='0']]:overflow-hidden"
+  )}
+>
+  <ComponentPreview name="sidebar-demo" center={false} />
+</div>
+
+## Installation
+
+<CodeBlockCommand component="sidebar" />

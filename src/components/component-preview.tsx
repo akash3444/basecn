@@ -10,7 +10,13 @@ import {
 } from "@/registry/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
-export default async function ComponentPreview({ name }: { name: string }) {
+export default async function ComponentPreview({
+  name,
+  center = true,
+}: {
+  name: string;
+  center?: boolean;
+}) {
   const { component: Component, src } = components[name];
 
   const code = await fs.readFile(path.join(process.cwd(), src), "utf-8");
@@ -33,7 +39,10 @@ export default async function ComponentPreview({ name }: { name: string }) {
         </TabsList>
         <TabsContent
           value="preview"
-          className="border rounded-lg p-2 min-h-[400px] max-h-[400px] flex items-center justify-center overflow-y-auto"
+          className={cn(
+            "border rounded-lg p-2 min-h-[400px] max-h-[400px] flex overflow-y-auto",
+            { "items-center justify-center": center }
+          )}
         >
           <Component />
         </TabsContent>

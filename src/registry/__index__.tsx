@@ -175,6 +175,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/sheet-demo")),
     src: "src/components/demo/sheet-demo.tsx",
   },
+  "sidebar-demo": {
+    component: React.lazy(() => import("@/components/demo/sidebar-demo")),
+    src: "src/components/demo/sidebar-demo.tsx",
+  },
   "slider-demo": {
     component: React.lazy(() => import("@/components/demo/slider-demo")),
     src: "src/components/demo/slider-demo.tsx",

@@ -31,6 +31,7 @@ function TooltipTrigger({
 }
 
 function TooltipPositioner({
+  className,
   ...props
 }: React.ComponentProps<typeof BaseTooltip.Positioner>) {
   return (
@@ -38,6 +39,7 @@ function TooltipPositioner({
       <BaseTooltip.Positioner
         data-slot="tooltip-positioner"
         sideOffset={8}
+        className={cn("z-50", className)}
         {...props}
       />
     </BaseTooltip.Portal>

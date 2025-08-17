@@ -368,6 +368,35 @@
       ]
     },
     {
+      "name": "sidebar",
+      "type": "registry:item",
+      "title": "Sidebar",
+      "description": "A composable, themeable and customizable sidebar component.",
+      "registryDependencies": [
+        "skeleton",
+        "https://basecn.dev/r/button.json",
+        "https://basecn.dev/r/input.json",
+        "https://basecn.dev/r/separator.json",
+        "https://basecn.dev/r/sheet.json",
+        "https://basecn.dev/r/tooltip.json"
+      ],
+      "dependencies": [
+        "@base-ui-components/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/components/ui/sidebar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "src/registry/hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
