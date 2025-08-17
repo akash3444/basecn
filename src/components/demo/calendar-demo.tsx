@@ -1,8 +1,17 @@
 "use client";
 
 import * as React from "react";
+import dynamic from "next/dynamic";
 
-import { Calendar } from "@/registry/components/ui/calendar";
+const Calendar = dynamic(
+  async () => {
+    const { Calendar } = await import("@/registry/components/ui/calendar");
+    return Calendar;
+  },
+  {
+    ssr: false,
+  }
+);
 
 export default function CalendarDemo() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
