@@ -103,6 +103,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/calendar-demo")),
     src: "src/components/demo/calendar-demo.tsx",
   },
+  "carousel-demo": {
+    component: React.lazy(() => import("@/components/demo/carousel-demo")),
+    src: "src/components/demo/carousel-demo.tsx",
+  },
   "checkbox-demo": {
     component: React.lazy(() => import("@/components/demo/checkbox-demo")),
     src: "src/components/demo/checkbox-demo.tsx",
