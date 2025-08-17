@@ -1,12 +1,17 @@
+import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
+
 import { CodeBlockCommand } from "./code-block-command";
+import { Button } from "./ui/button";
 
 interface UILibraryIndependentInfoProps {
   component: string;
+  showInstallation?: boolean;
 }
 
 export default function UILibraryIndependentInfo({
   component,
+  showInstallation = true,
 }: UILibraryIndependentInfoProps) {
   const officialDocsUrl = `https://ui.shadcn.com/docs/components/${component}`;
 
@@ -32,17 +37,19 @@ export default function UILibraryIndependentInfo({
         please visit the official shadcn/ui documentation:
       </p>
 
-      <p>
-        Link:{" "}
+      <Button asChild className="not-prose !px-5">
         <Link href={officialDocsUrl} target="_blank" rel="noopener noreferrer">
-          {component.charAt(0).toUpperCase() + component.slice(1)} Component -
-          shadcn/ui
+          View Official Docs <ArrowUpRightIcon />
         </Link>
-      </p>
+      </Button>
 
-      <h2>Quick Installation</h2>
+      {showInstallation && (
+        <>
+          <h2>Quick Installation</h2>
 
-      <CodeBlockCommand component={component} isShadcnComponent />
+          <CodeBlockCommand component={component} isShadcnComponent />
+        </>
+      )}
 
       <hr />
 
