@@ -4,25 +4,26 @@ import Link from "next/link";
 import { CodeBlockCommand } from "./code-block-command";
 import { Button } from "./ui/button";
 
-interface UILibraryIndependentInfoProps {
+interface RadixUIIndependentInfoProps {
   component: string;
   showInstallation?: boolean;
 }
 
-export default function UILibraryIndependentInfo({
+export default function RadixUIIndependentInfo({
   component,
   showInstallation = true,
-}: UILibraryIndependentInfoProps) {
+}: RadixUIIndependentInfoProps) {
   const officialDocsUrl = `https://ui.shadcn.com/docs/components/${component}`;
 
   return (
     <>
-      <h2>UI Library Independent Component</h2>
+      <h2>Radix UI Independent Component</h2>
 
       <p>
-        This component is <strong>UI library independent</strong> and does not
-        depend on Radix UI or Base UI. It&apos;s a custom implementation by
-        shadcn/ui that works independently of any specific UI library.
+        This component is <strong>Radix UI independent</strong> and does not
+        depend on Radix UI primitives. It&apos;s a standalone implementation by
+        shadcn/ui that uses standard HTML elements, custom styling and other
+        dependencies.
       </p>
 
       <p>
