@@ -24,6 +24,7 @@
     "motion": "^12.23.12",
     "next": "15.4.5",
     "react": "^19.1.1",
+    "react-day-picker": "^9.8.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.62.0",
     "shadcn": "2.9.3-canary.0",

@@ -119,6 +119,20 @@
       ]
     },
     {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A date field component that allows users to enter and edit date.",
+      "registryDependencies": ["https://basecn.dev/r/button.json"],
+      "dependencies": ["react-day-picker"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/calendar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
