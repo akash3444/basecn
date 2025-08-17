@@ -276,6 +276,20 @@
       ]
     },
     {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Pagination with page navigation, next and previous links.",
+      "registryDependencies": ["https://basecn.dev/r/button.json"],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/pagination.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
