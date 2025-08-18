@@ -173,6 +173,20 @@
       ]
     },
     {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Fast, composable, unstyled command menu for React.",
+      "registryDependencies": ["https://basecn.dev/r/dialog.json"],
+      "dependencies": ["@base-ui-components/react", "cmdk", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/command.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "context-menu",
       "type": "registry:ui",
       "title": "Context Menu",

@@ -147,6 +147,10 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/combobox-with-icon")),
     src: "src/components/demo/combobox-with-icon.tsx",
   },
+  "command-demo": {
+    component: React.lazy(() => import("@/components/demo/command-demo")),
+    src: "src/components/demo/command-demo.tsx",
+  },
   "context-menu-demo": {
     component: React.lazy(() => import("@/components/demo/context-menu-demo")),
     src: "src/components/demo/context-menu-demo.tsx",
