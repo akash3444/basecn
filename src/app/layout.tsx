@@ -5,6 +5,7 @@ import { RootProvider } from "fumadocs-ui/provider";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
+import { Databuddy } from "@databuddy/sdk";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,7 +68,20 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider>
+          {children}
+
+          <Databuddy
+            clientId="HMM4VGqblgu59xr2UOpco"
+            trackOutgoingLinks
+            trackInteractions
+            trackEngagement
+            trackBounceRate
+            trackWebVitals
+            trackScrollDepth
+            enableBatching
+          />
+        </RootProvider>
       </body>
     </html>
   );
