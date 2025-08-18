@@ -99,6 +99,30 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/button-demo")),
     src: "src/components/demo/button-demo.tsx",
   },
+  "button-variants": {
+    component: React.lazy(() => import("@/components/demo/button-variants")),
+    src: "src/components/demo/button-variants.tsx",
+  },
+  "button-shape": {
+    component: React.lazy(() => import("@/components/demo/button-shape")),
+    src: "src/components/demo/button-shape.tsx",
+  },
+  "button-loading": {
+    component: React.lazy(() => import("@/components/demo/button-loading")),
+    src: "src/components/demo/button-loading.tsx",
+  },
+  "button-group": {
+    component: React.lazy(() => import("@/components/demo/button-group")),
+    src: "src/components/demo/button-group.tsx",
+  },
+  "button-split": {
+    component: React.lazy(() => import("@/components/demo/button-split")),
+    src: "src/components/demo/button-split.tsx",
+  },
+  "button-with-icon": {
+    component: React.lazy(() => import("@/components/demo/button-with-icon")),
+    src: "src/components/demo/button-with-icon.tsx",
+  },
   "calendar-demo": {
     component: React.lazy(() => import("@/components/demo/calendar-demo")),
     src: "src/components/demo/calendar-demo.tsx",
