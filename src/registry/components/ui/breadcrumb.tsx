@@ -31,14 +31,12 @@ function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
   );
 }
 
-type RenderProp = Parameters<typeof useRender>[0]["render"];
-
 function BreadcrumbLink({
   className,
   render = <a />,
   ...props
 }: React.ComponentProps<"a"> & {
-  render?: RenderProp;
+  render?: useRender.RenderProp;
 }) {
   return useRender({
     render,

@@ -25,15 +25,13 @@ const badgeVariants = cva(
   }
 );
 
-type RenderProp = Parameters<typeof useRender>[0]["render"];
-
 function Badge({
   className,
   variant,
   render = <span />,
   ...props
 }: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { render?: RenderProp }) {
+  VariantProps<typeof badgeVariants> & { render?: useRender.RenderProp }) {
   return useRender({
     render,
     props: {

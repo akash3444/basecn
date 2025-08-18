@@ -35,12 +35,10 @@ const buttonVariants = cva(
   }
 );
 
-type RenderProp = Parameters<typeof useRender>[0]["render"];
-
 interface ButtonProps
   extends React.ComponentProps<"button">,
     VariantProps<typeof buttonVariants> {
-  render?: RenderProp;
+  render?: useRender.RenderProp;
 }
 
 function Button({

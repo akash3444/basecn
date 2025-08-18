@@ -103,9 +103,11 @@ function FormLabel({
   );
 }
 
-type RenderProp = Parameters<typeof useRender>[0]["render"];
-
-function FormControl({ children = <div /> }: { children?: RenderProp }) {
+function FormControl({
+  children = <div />,
+}: {
+  children?: useRender.RenderProp;
+}) {
   const { error, formItemId, formDescriptionId, formMessageId } =
     useFormField();
 
