@@ -95,6 +95,28 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/breadcrumb-demo")),
     src: "src/components/demo/breadcrumb-demo.tsx",
   },
+  "breadcrumb-custom-separator": {
+    component: React.lazy(
+      () => import("@/components/demo/breadcrumb-custom-separator")
+    ),
+    src: "src/components/demo/breadcrumb-custom-separator.tsx",
+  },
+  "breadcrumb-with-icon": {
+    component: React.lazy(
+      () => import("@/components/demo/breadcrumb-with-icon")
+    ),
+    src: "src/components/demo/breadcrumb-with-icon.tsx",
+  },
+  "breadcrumb-with-background": {
+    component: React.lazy(
+      () => import("@/components/demo/breadcrumb-with-background")
+    ),
+    src: "src/components/demo/breadcrumb-with-background.tsx",
+  },
+  "breadcrumb-tabs": {
+    component: React.lazy(() => import("@/components/demo/breadcrumb-tabs")),
+    src: "src/components/demo/breadcrumb-tabs.tsx",
+  },
   "button-demo": {
     component: React.lazy(() => import("@/components/demo/button-demo")),
     src: "src/components/demo/button-demo.tsx",
