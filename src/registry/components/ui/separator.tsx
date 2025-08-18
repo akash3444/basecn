@@ -1,14 +1,14 @@
 import * as React from "react";
-import { Separator as BaseSeparator } from "@base-ui-components/react/separator";
+import { Separator as SeparatorPrimitive } from "@base-ui-components/react/separator";
 
 import { cn } from "@/lib/utils";
 
 function Separator({
   className,
   ...props
-}: React.ComponentProps<typeof BaseSeparator>) {
+}: React.ComponentProps<typeof SeparatorPrimitive>) {
   return (
-    <BaseSeparator
+    <SeparatorPrimitive
       data-slot="separator"
       className={cn(
         "bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px",

@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
-import { Avatar as BaseAvatar } from "@base-ui-components/react/avatar";
+import { Avatar as AvatarPrimitive } from "@base-ui-components/react/avatar";
 
 function Avatar({
   className,
   ...props
-}: React.ComponentProps<typeof BaseAvatar.Root>) {
+}: React.ComponentProps<typeof AvatarPrimitive.Root>) {
   return (
-    <BaseAvatar.Root
+    <AvatarPrimitive.Root
       data-slot="avatar"
       className={cn(
         "relative flex size-8 shrink-0 overflow-hidden rounded-full",
@@ -20,9 +20,9 @@ function Avatar({
 function AvatarImage({
   className,
   ...props
-}: React.ComponentProps<typeof BaseAvatar.Image>) {
+}: React.ComponentProps<typeof AvatarPrimitive.Image>) {
   return (
-    <BaseAvatar.Image
+    <AvatarPrimitive.Image
       data-slot="avatar-image"
       className={cn("aspect-square size-full", className)}
       {...props}
@@ -33,9 +33,9 @@ function AvatarImage({
 function AvatarFallback({
   className,
   ...props
-}: React.ComponentProps<typeof BaseAvatar.Fallback>) {
+}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {
   return (
-    <BaseAvatar.Fallback
+    <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
       className={cn(
         "bg-muted flex items-center justify-center size-full rounded-full text-sm",

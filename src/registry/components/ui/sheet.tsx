@@ -1,37 +1,37 @@
 import * as React from "react";
-import { Dialog as BaseSheet } from "@base-ui-components/react/dialog";
+import { Dialog as SheetPrimitive } from "@base-ui-components/react/dialog";
 import { XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-function Sheet({ ...props }: React.ComponentProps<typeof BaseSheet.Root>) {
-  return <BaseSheet.Root data-slot="sheet" {...props} />;
+function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
+  return <SheetPrimitive.Root data-slot="sheet" {...props} />;
 }
 
 function SheetTrigger({
   ...props
-}: React.ComponentProps<typeof BaseSheet.Trigger>) {
-  return <BaseSheet.Trigger data-slot="sheet-trigger" {...props} />;
+}: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
+  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />;
 }
 
 function SheetClose({
   ...props
-}: React.ComponentProps<typeof BaseSheet.Close>) {
-  return <BaseSheet.Close data-slot="sheet-close" {...props} />;
+}: React.ComponentProps<typeof SheetPrimitive.Close>) {
+  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />;
 }
 
 function SheetPortal({
   ...props
-}: React.ComponentProps<typeof BaseSheet.Portal>) {
-  return <BaseSheet.Portal data-slot="sheet-portal" {...props} />;
+}: React.ComponentProps<typeof SheetPrimitive.Portal>) {
+  return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />;
 }
 
 function SheetOverlay({
   className,
   ...props
-}: React.ComponentProps<typeof BaseSheet.Backdrop>) {
+}: React.ComponentProps<typeof SheetPrimitive.Backdrop>) {
   return (
-    <BaseSheet.Backdrop
+    <SheetPrimitive.Backdrop
       data-slot="sheet-overlay"
       className={cn(
         "data-[open]:animate-in data-[closed]:animate-out data-[closed]:fade-out-0 data-[closed]:animation-duration-[300ms] data-[open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
@@ -47,13 +47,13 @@ function SheetContent({
   children,
   side = "right",
   ...props
-}: React.ComponentProps<typeof BaseSheet.Popup> & {
+}: React.ComponentProps<typeof SheetPrimitive.Popup> & {
   side?: "top" | "right" | "bottom" | "left";
 }) {
   return (
     <SheetPortal>
       <SheetOverlay />
-      <BaseSheet.Popup
+      <SheetPrimitive.Popup
         data-slot="sheet-content"
         className={cn(
           "bg-background data-[open]:animate-in data-[closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[closed]:duration-300 data-[open]:duration-500",
@@ -70,11 +70,11 @@ function SheetContent({
         {...props}
       >
         {children}
-        <BaseSheet.Close className="ring-offset-background focus:ring-ring data-[open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
+        <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
           <XIcon className="size-4" />
           <span className="sr-only">Close</span>
-        </BaseSheet.Close>
-      </BaseSheet.Popup>
+        </SheetPrimitive.Close>
+      </SheetPrimitive.Popup>
     </SheetPortal>
   );
 }
@@ -102,9 +102,9 @@ function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
 function SheetTitle({
   className,
   ...props
-}: React.ComponentProps<typeof BaseSheet.Title>) {
+}: React.ComponentProps<typeof SheetPrimitive.Title>) {
   return (
-    <BaseSheet.Title
+    <SheetPrimitive.Title
       data-slot="sheet-title"
       className={cn("text-foreground font-semibold", className)}
       {...props}
@@ -115,9 +115,9 @@ function SheetTitle({
 function SheetDescription({
   className,
   ...props
-}: React.ComponentProps<typeof BaseSheet.Description>) {
+}: React.ComponentProps<typeof SheetPrimitive.Description>) {
   return (
-    <BaseSheet.Description
+    <SheetPrimitive.Description
       data-slot="sheet-description"
       className={cn("text-muted-foreground text-sm", className)}
       {...props}

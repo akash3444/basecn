@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ToggleGroup as BaseToggleGroup } from "@base-ui-components/react/toggle-group";
+import { ToggleGroup as ToggleGroupPrimitive } from "@base-ui-components/react/toggle-group";
 import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
@@ -20,10 +20,10 @@ function ToggleGroup({
   size,
   children,
   ...props
-}: React.ComponentProps<typeof BaseToggleGroup> &
+}: React.ComponentProps<typeof ToggleGroupPrimitive> &
   VariantProps<typeof toggleVariants>) {
   return (
-    <BaseToggleGroup
+    <ToggleGroupPrimitive
       data-slot="toggle-group"
       data-variant={variant}
       data-size={size}
@@ -36,7 +36,7 @@ function ToggleGroup({
       <ToggleGroupContext.Provider value={{ variant, size }}>
         {children}
       </ToggleGroupContext.Provider>
-    </BaseToggleGroup>
+    </ToggleGroupPrimitive>
   );
 }
 

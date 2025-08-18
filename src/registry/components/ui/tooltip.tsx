@@ -1,14 +1,14 @@
 import * as React from "react";
-import { Tooltip as BaseTooltip } from "@base-ui-components/react/tooltip";
+import { Tooltip as TooltipPrimitive } from "@base-ui-components/react/tooltip";
 
 import { cn } from "@/lib/utils";
 
 function TooltipProvider({
   delay = 0,
   ...props
-}: React.ComponentProps<typeof BaseTooltip.Provider>) {
+}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
   return (
-    <BaseTooltip.Provider
+    <TooltipPrimitive.Provider
       data-slot="tooltip-provider"
       delay={delay}
       {...props}
@@ -16,33 +16,35 @@ function TooltipProvider({
   );
 }
 
-function Tooltip({ ...props }: React.ComponentProps<typeof BaseTooltip.Root>) {
+function Tooltip({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Root>) {
   return (
     <TooltipProvider>
-      <BaseTooltip.Root data-slot="tooltip" {...props} />
+      <TooltipPrimitive.Root data-slot="tooltip" {...props} />
     </TooltipProvider>
   );
 }
 
 function TooltipTrigger({
   ...props
-}: React.ComponentProps<typeof BaseTooltip.Trigger>) {
-  return <BaseTooltip.Trigger data-slot="tooltip-trigger" {...props} />;
+}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
+  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />;
 }
 
 function TooltipPositioner({
   className,
   ...props
-}: React.ComponentProps<typeof BaseTooltip.Positioner>) {
+}: React.ComponentProps<typeof TooltipPrimitive.Positioner>) {
   return (
-    <BaseTooltip.Portal>
-      <BaseTooltip.Positioner
+    <TooltipPrimitive.Portal>
+      <TooltipPrimitive.Positioner
         data-slot="tooltip-positioner"
         sideOffset={8}
         className={cn("z-50", className)}
         {...props}
       />
-    </BaseTooltip.Portal>
+    </TooltipPrimitive.Portal>
   );
 }
 
@@ -50,9 +52,9 @@ function TooltipContent({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof BaseTooltip.Popup>) {
+}: React.ComponentProps<typeof TooltipPrimitive.Popup>) {
   return (
-    <BaseTooltip.Popup
+    <TooltipPrimitive.Popup
       data-slot="tooltip-content"
       className={cn(
         "bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[closed]:animate-out data-[closed]:fade-out-0 data-[closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
@@ -62,16 +64,16 @@ function TooltipContent({
     >
       {children}
       <TooltipArrow />
-    </BaseTooltip.Popup>
+    </TooltipPrimitive.Popup>
   );
 }
 
 function TooltipArrow({
   className,
   ...props
-}: React.ComponentProps<typeof BaseTooltip.Arrow>) {
+}: React.ComponentProps<typeof TooltipPrimitive.Arrow>) {
   return (
-    <BaseTooltip.Arrow
+    <TooltipPrimitive.Arrow
       data-slot="tooltip-arrow"
       className={cn(
         "bg-primary fill-primary z-50 size-2.5 rotate-45 rounded-[2px]",
