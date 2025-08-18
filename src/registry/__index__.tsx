@@ -195,6 +195,12 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/separator-demo")),
     src: "src/components/demo/separator-demo.tsx",
   },
+  "separator-with-label": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-with-label")
+    ),
+    src: "src/components/demo/separator-with-label.tsx",
+  },
   "sheet-demo": {
     component: React.lazy(() => import("@/components/demo/sheet-demo")),
     src: "src/components/demo/sheet-demo.tsx",
@@ -206,6 +212,12 @@ export const components: Record<
   "slider-demo": {
     component: React.lazy(() => import("@/components/demo/slider-demo")),
     src: "src/components/demo/slider-demo.tsx",
+  },
+  "slider-with-multiple-thumbs": {
+    component: React.lazy(
+      () => import("@/components/demo/slider-with-multiple-thumbs")
+    ),
+    src: "src/components/demo/slider-with-multiple-thumbs.tsx",
   },
   "switch-demo": {
     component: React.lazy(() => import("@/components/demo/switch-demo")),
