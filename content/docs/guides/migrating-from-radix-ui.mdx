@@ -1,0 +1,146 @@
+---
+title: Migrating from Radix UI
+description: A guide to migrating from Radix UI to Base UI.
+---
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+
+## Overview
+
+Radix UI and Base UI are both excellent libraries for building web applications. However, they differ in their approach to component architecture. This guide will help you migrate your shadcn/ui components from Radix UI to Base UI.
+
+## Installation
+
+```bash
+pnpm add @base-ui-components/react
+```
+
+## Migration Steps
+
+<Steps>
+  <Step>
+    ### `asChild` to `render` Prop
+
+    Radix UI uses an `asChild` prop, while Base UI uses a `render` prop.
+
+    In Radix UI, the `Slot` component lets you implement an `asChild` prop.
+
+    ```tsx
+    import { Slot } from 'radix-ui';
+
+    function Button({ asChild, ...props }) {
+      const Comp = asChild ? Slot.Root : 'button';
+      return <Comp {...props} />;
+    }
+
+    // Usage
+    <Button asChild>
+      <a href="/contact">Contact</a>
+    </Button>
+    ```
+
+    In Base UI, `useRender` lets you implement a render prop. The example below shows the equivalent implementation to the Radix example above.
+
+    ```tsx
+    import { useRender } from '@base-ui-components/react/use-render';
+
+    function Button({ render = <button />, ...props }) {
+      return useRender({ render, props });
+    }
+
+    // Usage 1
+    <Button render={<a href="/contact">Contact</a>} />
+
+    // Usage 2
+    <Button render={<a href="/contact"/>}>Contact</Button>
+    ```
+  </Step>
+  <Step>
+    ### Positioning Content Popups
+
+    In Radix UI, for components such as `Select`, `Tooltip`, `Popover`, `Dropdown Menu`, `HoverCard`, etc., you can position or align the content popup by passing props such as `side` or `align` to the `Content` component.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Open</Button>
+      </DropdownMenuTrigger>
+
+      // [!code highlight]
+      <DropdownMenuContent side="left" align="start">
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+    ```
+
+    With Base UI, to position or align the content popup by passing props such as `side` or `align`, you'll need to use the positioner component instead of the content component. This is a required component, and your `Content` component should be wrapped with `Positioner`. The example below shows the equivalent implementation to the Radix example above.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        Open
+      </DropdownMenuTrigger>
+
+      // [!code highlight]
+      <DropdownMenuPositioner side="left" align="start">
+        <DropdownMenuContent>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+        </DropdownMenuContent>
+      // [!code highlight]
+      </DropdownMenuPositioner>
+    </DropdownMenu>
+    ```
+  </Step>
+  <Step>
+    ### Using Labels in Popups
+
+    In Radix UI, you can use the `Label` component to add a label to the popup content. It can be used anywhere in the popup content.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Open</Button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent>
+        // [!code highlight]
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuGroup>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+        </DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+    ```
+
+    With Base UI, you must ensure that the label is wrapped with the `Group` component. The example below shows the equivalent implementation to the Radix example above.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>
+        Open
+      </DropdownMenuTrigger>
+
+      <DropdownMenuPositioner>
+        <DropdownMenuContent>
+          <DropdownMenuGroup>
+            // [!code highlight]
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Billing</DropdownMenuItem>
+          </DropdownMenuGroup>
+        </DropdownMenuContent>
+      </DropdownMenuPositioner>
+    </DropdownMenu>
+    ```
+  </Step>
+  <Step>
+    ### Component Props
+
+    Radix UI and Base UI have different prop names for the same components. You'll need to ensure that you're using the correct prop names for each component when migrating. We'll soon have a migration guide for each component to help you with this process.
+
+  </Step>
+</Steps>
