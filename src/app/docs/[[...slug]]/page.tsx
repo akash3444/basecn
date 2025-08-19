@@ -1,3 +1,4 @@
+import { DocsFooter } from "@/components/docs-footer";
 import { Button } from "@/components/ui/button";
 import { source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
@@ -22,7 +23,14 @@ export default async function Page(props: {
   const MDXContent = page.data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage
+      toc={page.data.toc}
+      full={page.data.full}
+      footer={{
+        enabled: true,
+        component: <DocsFooter />,
+      }}
+    >
       <DocsTitle className="text-4xl">{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0 -mt-1">
         {page.data.description}
