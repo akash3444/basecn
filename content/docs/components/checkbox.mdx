@@ -11,3 +11,35 @@ links:
 ## Installation
 
 <CodeBlockCommand component="checkbox" />
+
+## Migrating from Radix UI
+
+<Steps>
+  <Step>
+    <CommonMigrationsStepsInfo componentName="Checkbox" />
+  </Step>
+  <Step>
+    ### Indeterminate State
+
+    In Radix UI, you can pass the `checked` or `defaultChecked` prop with a value of `"indeterminate"` to the `Checkbox` component to control the indeterminate state.
+
+    ```tsx
+    import { Checkbox } from "@/components/ui/checkbox"
+
+    // [!code highlight]
+    <Checkbox checked="indeterminate" />
+    // or
+    // [!code highlight]
+    <Checkbox defaultChecked="indeterminate" />
+    ```
+
+    With Base UI, you can pass the `indeterminate` prop to the `Checkbox` component to control the indeterminate state.
+
+    ```tsx
+    import { Checkbox } from "@/components/ui/checkbox"
+
+    // [!code highlight]
+    <Checkbox indeterminate />
+    ```
+  </Step>
+</Steps>

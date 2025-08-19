@@ -31,3 +31,48 @@ links:
 ### Multiple Items Open
 
 <ComponentPreview name="accordion-multiple-items-open" />
+
+## Migrating from Radix UI
+
+<Steps>
+  <Step>
+    <CommonMigrationsStepsInfo componentName="Accordion" />
+  </Step>
+  <Step>
+    ### Accordion Type
+
+    In Radix UI, you can pass the `type` prop to the `Accordion` component to change the accordion type to either `single` or `multiple`.
+
+    ```tsx
+    import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+    // [!code highlight]
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+    ```
+
+    With Base UI, you can pass the boolean `openMultiple` prop to the `Accordion` component to control the accordion type. When `openMultiple` is `true`, the accordion behaves as type `multiple`; when `false`, it behaves as type `single`.
+    
+    The default value for `openMultiple` is `true`.
+
+  ```tsx
+  import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+  // [!code highlight]
+  <Accordion openMultiple={false}> // Same as type="single"
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+  ```
+  </Step>
+</Steps>

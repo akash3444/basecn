@@ -11,3 +11,38 @@ links:
 ## Installation
 
 <CodeBlockCommand component="hover-card" />
+
+## Migrating from Radix UI
+
+<Steps>
+  <Step>
+    <CommonMigrationsStepsInfo componentName="Hover Card" />
+  </Step>
+  <Step>
+    ### Open Delay Configuration
+
+    In Radix UI, you can pass the `openDelay` prop to the `HoverCard` component to control the delay before the hover card opens.
+
+    ```tsx
+    import { HoverCard } from "@/components/ui/hover-card"
+
+    // [!code highlight]
+    <HoverCard openDelay={100}>
+      <HoverCardTrigger>...</HoverCardTrigger>
+      <HoverCardContent>...</HoverCardContent>
+    </HoverCard>
+    ```
+
+    With Base UI, you can pass the `delay` prop to the `HoverCard` component to achieve the same functionality.
+
+    ```tsx
+    import { HoverCard } from "@/components/ui/hover-card"
+
+    // [!code highlight]
+    <HoverCard delay={100}>
+      <HoverCardTrigger>...</HoverCardTrigger>
+      <HoverCardContent>...</HoverCardContent>
+    </HoverCard>
+    ```
+  </Step>
+</Steps>
