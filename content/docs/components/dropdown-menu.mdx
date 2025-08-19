@@ -16,6 +16,41 @@ links:
 
 <Steps>
   <Step>
-    <CommonMigrationsStepsInfo componentName="Dropdown Menu" />
+    <include>migration-steps/common.mdx</include>
+  </Step>
+  <Step>
+    ### Listening to Item Clicks
+
+    In Radix UI, you can listen to item clicks by passing a function to the `onSelect` prop.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+      <DropdownMenuContent>
+        // [!code highlight]
+        <DropdownMenuItem onSelect={() => { console.log("Profile") }}>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+    ```
+
+    In Base UI, you can do the same by passing a function to the `onClick` prop.
+
+    ```tsx
+    <DropdownMenu>
+      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+      <DropdownMenuPositioner>
+        <DropdownMenuContent>
+          // [!code highlight]
+          <DropdownMenuItem onClick={() => { console.log("Profile") }}>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Team</DropdownMenuItem>
+          <DropdownMenuItem>Subscription</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenuPositioner>
+    </DropdownMenu>
+    ```
   </Step>
 </Steps>

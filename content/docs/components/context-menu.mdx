@@ -16,6 +16,42 @@ links:
 
 <Steps>
   <Step>
-    <CommonMigrationsStepsInfo componentName="Context Menu" />
+    <include>migration-steps/common.mdx</include>
+  </Step>
+  <Step>
+    ### Listening to Item Clicks
+
+    In Radix UI, you can listen to item clicks by passing a function to the `onSelect` prop.
+
+    ```tsx
+    <ContextMenu>
+      <ContextMenuTrigger>...</ContextMenuTrigger>
+      
+      <ContextMenuContent>
+        // [!code highlight]
+        <ContextMenuItem inset onSelect={() => { console.log("Back") }}>
+          Back
+        </ContextMenuItem>
+      </ContextMenuContent>
+    </ContextMenu>
+    ```
+
+    In Base UI, you can do the same by passing a function to the `onClick` prop.
+
+    ```tsx
+    <ContextMenu>
+      <ContextMenuTrigger>...</ContextMenuTrigger>
+      
+
+      <ContextMenuPositioner>
+        <ContextMenuContent>
+          // [!code highlight]
+          <ContextMenuItem inset onClick={() => { console.log("Back") }}>
+            Back
+          </ContextMenuItem>
+        </ContextMenuContent>
+      </ContextMenuPositioner>
+    </ContextMenu>
+    ```
   </Step>
 </Steps>

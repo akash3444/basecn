@@ -1,3 +1,4 @@
 {
-  "defaultOpen": true
+  "defaultOpen": true,
+  "pages": ["...", "!migration-steps"]
 }

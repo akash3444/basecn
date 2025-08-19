@@ -11,3 +11,50 @@ links:
 ## Installation
 
 <CodeBlockCommand component="menubar" />
+
+## Migrating from Radix UI
+
+<Steps>
+  <Step>
+    <include>migration-steps/common.mdx</include>
+  </Step>
+  <Step>
+    ### Listening to Item Clicks
+
+    In Radix UI, you can listen to item clicks by passing a function to the `onSelect` prop.
+
+    ```tsx
+    <Menubar>
+      <MenubarMenu>
+        <MenubarTrigger>...</MenubarTrigger>
+        <MenubarContent>
+          // [!code highlight]
+          <MenubarMenuItem onSelect={() => { console.log("New Tab") }}>New Tab</MenubarMenuItem>
+          <MenubarMenuItem>New Window</MenubarMenuItem>
+          <MenubarMenuItem>New Private Window</MenubarMenuItem>
+          <MenubarMenuItem>Open File</MenubarMenuItem>
+        </MenubarContent>
+      </MenubarMenu>
+    </Menubar>
+    ```
+
+    In Base UI, you can do the same by passing a function to the `onClick` prop.
+
+    ```tsx
+    <Menubar>
+      <MenubarMenu>
+        <MenubarTrigger>...</MenubarTrigger>
+        <MenubarPositioner>
+          <MenubarContent>
+            // [!code highlight]
+            <MenubarMenuItem onClick={() => { console.log("New Tab") }}>New Tab</MenubarMenuItem>
+            <MenubarMenuItem>New Window</MenubarMenuItem>
+            <MenubarMenuItem>New Private Window</MenubarMenuItem>
+            <MenubarMenuItem>Open File</MenubarMenuItem>
+          </MenubarContent>
+        </MenubarPositioner>
+      </MenubarMenu>
+    </Menubar>
+    ```
+  </Step>
+</Steps>
