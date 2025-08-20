@@ -77,6 +77,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             trackInteractions
             trackEngagement
             trackBounceRate
+            trackWebVitals
             enableBatching
           />
         </RootProvider>
