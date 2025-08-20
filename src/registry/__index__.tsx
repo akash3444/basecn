@@ -233,6 +233,30 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/radio-group-demo")),
     src: "src/components/demo/radio-group-demo.tsx",
   },
+  "radio-group-horizontal": {
+    component: React.lazy(
+      () => import("@/components/demo/radio-group-horizontal")
+    ),
+    src: "src/components/demo/radio-group-horizontal.tsx",
+  },
+  "radio-group-size": {
+    component: React.lazy(() => import("@/components/demo/radio-group-size")),
+    src: "src/components/demo/radio-group-size.tsx",
+  },
+  "radio-group-color": {
+    component: React.lazy(() => import("@/components/demo/radio-group-color")),
+    src: "src/components/demo/radio-group-color.tsx",
+  },
+  "radio-group-variants": {
+    component: React.lazy(
+      () => import("@/components/demo/radio-group-variants")
+    ),
+    src: "src/components/demo/radio-group-variants.tsx",
+  },
+  "radio-group-cards": {
+    component: React.lazy(() => import("@/components/demo/radio-group-cards")),
+    src: "src/components/demo/radio-group-cards.tsx",
+  },
   "scroll-area-demo": {
     component: React.lazy(() => import("@/components/demo/scroll-area-demo")),
     src: "src/components/demo/scroll-area-demo.tsx",

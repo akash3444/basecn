@@ -1,4 +1,5 @@
-import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
+import { RadioGroup } from "@/registry/components/ui/radio-group";
+import { Radio as RadioPrimitive } from "@base-ui-components/react/radio";
 import {
   AppleIcon,
   BananaIcon,
@@ -26,25 +27,28 @@ const fruits = [
   },
 ];
 
-export default function CheckboxCards() {
+export default function RadioGroupCards() {
   return (
-    <div className="flex items-center gap-6">
+    <RadioGroup
+      defaultValue={fruits[0].value}
+      className="flex items-center gap-6"
+    >
       {fruits.map((fruit) => (
-        <CheckboxPrimitive.Root
+        <RadioPrimitive.Root
           key={fruit.value}
+          value={fruit.value}
           data-slot="checkbox"
-          defaultChecked={fruit.defaultChecked}
           className="outline rounded-lg p-3 relative data-[checked]:outline-primary data-[checked]:outline-2 data-[checked]:bg-primary/5"
         >
           <fruit.icon />
-          <CheckboxPrimitive.Indicator
+          <RadioPrimitive.Indicator
             data-slot="checkbox-indicator"
             className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2"
           >
             <CircleCheckIcon className="size-7 fill-primary stroke-primary-foreground" />
-          </CheckboxPrimitive.Indicator>
-        </CheckboxPrimitive.Root>
+          </RadioPrimitive.Indicator>
+        </RadioPrimitive.Root>
       ))}
-    </div>
+    </RadioGroup>
   );
 }
