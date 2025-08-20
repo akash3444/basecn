@@ -157,6 +157,22 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/checkbox-demo")),
     src: "src/components/demo/checkbox-demo.tsx",
   },
+  "checkbox-size": {
+    component: React.lazy(() => import("@/components/demo/checkbox-size")),
+    src: "src/components/demo/checkbox-size.tsx",
+  },
+  "checkbox-shape": {
+    component: React.lazy(() => import("@/components/demo/checkbox-shape")),
+    src: "src/components/demo/checkbox-shape.tsx",
+  },
+  "checkbox-color": {
+    component: React.lazy(() => import("@/components/demo/checkbox-color")),
+    src: "src/components/demo/checkbox-color.tsx",
+  },
+  "checkbox-cards": {
+    component: React.lazy(() => import("@/components/demo/checkbox-cards")),
+    src: "src/components/demo/checkbox-cards.tsx",
+  },
   "collapsible-demo": {
     component: React.lazy(() => import("@/components/demo/collapsible-demo")),
     src: "src/components/demo/collapsible-demo.tsx",
