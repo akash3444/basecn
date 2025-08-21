@@ -293,6 +293,18 @@ export const components: Record<
     ),
     src: "src/components/demo/slider-with-multiple-thumbs.tsx",
   },
+  "slider-size": {
+    component: React.lazy(() => import("@/components/demo/slider-size")),
+    src: "src/components/demo/slider-size.tsx",
+  },
+  "slider-color": {
+    component: React.lazy(() => import("@/components/demo/slider-color")),
+    src: "src/components/demo/slider-color.tsx",
+  },
+  "slider-thumb-icon": {
+    component: React.lazy(() => import("@/components/demo/slider-thumb-icon")),
+    src: "src/components/demo/slider-thumb-icon.tsx",
+  },
   "switch-demo": {
     component: React.lazy(() => import("@/components/demo/switch-demo")),
     src: "src/components/demo/switch-demo.tsx",
