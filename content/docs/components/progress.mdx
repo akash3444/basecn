@@ -1,0 +1,77 @@
+---
+title: Progress
+description: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+links:
+  docs: https://base-ui.com/react/components/progress
+  api: https://base-ui.com/react/components/progress#api-reference
+---
+
+<ComponentPreview name="progress-demo" />
+
+## Installation
+
+<CodeBlockCommand component="progress" />
+
+---
+
+## Examples
+
+### With Value
+
+<ComponentPreview name="progress-with-value" />
+
+### With Label
+
+<ComponentPreview name="progress-with-label" />
+
+
+## Migrating from Radix UI
+
+The Progress component is similar to Radix UI's Progress component, so you don't need to change anything to migrate.
+
+However, there are some additional components you can use to enhance the progress bar.
+
+
+### ProgressLabel Component
+
+The `ProgressLabel` component displays a descriptive label for the progress bar. When using labels, you'll need to compose the Progress component manually using ProgressTrack and ProgressIndicator. This gives you complete control over the layout and positioning of labels, tracks, and values.
+
+```tsx
+import {
+  Progress,
+  ProgressLabel,
+  ProgressTrack,
+  ProgressIndicator,
+} from "@/components/ui/progress";
+
+<Progress value={50}>
+  // [!code highlight]
+  <ProgressLabel>Progress</ProgressLabel>
+  <ProgressTrack>
+    <ProgressIndicator />
+  </ProgressTrack>
+</Progress>
+```
+
+### ProgressValue Component
+
+The `ProgressValue` component displays the current progress value in a readable format. When using values, you'll need to compose the Progress component manually using ProgressTrack and ProgressIndicator. This gives you complete control over the layout and positioning of labels, tracks, and values.
+
+The `ProgressValue` component accepts a render function that provides access to both the formatted value (with percentage) and the raw progress value. This allows for custom formatting and display logic.
+
+```tsx
+import {
+  Progress,
+  ProgressValue,
+  ProgressTrack,
+  ProgressIndicator,
+} from "@/components/ui/progress";
+
+<Progress value={50}>
+  <ProgressTrack>
+    <ProgressIndicator />
+  </ProgressTrack>
+  // [!code highlight]
+  <ProgressValue>{(formattedValue, progress) => `${progress} lbs`}</ProgressValue>
+</Progress>
+```

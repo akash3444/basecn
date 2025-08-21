@@ -241,6 +241,22 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/popover-demo")),
     src: "src/components/demo/popover-demo.tsx",
   },
+  "progress-demo": {
+    component: React.lazy(() => import("@/components/demo/progress-demo")),
+    src: "src/components/demo/progress-demo.tsx",
+  },
+  "progress-with-value": {
+    component: React.lazy(
+      () => import("@/components/demo/progress-with-value")
+    ),
+    src: "src/components/demo/progress-with-value.tsx",
+  },
+  "progress-with-label": {
+    component: React.lazy(
+      () => import("@/components/demo/progress-with-label")
+    ),
+    src: "src/components/demo/progress-with-label.tsx",
+  },
   "radio-group-demo": {
     component: React.lazy(() => import("@/components/demo/radio-group-demo")),
     src: "src/components/demo/radio-group-demo.tsx",

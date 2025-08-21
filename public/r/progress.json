@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "type": "registry:ui",
+  "title": "Progress",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  "dependencies": [
+    "@base-ui-components/react"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/ui/progress.tsx",
+      "content": "\"use client\";\n\nimport { Progress as ProgressPrimitive } from \"@base-ui-components/react/progress\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Progress({\n  className,\n  children,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Root>) {\n  return (\n    <ProgressPrimitive.Root\n      data-slot=\"progress\"\n      className={cn(\"relative w-full\", className)}\n      {...props}\n    >\n      {children ? (\n        children\n      ) : (\n        <ProgressTrack>\n          <ProgressIndicator />\n        </ProgressTrack>\n      )}\n    </ProgressPrimitive.Root>\n  );\n}\n\nfunction ProgressTrack({\n  className,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Track>) {\n  return (\n    <ProgressPrimitive.Track\n      data-slot=\"progress-track\"\n      className={cn(\n        \"bg-primary/20 w-full h-2 overflow-hidden rounded-full\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction ProgressIndicator({\n  className,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Indicator>) {\n  return (\n    <ProgressPrimitive.Indicator\n      data-slot=\"progress-indicator\"\n      className={cn(\n        \"bg-primary h-full w-full flex-1 transition-all\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nfunction ProgressLabel({\n  className,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Label>) {\n  return (\n    <ProgressPrimitive.Label\n      data-slot=\"progress-label\"\n      className={cn(\"text-sm text-muted-foreground\", className)}\n      {...props}\n    />\n  );\n}\n\nfunction ProgressValue({\n  className,\n  ...props\n}: React.ComponentProps<typeof ProgressPrimitive.Value>) {\n  return (\n    <ProgressPrimitive.Value\n      data-slot=\"progress-value\"\n      className={cn(\"text-sm text-muted-foreground\", className)}\n      {...props}\n    />\n  );\n}\n\nexport {\n  Progress,\n  ProgressIndicator,\n  ProgressLabel,\n  ProgressTrack,\n  ProgressValue,\n};\n",
+      "type": "registry:component"
+    }
+  ]
+}
