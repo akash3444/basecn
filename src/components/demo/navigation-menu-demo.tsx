@@ -65,7 +65,7 @@ export default function NavigationMenuDemo() {
               <li className="row-span-3">
                 <NavigationMenuLink
                   render={
-                    <a
+                    <Link
                       className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                       href="/"
                     />
