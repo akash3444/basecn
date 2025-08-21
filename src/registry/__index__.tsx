@@ -221,6 +221,18 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/menubar-demo")),
     src: "src/components/demo/menubar-demo.tsx",
   },
+  "navigation-menu-demo": {
+    component: React.lazy(
+      () => import("@/components/demo/navigation-menu-demo")
+    ),
+    src: "src/components/demo/navigation-menu-demo.tsx",
+  },
+  "navigation-menu-with-arrow": {
+    component: React.lazy(
+      () => import("@/components/demo/navigation-menu-with-arrow")
+    ),
+    src: "src/components/demo/navigation-menu-with-arrow.tsx",
+  },
   "pagination-demo": {
     component: React.lazy(() => import("@/components/demo/pagination-demo")),
     src: "src/components/demo/pagination-demo.tsx",

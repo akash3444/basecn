@@ -100,6 +100,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Fumadocs */
+  --color-fd-diff-remove: oklch(0.88 0.06 18 / 0.7);
+  --color-fd-diff-add: oklch(0.9 0.09 164 / 0.5);
+  --color-fd-diff-add-symbol: oklch(0.45 0.11 151);
 }
 
 .dark {
@@ -134,6 +139,12 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Fumadocs */
+  --color-fd-diff-remove: oklch(0.64 0.21 25 / 0.4);
+  --color-fd-diff-remove-symbol: oklch(0.81 0.1 20);
+  --color-fd-diff-add: oklch(0.87 0.14 154 / 0.25);
+  --color-fd-diff-add-symbol: oklch(0.96 0.04 157);
 }
 
 @layer base {
@@ -177,4 +188,8 @@
 }
 .shiki:not(.not-fumadocs-codeblock *)[data-line-numbers] code .line::after {
   @apply left-2 text-right w-[4ch] pr-2;
+}
+.shiki:not(.not-fumadocs-codeblock *) code .diff.remove,
+.shiki:not(.not-fumadocs-codeblock *) code .diff.add {
+  @apply opacity-100;
 }
