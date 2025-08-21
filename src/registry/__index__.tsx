@@ -309,6 +309,14 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/switch-demo")),
     src: "src/components/demo/switch-demo.tsx",
   },
+  "switch-disabled": {
+    component: React.lazy(() => import("@/components/demo/switch-disabled")),
+    src: "src/components/demo/switch-disabled.tsx",
+  },
+  "switch-color": {
+    component: React.lazy(() => import("@/components/demo/switch-color")),
+    src: "src/components/demo/switch-color.tsx",
+  },
   "tabs-demo": {
     component: React.lazy(() => import("@/components/demo/tabs-demo")),
     src: "src/components/demo/tabs-demo.tsx",
