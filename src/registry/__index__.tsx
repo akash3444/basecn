@@ -205,6 +205,34 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/form-demo")),
     src: "src/components/demo/form-demo.tsx",
   },
+  "checkbox-form": {
+    component: React.lazy(() => import("@/components/demo/checkbox-form")),
+    src: "src/components/demo/checkbox-form.tsx",
+  },
+  "radio-form": {
+    component: React.lazy(() => import("@/components/demo/radio-form")),
+    src: "src/components/demo/radio-form.tsx",
+  },
+  "select-form": {
+    component: React.lazy(() => import("@/components/demo/select-form")),
+    src: "src/components/demo/select-form.tsx",
+  },
+  "switch-form": {
+    component: React.lazy(() => import("@/components/demo/switch-form")),
+    src: "src/components/demo/switch-form.tsx",
+  },
+  "textarea-form": {
+    component: React.lazy(() => import("@/components/demo/textarea-form")),
+    src: "src/components/demo/textarea-form.tsx",
+  },
+  "combobox-form": {
+    component: React.lazy(() => import("@/components/demo/combobox-form")),
+    src: "src/components/demo/combobox-form.tsx",
+  },
+  "date-picker-form": {
+    component: React.lazy(() => import("@/components/demo/date-picker-form")),
+    src: "src/components/demo/date-picker-form.tsx",
+  },
   "hover-card-demo": {
     component: React.lazy(() => import("@/components/demo/hover-card-demo")),
     src: "src/components/demo/hover-card-demo.tsx",

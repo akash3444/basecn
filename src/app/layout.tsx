@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Databuddy } from "@databuddy/sdk";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,6 +81,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             trackWebVitals
             enableBatching
           />
+
+          <Toaster />
         </RootProvider>
       </body>
     </html>
