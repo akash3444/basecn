@@ -71,9 +71,8 @@ export default function CheckboxForm() {
         }}
         className="space-y-8"
       >
-        <form.AppField
-          name="items"
-          children={(field) => (
+        <form.AppField name="items">
+          {(field) => (
             <form.Item>
               <div className="mb-4">
                 <field.Label className="text-base">Sidebar</field.Label>
@@ -82,10 +81,8 @@ export default function CheckboxForm() {
                 </field.Description>
               </div>
               {items.map((item) => (
-                <form.AppField
-                  key={item.id}
-                  name={`items`}
-                  children={(field) => {
+                <form.AppField key={item.id} name="items">
+                  {(field) => {
                     return (
                       <form.Item className="flex flex-row items-center gap-2">
                         <field.Control>
@@ -111,12 +108,12 @@ export default function CheckboxForm() {
                       </form.Item>
                     );
                   }}
-                />
+                </form.AppField>
               ))}
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

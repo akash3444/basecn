@@ -66,9 +66,8 @@ export default function ComboboxForm() {
         }}
         className="space-y-6"
       >
-        <form.AppField
-          name="language"
-          children={(field) => (
+        <form.AppField name="language">
+          {(field) => (
             <form.Item className="flex flex-col">
               <field.Label>Language</field.Label>
               <Popover>
@@ -134,7 +133,7 @@ export default function ComboboxForm() {
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

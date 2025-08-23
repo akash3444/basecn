@@ -48,9 +48,8 @@ export default function DatePickerForm() {
         }}
         className="space-y-8"
       >
-        <form.AppField
-          name="dob"
-          children={(field) => (
+        <form.AppField name="dob">
+          {(field) => (
             <form.Item className="flex flex-col">
               <field.Label>Date of birth</field.Label>
               <Popover>
@@ -98,7 +97,7 @@ export default function DatePickerForm() {
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

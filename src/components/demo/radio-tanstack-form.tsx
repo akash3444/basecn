@@ -45,9 +45,8 @@ export default function RadioForm() {
         }}
         className="mx-auto space-y-6"
       >
-        <form.AppField
-          name="type"
-          children={(field) => (
+        <form.AppField name="type">
+          {(field) => (
             <form.Item className="space-y-3">
               <field.Label>Notify me about...</field.Label>
               <field.Control>
@@ -85,7 +84,7 @@ export default function RadioForm() {
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

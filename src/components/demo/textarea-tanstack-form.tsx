@@ -47,9 +47,8 @@ export default function TextareaForm() {
         }}
         className="w-2/3 space-y-6"
       >
-        <form.AppField
-          name="bio"
-          children={(field) => (
+        <form.AppField name="bio">
+          {(field) => (
             <form.Item>
               <field.Label>Bio</field.Label>
               <field.Control>
@@ -70,7 +69,7 @@ export default function TextareaForm() {
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

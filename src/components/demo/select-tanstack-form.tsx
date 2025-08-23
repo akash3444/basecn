@@ -46,9 +46,8 @@ export default function SelectForm() {
         }}
         className="mx-auto space-y-6"
       >
-        <form.AppField
-          name="email"
-          children={(field) => (
+        <form.AppField name="email">
+          {(field) => (
             <form.Item>
               <field.Label>Email</field.Label>
               <Select
@@ -79,7 +78,7 @@ export default function SelectForm() {
               <field.Message />
             </form.Item>
           )}
-        />
+        </form.AppField>
         <Button type="submit">Submit</Button>
       </form>
     </form.AppForm>

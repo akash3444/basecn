@@ -45,9 +45,8 @@ export default function SwitchForm() {
         <div>
           <h3 className="mb-4 text-lg font-medium">Email Notifications</h3>
           <div className="space-y-4">
-            <form.AppField
-              name="marketing_emails"
-              children={(field) => (
+            <form.AppField name="marketing_emails">
+              {(field) => (
                 <form.Item className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                   <div className="space-y-0.5">
                     <field.Label>Marketing emails</field.Label>
@@ -67,10 +66,9 @@ export default function SwitchForm() {
                   </field.Control>
                 </form.Item>
               )}
-            />
-            <form.AppField
-              name="security_emails"
-              children={(field) => (
+            </form.AppField>
+            <form.AppField name="security_emails">
+              {(field) => (
                 <form.Item className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                   <div className="space-y-0.5">
                     <field.Label>Security emails</field.Label>
@@ -92,7 +90,7 @@ export default function SwitchForm() {
                   </field.Control>
                 </form.Item>
               )}
-            />
+            </form.AppField>
           </div>
         </div>
         <Button type="submit">Submit</Button>
