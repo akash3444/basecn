@@ -21,9 +21,13 @@ export default async function ComponentPreview({
 
   const code = await fs.readFile(path.join(process.cwd(), src), "utf-8");
 
-  const codeWithUpdatedImports = code.replaceAll(
+  let codeWithUpdatedImports = code.replaceAll(
     "@/registry/components/ui/",
     "@/components/ui/"
+  );
+  codeWithUpdatedImports = codeWithUpdatedImports.replaceAll(
+    "@/components/ui/form-tanstack",
+    "@/components/ui/form"
   );
 
   return (

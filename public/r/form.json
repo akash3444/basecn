@@ -8,6 +8,9 @@
     "@base-ui-components/react",
     "react-hook-form"
   ],
+  "registryDependencies": [
+    "https://basecn.dev/r/label.json"
+  ],
   "files": [
     {
       "path": "src/registry/components/ui/form.tsx",

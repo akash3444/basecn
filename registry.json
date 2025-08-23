@@ -230,10 +230,25 @@
       "type": "registry:ui",
       "title": "Form",
       "description": "Renders a form built with React Hook Form.",
+      "registryDependencies": ["https://basecn.dev/r/label.json"],
       "dependencies": ["@base-ui-components/react", "react-hook-form"],
       "files": [
         {
           "path": "src/registry/components/ui/form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "form-tanstack",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Renders a form built with Tanstack Form.",
+      "registryDependencies": ["https://basecn.dev/r/label.json"],
+      "dependencies": ["@base-ui-components/react", "@tanstack/react-form"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/form-tanstack.tsx",
           "type": "registry:component"
         }
       ]

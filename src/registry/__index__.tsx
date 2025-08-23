@@ -209,29 +209,75 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/checkbox-form")),
     src: "src/components/demo/checkbox-form.tsx",
   },
+  "checkbox-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/checkbox-tanstack-form")
+    ),
+    src: "src/components/demo/checkbox-tanstack-form.tsx",
+  },
   "radio-form": {
     component: React.lazy(() => import("@/components/demo/radio-form")),
     src: "src/components/demo/radio-form.tsx",
+  },
+  "radio-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/radio-tanstack-form")
+    ),
+    src: "src/components/demo/radio-tanstack-form.tsx",
   },
   "select-form": {
     component: React.lazy(() => import("@/components/demo/select-form")),
     src: "src/components/demo/select-form.tsx",
   },
+  "select-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/select-tanstack-form")
+    ),
+    src: "src/components/demo/select-tanstack-form.tsx",
+  },
   "switch-form": {
     component: React.lazy(() => import("@/components/demo/switch-form")),
     src: "src/components/demo/switch-form.tsx",
+  },
+  "switch-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/switch-tanstack-form")
+    ),
+    src: "src/components/demo/switch-tanstack-form.tsx",
   },
   "textarea-form": {
     component: React.lazy(() => import("@/components/demo/textarea-form")),
     src: "src/components/demo/textarea-form.tsx",
   },
+  "textarea-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/textarea-tanstack-form")
+    ),
+    src: "src/components/demo/textarea-tanstack-form.tsx",
+  },
   "combobox-form": {
     component: React.lazy(() => import("@/components/demo/combobox-form")),
     src: "src/components/demo/combobox-form.tsx",
   },
+  "combobox-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-tanstack-form")
+    ),
+    src: "src/components/demo/combobox-tanstack-form.tsx",
+  },
   "date-picker-form": {
     component: React.lazy(() => import("@/components/demo/date-picker-form")),
     src: "src/components/demo/date-picker-form.tsx",
+  },
+  "date-picker-tanstack-form": {
+    component: React.lazy(
+      () => import("@/components/demo/date-picker-tanstack-form")
+    ),
+    src: "src/components/demo/date-picker-tanstack-form.tsx",
+  },
+  "form-tanstack-demo": {
+    component: React.lazy(() => import("@/components/demo/form-tanstack-demo")),
+    src: "src/components/demo/form-tanstack-demo.tsx",
   },
   "hover-card-demo": {
     component: React.lazy(() => import("@/components/demo/hover-card-demo")),

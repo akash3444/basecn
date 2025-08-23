@@ -185,6 +185,7 @@
 
 .shiki:not(.not-fumadocs-codeblock *)[data-line-numbers] code .line {
   padding-left: calc(var(--padding-left) + 10 * var(--spacing));
+  @apply border-l-2 border-transparent;
 }
 .shiki:not(.not-fumadocs-codeblock *)[data-line-numbers] code .line::after {
   @apply left-2 text-right w-[4ch] pr-2;
@@ -192,4 +193,8 @@
 .shiki:not(.not-fumadocs-codeblock *) code .diff.remove,
 .shiki:not(.not-fumadocs-codeblock *) code .diff.add {
   @apply opacity-100;
+}
+
+.shiki:not(.not-fumadocs-codeblock *) code .line.highlighted {
+  @apply bg-primary/5 border-primary/60;
 }

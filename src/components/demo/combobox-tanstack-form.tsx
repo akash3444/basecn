@@ -1,8 +1,6 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Check, ChevronsUpDown } from "lucide-react";
-import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -16,15 +14,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/registry/components/ui/command";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/registry/components/ui/form";
+import { createFormHook } from "@/registry/components/ui/form-tanstack";
 import {
   Popover,
   PopoverContent,
@@ -47,34 +37,42 @@ const languages = [
 const FormSchema = z.object({
   language: z.string({ error: "Please select a language." }),
 });
+type FormValues = z.infer<typeof FormSchema>;
+
+const { useAppForm } = createFormHook();
 
 export default function ComboboxForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const form = useAppForm({
+    defaultValues: {} as FormValues,
+    validators: { onChange: FormSchema },
+    onSubmit: ({ value }) => {
+      toast("You submitted the following values", {
+        description: (
+          <pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
+            <code className="text-white">{JSON.stringify(value, null, 2)}</code>
+          </pre>
+        ),
+        position: "top-center",
+      });
+    },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast("You submitted the following values", {
-      description: (
-        <pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "top-center",
-    });
-  }
-
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <FormField
-          control={form.control}
+    <form.AppForm>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          form.handleSubmit();
+        }}
+        className="space-y-6"
+      >
+        <form.AppField
           name="language"
-          render={({ field }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>Language</FormLabel>
+          children={(field) => (
+            <form.Item className="flex flex-col">
+              <field.Label>Language</field.Label>
               <Popover>
-                <FormControl>
+                <field.Control>
                   <PopoverTrigger
                     render={
                       <Button
@@ -82,19 +80,19 @@ export default function ComboboxForm() {
                         role="combobox"
                         className={cn(
                           "w-full justify-between",
-                          !field.value && "text-muted-foreground"
+                          !field.state.value && "text-muted-foreground"
                         )}
                       />
                     }
                   >
-                    {field.value
+                    {field.state.value
                       ? languages.find(
-                          (language) => language.value === field.value
+                          (language) => language.value === field.state.value
                         )?.label
                       : "Select language"}
                     <ChevronsUpDown className="opacity-50" />
                   </PopoverTrigger>
-                </FormControl>
+                </field.Control>
                 <PopoverPositioner align="start">
                   <PopoverContent className="p-0">
                     <Command>
@@ -110,14 +108,14 @@ export default function ComboboxForm() {
                               value={language.label}
                               key={language.value}
                               onSelect={() => {
-                                form.setValue("language", language.value);
+                                field.handleChange(language.value);
                               }}
                             >
                               {language.label}
                               <Check
                                 className={cn(
                                   "ml-auto",
-                                  language.value === field.value
+                                  language.value === field.state.value
                                     ? "opacity-100"
                                     : "opacity-0"
                                 )}
@@ -130,15 +128,15 @@ export default function ComboboxForm() {
                   </PopoverContent>
                 </PopoverPositioner>
               </Popover>
-              <FormDescription>
+              <field.Description>
                 This is the language that will be used in the dashboard.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
+              </field.Description>
+              <field.Message />
+            </form.Item>
           )}
         />
         <Button type="submit">Submit</Button>
       </form>
-    </Form>
+    </form.AppForm>
   );
 }

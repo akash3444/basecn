@@ -17,8 +17,10 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
       <CodeBlock
         data-line-numbers
         className={cn(
-          "p-0 border-0", // figure
-          "[&>div:not(:has(pre))]:size-8 [&>div:not(:has(pre))]:rounded-md", // copy button
+          "p-0", // figure
+          "[&>div:has(figcaption)]:ps-5.5 [&>div:has(figcaption)]:pe-1", // Header with title and copy button
+          "[&>div:has(figcaption)+div]:border-t [&>div:has(figcaption)+div]:rounded-t-none", // pre container when the header is visible
+          "[&>div:not(:has(pre),:has(figcaption))]:size-8 [&>div:not(:has(pre),:has(figcaption))]:rounded-md", // copy button
           "[&>div:has(pre)]:py-4 [&>div:has(pre)]:border-0 [&>div:has(pre)]:max-h-[400px]" // pre container
         )}
         {...props}
@@ -30,6 +32,9 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ),
     code: ({ ref: _ref, className, ...props }) => (
       <code className={cn("border-border/50 py-0.5", className)} {...props} />
+    ),
+    a: ({ ref: _ref, className, ...props }) => (
+      <a className={cn("has-[code]:decoration-dotted", className)} {...props} />
     ),
     CodeBlockCommand,
     ComponentPreview,
