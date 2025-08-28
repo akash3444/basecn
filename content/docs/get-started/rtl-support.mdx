@@ -1,0 +1,64 @@
+---
+title: RTL Support
+description: Guide for implementing right-to-left (RTL) text direction support in Base UI components.
+---
+
+Right-to-left (RTL) text direction support is essential for creating inclusive applications that serve users of languages such as Arabic, Hebrew, Persian, and Urdu. This guide demonstrates how to properly implement RTL support using Base UI components.
+
+<ComponentPreview name="slider-rtl" />
+
+## Understanding RTL Implementation
+
+RTL support requires both semantic markup and directional context to ensure components render and behave correctly for right-to-left languages. Base UI components are designed to automatically adapt their layout and interaction patterns when placed within an RTL context.
+
+## Implementation
+
+To enable RTL support for Base UI components, you need to:
+
+1. Set the `dir="rtl"` attribute on a parent container
+2. Wrap your components with the `DirectionProvider` from Base UI
+3. Configure the provider with `direction="rtl"`
+
+### Basic Usage
+
+```tsx
+import { DirectionProvider } from "@base-ui-components/react/direction-provider";
+import { Slider } from "@/components/ui/slider";
+
+export default function RTLExample() {
+  return (
+    <div dir="rtl">
+      <DirectionProvider direction="rtl">
+        <Slider defaultValue={[50]} max={100} step={1} className="max-w-sm" />
+      </DirectionProvider>
+    </div>
+  );
+}
+```
+
+### Application-wide RTL Support
+
+For applications that need to support RTL throughout, configure the direction at your application root:
+
+```tsx
+// app/layout.tsx or your root component
+import { DirectionProvider } from "@base-ui-components/react/direction-provider";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const direction = "rtl"; // This could come from user preferences or locale detection
+  
+  return (
+    <html lang="ar" dir={direction}>
+      <body>
+        <DirectionProvider direction={direction}>
+          {children}
+        </DirectionProvider>
+      </body>
+    </html>
+  );
+}
+```

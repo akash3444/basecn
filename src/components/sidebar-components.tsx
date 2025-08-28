@@ -51,5 +51,6 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
 
 const newPages = [
   "get-started/namespaced-registry",
+  "get-started/rtl-support",
   "components/form-with-tanstack-form",
 ];
