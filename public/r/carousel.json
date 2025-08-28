@@ -9,7 +9,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://basecn.dev/r/button.json"
+    "@basecn/button"
   ],
   "files": [
     {

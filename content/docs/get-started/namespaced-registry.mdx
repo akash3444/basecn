@@ -1,0 +1,33 @@
+---
+title: Namespaced Registry
+description: Install basecn components using a namespaced registry.
+---
+
+## What is a Namespaced Registry?
+
+With the release of Shadcn CLI 3.0, you can now install components from basecn using the `@basecn/component-name` format. This simplifies the installation process by eliminating the need to use the `https://basecn.dev/r/component-name.json` format.
+
+## How to Use a Namespaced Registry
+
+To configure the basecn registry in your `components.json`, add the following:
+
+```json title="components.json"
+{
+  // [!code highlight:3]
+  "registries": {
+    "@basecn": "https://basecn.dev/r/{name}.json"
+  }
+}
+```
+
+Once configured, you can install components from basecn using the `@basecn/component-name` format.
+
+For example, to install the `button` component, use the following command:
+
+```bash
+npx shadcn@latest add @basecn/button
+```
+
+This command will install the `button` component from the Basecn registry.
+
+<Callout>Explore more features with Shadcn CLI 3.0. Check the [official changelog](https://ui.shadcn.com/docs/changelog) for detailed information.</Callout>

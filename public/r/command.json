@@ -10,7 +10,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://basecn.dev/r/dialog.json"
+    "@basecn/dialog"
   ],
   "files": [
     {

@@ -1,12 +1,13 @@
 import { config } from "@/config";
-import { CodeBlock } from "./code-block";
-import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
+import { Separator } from "@/registry/components/ui/separator";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/registry/components/ui/tabs";
+import { CodeBlock } from "./code-block";
+import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
 
 const tabs = [
   {
@@ -46,12 +47,12 @@ const getRegistryUrl = (component: string) => {
 
 export function CodeBlockCommand({
   component,
-  isShadcnComponent: shadcnComponent,
+  isShadcnComponent,
 }: {
   component: string;
   isShadcnComponent?: boolean;
 }) {
-  const registryUrl = shadcnComponent ? component : getRegistryUrl(component);
+  const registryUrl = isShadcnComponent ? component : getRegistryUrl(component);
 
   return (
     <Tabs defaultValue="pnpm" className="[&_figure]:mt-0">
@@ -73,6 +74,31 @@ export function CodeBlockCommand({
             lang="bash"
             code={getInstallationCommand(tab.value, registryUrl) || ""}
           />
+
+          {!isShadcnComponent && (
+            <>
+              <div className="my-6 flex items-center justify-center gap-2 overflow-hidden">
+                <Separator />
+                <span className="text-sm text-muted-foreground uppercase">
+                  or
+                </span>
+                <Separator />
+              </div>
+
+              <p className="text-sm text-muted-foreground">
+                If you are using a namespaced registry, you can use the
+                following command:
+              </p>
+
+              <CodeBlock
+                lang="bash"
+                code={
+                  getInstallationCommand(tab.value, `@basecn/${component}`) ||
+                  ""
+                }
+              />
+            </>
+          )}
         </TabsContent>
       ))}
     </Tabs>

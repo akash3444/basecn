@@ -11,11 +11,11 @@
   ],
   "registryDependencies": [
     "skeleton",
-    "https://basecn.dev/r/button.json",
-    "https://basecn.dev/r/input.json",
-    "https://basecn.dev/r/separator.json",
-    "https://basecn.dev/r/sheet.json",
-    "https://basecn.dev/r/tooltip.json"
+    "@basecn/button",
+    "@basecn/input",
+    "@basecn/separator",
+    "@basecn/sheet",
+    "@basecn/tooltip"
   ],
   "files": [
     {

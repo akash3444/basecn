@@ -23,9 +23,7 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
   const pathname = usePathname();
 
   // If the item is a new component, add a new badge to the sidebar
-  const isNew = newComponents.some((component) =>
-    (item.url as string)?.endsWith(`/components/${component}`)
-  );
+  const isNew = newPages.some((page) => (item.url as string)?.endsWith(page));
 
   return (
     <Link
@@ -51,4 +49,7 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
   );
 };
 
-const newComponents = ["form-with-tanstack-form"];
+const newPages = [
+  "get-started/namespaced-registry",
+  "components/form-with-tanstack-form",
+];

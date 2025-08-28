@@ -9,7 +9,7 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "https://basecn.dev/r/toggle.json"
+    "@basecn/toggle"
   ],
   "files": [
     {

@@ -9,7 +9,7 @@
     "react-hook-form"
   ],
   "registryDependencies": [
-    "https://basecn.dev/r/label.json"
+    "@basecn/label"
   ],
   "files": [
     {

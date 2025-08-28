@@ -123,7 +123,7 @@
       "type": "registry:ui",
       "title": "Carousel",
       "description": "A carousel with motion and swipe built using Embla.",
-      "registryDependencies": ["https://basecn.dev/r/button.json"],
+      "registryDependencies": ["@basecn/button"],
       "dependencies": ["embla-carousel-react", "lucide-react"],
       "files": [
         {
@@ -137,7 +137,7 @@
       "type": "registry:ui",
       "title": "Calendar",
       "description": "A date field component that allows users to enter and edit date.",
-      "registryDependencies": ["https://basecn.dev/r/button.json"],
+      "registryDependencies": ["@basecn/button"],
       "dependencies": ["react-day-picker"],
       "files": [
         {
@@ -177,7 +177,7 @@
       "type": "registry:ui",
       "title": "Command",
       "description": "Fast, composable, unstyled command menu for React.",
-      "registryDependencies": ["https://basecn.dev/r/dialog.json"],
+      "registryDependencies": ["@basecn/dialog"],
       "dependencies": ["@base-ui-components/react", "cmdk", "lucide-react"],
       "files": [
         {
@@ -230,7 +230,7 @@
       "type": "registry:ui",
       "title": "Form",
       "description": "Renders a form built with React Hook Form.",
-      "registryDependencies": ["https://basecn.dev/r/label.json"],
+      "registryDependencies": ["@basecn/label"],
       "dependencies": ["@base-ui-components/react", "react-hook-form"],
       "files": [
         {
@@ -244,7 +244,7 @@
       "type": "registry:ui",
       "title": "Form",
       "description": "Renders a form built with Tanstack Form.",
-      "registryDependencies": ["https://basecn.dev/r/label.json"],
+      "registryDependencies": ["@basecn/label"],
       "dependencies": ["@base-ui-components/react", "@tanstack/react-form"],
       "files": [
         {
@@ -326,7 +326,7 @@
       "type": "registry:ui",
       "title": "Pagination",
       "description": "Pagination with page navigation, next and previous links.",
-      "registryDependencies": ["https://basecn.dev/r/button.json"],
+      "registryDependencies": ["@basecn/button"],
       "dependencies": ["lucide-react"],
       "files": [
         {
@@ -433,11 +433,11 @@
       "description": "A composable, themeable and customizable sidebar component.",
       "registryDependencies": [
         "skeleton",
-        "https://basecn.dev/r/button.json",
-        "https://basecn.dev/r/input.json",
-        "https://basecn.dev/r/separator.json",
-        "https://basecn.dev/r/sheet.json",
-        "https://basecn.dev/r/tooltip.json"
+        "@basecn/button",
+        "@basecn/input",
+        "@basecn/separator",
+        "@basecn/sheet",
+        "@basecn/tooltip"
       ],
       "dependencies": [
         "@base-ui-components/react",
@@ -512,7 +512,7 @@
       "type": "registry:ui",
       "title": "Toggle Group",
       "description": "A set of two-state buttons that can be toggled on or off.",
-      "registryDependencies": ["https://basecn.dev/r/toggle.json"],
+      "registryDependencies": ["@basecn/toggle"],
       "dependencies": ["@base-ui-components/react", "class-variance-authority"],
       "files": [
         {
