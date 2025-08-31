@@ -9,19 +9,19 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/components/ui/alert-dialog";
-import { Button } from "@/registry/components/ui/button";
+import { Button, buttonVariants } from "@/registry/components/ui/button";
 import { OctagonAlert } from "lucide-react";
 
-export default function AlertDialogWithIcon() {
+export default function AlertDialogDestructive() {
   return (
     <AlertDialog>
       <AlertDialogTrigger render={<Button variant="outline" />}>
         Show Dialog
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <AlertDialogHeader>
+        <AlertDialogHeader className="rounded-none">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
-            <OctagonAlert className="size-5 shrink-0 mt-1" />
+            <OctagonAlert className="size-5 shrink-0 mt-1 text-destructive fill-destructive/10" />
             <div className="flex flex-col gap-1">
               <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
               <AlertDialogDescription>
@@ -33,7 +33,11 @@ export default function AlertDialogWithIcon() {
         </AlertDialogHeader>
         <AlertDialogFooter className="mt-2">
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction
+            className={buttonVariants({ variant: "destructive" })}
+          >
+            Continue
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

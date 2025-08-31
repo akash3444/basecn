@@ -87,6 +87,24 @@ export const components: Record<
     ),
     src: "src/components/demo/alert-dialog-with-icon.tsx",
   },
+  "alert-dialog-destructive": {
+    component: React.lazy(
+      () => import("@/components/demo/alert-dialog-destructive")
+    ),
+    src: "src/components/demo/alert-dialog-destructive.tsx",
+  },
+  "alert-dialog-header": {
+    component: React.lazy(
+      () => import("@/components/demo/alert-dialog-header")
+    ),
+    src: "src/components/demo/alert-dialog-header.tsx",
+  },
+  "alert-dialog-with-close-button": {
+    component: React.lazy(
+      () => import("@/components/demo/alert-dialog-with-close-button")
+    ),
+    src: "src/components/demo/alert-dialog-with-close-button.tsx",
+  },
   "badge-demo": {
     component: React.lazy(() => import("@/components/demo/badge-demo")),
     src: "src/components/demo/badge-demo.tsx",
