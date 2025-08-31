@@ -319,6 +319,14 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/progress-demo")),
     src: "src/components/demo/progress-demo.tsx",
   },
+  "progress-color": {
+    component: React.lazy(() => import("@/components/demo/progress-color")),
+    src: "src/components/demo/progress-color.tsx",
+  },
+  "progress-shape": {
+    component: React.lazy(() => import("@/components/demo/progress-shape")),
+    src: "src/components/demo/progress-shape.tsx",
+  },
   "progress-with-value": {
     component: React.lazy(
       () => import("@/components/demo/progress-with-value")
