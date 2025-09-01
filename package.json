@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "lint": "next lint",
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbopack",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
     "registry:build": "shadcn build"
@@ -27,11 +27,11 @@
     "fumadocs-ui": "15.6.9",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
-    "next": "15.4.5",
+    "next": "15.5.2",
     "next-themes": "^0.4.6",
-    "react": "^19.1.1",
+    "react": "19.1.1",
     "react-day-picker": "^9.8.1",
-    "react-dom": "^19.1.1",
+    "react-dom": "19.1.1",
     "react-hook-form": "^7.62.0",
     "shadcn": "2.9.3-canary.0",
     "sonner": "^2.0.7",
@@ -42,14 +42,20 @@
     "@tailwindcss/postcss": "^4.1.11",
     "@types/mdx": "^2.0.13",
     "@types/node": "24.1.0",
-    "@types/react": "^19.1.9",
-    "@types/react-dom": "^19.1.7",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
     "eslint": "^8",
-    "eslint-config-next": "15.4.5",
+    "eslint-config-next": "15.5.2",
     "postcss": "^8.5.6",
     "shiki": "^3.11.0",
     "tailwindcss": "^4.1.11",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.1.12",
+      "@types/react-dom": "19.1.9"
+    }
   }
 }
