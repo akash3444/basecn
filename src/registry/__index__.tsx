@@ -11,6 +11,16 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/aspect-ratio-demo")),
     src: "src/components/demo/aspect-ratio-demo.tsx",
   },
+  "aspect-ratio-square": {
+    component: React.lazy(
+      () => import("@/components/demo/aspect-ratio-square")
+    ),
+    src: "src/components/demo/aspect-ratio-square.tsx",
+  },
+  "aspect-ratio-video": {
+    component: React.lazy(() => import("@/components/demo/aspect-ratio-video")),
+    src: "src/components/demo/aspect-ratio-video.tsx",
+  },
   "avatar-demo": {
     component: React.lazy(() => import("@/components/demo/avatar-demo")),
     src: "src/components/demo/avatar-demo.tsx",
