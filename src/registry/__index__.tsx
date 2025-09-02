@@ -119,6 +119,22 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/badge-demo")),
     src: "src/components/demo/badge-demo.tsx",
   },
+  "badge-variants": {
+    component: React.lazy(() => import("@/components/demo/badge-variants")),
+    src: "src/components/demo/badge-variants.tsx",
+  },
+  "badge-status": {
+    component: React.lazy(() => import("@/components/demo/badge-status")),
+    src: "src/components/demo/badge-status.tsx",
+  },
+  "badge-image": {
+    component: React.lazy(() => import("@/components/demo/badge-image")),
+    src: "src/components/demo/badge-image.tsx",
+  },
+  "badge-indicator": {
+    component: React.lazy(() => import("@/components/demo/badge-indicator")),
+    src: "src/components/demo/badge-indicator.tsx",
+  },
   "breadcrumb-demo": {
     component: React.lazy(() => import("@/components/demo/breadcrumb-demo")),
     src: "src/components/demo/breadcrumb-demo.tsx",
