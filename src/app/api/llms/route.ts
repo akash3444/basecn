@@ -1,8 +1,7 @@
-import { notFound } from "next/navigation";
 import { NextResponse, type NextRequest } from "next/server";
 
-import { source } from "@/lib/source";
 import { config } from "@/config";
+import { source } from "@/lib/source";
 
 export const revalidate = false;
 
@@ -50,10 +49,7 @@ const generateLLMsText = (tree: typeof source.pageTree) => {
   return [...introduction, ...treeText].join("\n");
 };
 
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: Promise<{ slug: string[] }> }
-) {
+export async function GET(_req: NextRequest) {
   const text = generateLLMsText(source.pageTree);
 
   return new NextResponse(text, {
