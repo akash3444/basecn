@@ -1,4 +1,5 @@
 import { DocsFooter } from "@/components/docs-footer";
+import { MarkdownActions } from "@/components/markdown-actions";
 import { Button } from "@/components/ui/button";
 import { source } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
@@ -31,41 +32,50 @@ export default async function Page(props: {
         component: <DocsFooter />,
       }}
     >
-      <DocsTitle className="text-4xl">{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0 -mt-1">
-        {page.data.description}
-      </DocsDescription>
-      <div className="mb-8 flex items-center gap-2">
-        {page.data.links?.docs && (
-          <Button
-            variant="secondary"
-            className="h-6 text-xs !px-2 gap-1.5"
-            asChild
-          >
-            <Link
-              href={page.data.links.docs}
-              target="_blank"
-              rel="noopener noreferrer"
+      <div className="flex flex-col">
+        <div className="flex items-center justify-between gap-4">
+          <DocsTitle className="text-4xl">{page.data.title}</DocsTitle>
+          <MarkdownActions
+            content={page.data.content}
+            className="hidden lg:flex"
+          />
+        </div>
+        <DocsDescription className="mt-3 mb-5">
+          {page.data.description}
+        </DocsDescription>
+        <MarkdownActions content={page.data.content} className="lg:hidden" />
+        <div className="mb-8 flex items-center gap-2">
+          {page.data.links?.docs && (
+            <Button
+              variant="secondary"
+              className="h-6 text-xs !px-2 gap-1.5"
+              asChild
             >
-              Docs <ArrowUpRight className="size-3" />
-            </Link>
-          </Button>
-        )}
-        {page.data.links?.api && (
-          <Button
-            variant="secondary"
-            className="h-6 text-xs !px-2 gap-1.5"
-            asChild
-          >
-            <Link
-              href={page.data.links.api}
-              target="_blank"
-              rel="noopener noreferrer"
+              <Link
+                href={page.data.links.docs}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Docs <ArrowUpRight className="size-3" />
+              </Link>
+            </Button>
+          )}
+          {page.data.links?.api && (
+            <Button
+              variant="secondary"
+              className="h-6 text-xs !px-2 gap-1.5"
+              asChild
             >
-              API Reference <ArrowUpRight className="size-3" />
-            </Link>
-          </Button>
-        )}
+              <Link
+                href={page.data.links.api}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                API Reference <ArrowUpRight className="size-3" />
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
       <DocsBody>
         <MDXContent
