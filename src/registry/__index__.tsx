@@ -193,6 +193,28 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/calendar-demo")),
     src: "src/components/demo/calendar-demo.tsx",
   },
+  "calendar-range": {
+    component: React.lazy(() => import("@/components/demo/calendar-range")),
+    src: "src/components/demo/calendar-range.tsx",
+  },
+  "calendar-month-year-selector": {
+    component: React.lazy(
+      () => import("@/components/demo/calendar-month-year-selector")
+    ),
+    src: "src/components/demo/calendar-month-year-selector.tsx",
+  },
+  "calendar-date-of-birth-picker": {
+    component: React.lazy(
+      () => import("@/components/demo/calendar-date-of-birth-picker")
+    ),
+    src: "src/components/demo/calendar-date-of-birth-picker.tsx",
+  },
+  "calendar-date-and-time-picker": {
+    component: React.lazy(
+      () => import("@/components/demo/calendar-date-and-time-picker")
+    ),
+    src: "src/components/demo/calendar-date-and-time-picker.tsx",
+  },
   "carousel-demo": {
     component: React.lazy(() => import("@/components/demo/carousel-demo")),
     src: "src/components/demo/carousel-demo.tsx",
