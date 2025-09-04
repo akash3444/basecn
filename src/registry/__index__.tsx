@@ -281,6 +281,42 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/combobox-with-icon")),
     src: "src/components/demo/combobox-with-icon.tsx",
   },
+  "combobox-baseui-demo": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-demo")
+    ),
+    src: "src/components/demo/combobox-baseui-demo.tsx",
+  },
+  "combobox-baseui-chips": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-chips")
+    ),
+    src: "src/components/demo/combobox-baseui-chips.tsx",
+  },
+  "combobox-baseui-input-inside-popup": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-input-inside-popup")
+    ),
+    src: "src/components/demo/combobox-baseui-input-inside-popup.tsx",
+  },
+  "combobox-baseui-groups": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-groups")
+    ),
+    src: "src/components/demo/combobox-baseui-groups.tsx",
+  },
+  "combobox-baseui-separator": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-separator")
+    ),
+    src: "src/components/demo/combobox-baseui-separator.tsx",
+  },
+  "combobox-baseui-creatable": {
+    component: React.lazy(
+      () => import("@/components/demo/combobox-baseui-creatable")
+    ),
+    src: "src/components/demo/combobox-baseui-creatable.tsx",
+  },
   "command-demo": {
     component: React.lazy(() => import("@/components/demo/command-demo")),
     src: "src/components/demo/command-demo.tsx",

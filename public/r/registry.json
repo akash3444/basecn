@@ -200,6 +200,25 @@
         }
       ]
     },
+
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "An input combined with a list of predefined items to select.",
+      "registryDependencies": [
+        "@basecn/input",
+        "@basecn/button",
+        "@basecn/separator"
+      ],
+      "dependencies": ["@base-ui-components/react", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/combobox.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
     {
       "name": "context-menu",
       "type": "registry:ui",
