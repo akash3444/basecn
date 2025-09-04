@@ -41,6 +41,20 @@
       }
     },
     {
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "title": "Autocomplete",
+      "description": "An input that suggests options as you type.",
+      "registryDependencies": ["@basecn/input", "@basecn/button"],
+      "dependencies": ["@base-ui-components/react", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/autocomplete.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",

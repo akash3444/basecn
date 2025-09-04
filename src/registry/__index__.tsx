@@ -115,6 +115,36 @@ export const components: Record<
     ),
     src: "src/components/demo/alert-dialog-with-close-button.tsx",
   },
+  "autocomplete-demo": {
+    component: React.lazy(() => import("@/components/demo/autocomplete-demo")),
+    src: "src/components/demo/autocomplete-demo.tsx",
+  },
+  "autocomplete-group": {
+    component: React.lazy(() => import("@/components/demo/autocomplete-group")),
+    src: "src/components/demo/autocomplete-group.tsx",
+  },
+  "autocomplete-limit-results": {
+    component: React.lazy(
+      () => import("@/components/demo/autocomplete-limit-results")
+    ),
+    src: "src/components/demo/autocomplete-limit-results.tsx",
+  },
+  "autocomplete-auto-highlight": {
+    component: React.lazy(
+      () => import("@/components/demo/autocomplete-auto-highlight")
+    ),
+    src: "src/components/demo/autocomplete-auto-highlight.tsx",
+  },
+  "autocomplete-clear": {
+    component: React.lazy(() => import("@/components/demo/autocomplete-clear")),
+    src: "src/components/demo/autocomplete-clear.tsx",
+  },
+  "autocomplete-emoji-picker": {
+    component: React.lazy(
+      () => import("@/components/demo/autocomplete-emoji-picker")
+    ),
+    src: "src/components/demo/autocomplete-emoji-picker.tsx",
+  },
   "badge-demo": {
     component: React.lazy(() => import("@/components/demo/badge-demo")),
     src: "src/components/demo/badge-demo.tsx",

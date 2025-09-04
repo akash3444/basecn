@@ -52,5 +52,6 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
 const newPages = [
   "get-started/namespaced-registry",
   "/llms.txt",
+  "components/autocomplete",
   "components/form-with-tanstack-form",
 ];

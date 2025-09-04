@@ -11,7 +11,7 @@
     "registry:build": "shadcn build"
   },
   "dependencies": {
-    "@base-ui-components/react": "1.0.0-beta.2",
+    "@base-ui-components/react": "1.0.0-beta.3",
     "@databuddy/sdk": "^1.4.2",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-slot": "^1.2.3",
