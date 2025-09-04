@@ -192,7 +192,9 @@ export default function ComboboxCreatableDemo() {
                     <span className="col-start-1">
                       <PlusIcon className="size-3" />
                     </span>
-                    <div className="col-start-2">Create "{item.creatable}"</div>
+                    <div className="col-start-2">
+                      Create &quot;{item.creatable}&quot;
+                    </div>
                   </ComboboxItem>
                 ) : (
                   <ComboboxItem key={item.id} value={item}>
