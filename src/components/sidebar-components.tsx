@@ -53,5 +53,6 @@ const newPages = [
   "get-started/namespaced-registry",
   "/llms.txt",
   "components/autocomplete",
+  "components/combobox-baseui",
   "components/form-with-tanstack-form",
 ];
