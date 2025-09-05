@@ -48,6 +48,12 @@ export default function AutocompleteLimitResults() {
         <AutocompletePositioner sideOffset={6}>
           <AutocompletePopup>
             <AutocompleteEmpty>No tags found.</AutocompleteEmpty>
+
+            <AutocompleteStatus>
+              {moreCount > 0
+                ? `Hiding ${moreCount} results (type a more specific query to narrow results)`
+                : null}
+            </AutocompleteStatus>
             <AutocompleteList>
               {(tag) => (
                 <AutocompleteItem key={tag.id} value={tag.value}>

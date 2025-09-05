@@ -30,7 +30,7 @@ export default function AutocompleteGroupedItems() {
             <AutocompleteList>
               {(group: TagGroup) => (
                 <AutocompleteGroup key={group.value} items={group.items}>
-                  <AutocompleteGroupLabel className="sticky top-0 z-[1] uppercase">
+                  <AutocompleteGroupLabel className="sticky top-0 z-1 uppercase">
                     {group.value}
                   </AutocompleteGroupLabel>
                   <AutocompleteCollection>

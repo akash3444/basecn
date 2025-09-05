@@ -55,14 +55,6 @@ export default function AutocompleteEmojiPicker() {
 
   return (
     <div className="relative w-full max-w-xs flex items-center gap-2">
-      <Input
-        ref={textInputRef}
-        type="text"
-        placeholder="Type your message…"
-        value={textValue}
-        className="ps-9"
-        onChange={(event) => setTextValue(event.target.value)}
-      />
       <Autocomplete
         items={emojiGroups}
         cols={COLUMNS}
@@ -83,7 +75,7 @@ export default function AutocompleteEmojiPicker() {
         >
           <Smile className="size-4.5" />
         </AutocompleteTrigger>
-        <AutocompletePositioner sideOffset={6} align="end">
+        <AutocompletePositioner sideOffset={6} align="start">
           <AutocompletePopup className="w-full">
             <div className="px-3 mt-2">
               <AutocompleteInput
@@ -114,10 +106,9 @@ export default function AutocompleteEmojiPicker() {
                               handleInsertEmoji(rowItem.emoji);
                               setPickerOpen(false);
                             }}
+                            className="text-2xl leading-none ml-1"
                           >
-                            <span className="text-2xl leading-none">
-                              {rowItem.emoji}
-                            </span>
+                            {rowItem.emoji}
                           </AutocompleteItem>
                         ))}
                       </AutocompleteRow>
@@ -129,7 +120,15 @@ export default function AutocompleteEmojiPicker() {
           </AutocompletePopup>
         </AutocompletePositioner>
       </Autocomplete>
-      <Button size="icon">
+      <Input
+        ref={textInputRef}
+        type="text"
+        placeholder="Type your message…"
+        value={textValue}
+        className="ps-9"
+        onChange={(event) => setTextValue(event.target.value)}
+      />
+      <Button size="icon" className="size-8.5">
         <Send />
       </Button>
     </div>

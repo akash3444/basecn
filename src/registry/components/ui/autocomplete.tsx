@@ -89,7 +89,7 @@ function AutocompleteItem({
     <AutocompletePrimitive.Item
       data-slot="autocomplete-item"
       className={cn(
-        "py-1.5 px-3 rounded-md data-highlighted:bg-accent data-highlighted:text-accent-foreground",
+        "py-1.5 px-3 text-sm rounded-md data-highlighted:bg-accent data-highlighted:text-accent-foreground",
         className
       )}
       {...props}
@@ -118,7 +118,7 @@ function AutocompleteGroupLabel({
     <AutocompletePrimitive.GroupLabel
       data-slot="autocomplete-group-label"
       className={cn(
-        "sticky top-0 z-1 mb-0 mt-0 ml-0 bg-popover pl-3 py-2 text-sm font-semibold",
+        "bg-popover pl-3 py-2 text-sm text-muted-foreground font-medium",
         className
       )}
       {...props}
@@ -145,7 +145,7 @@ function AutocompleteStatus({
     <AutocompletePrimitive.Status
       data-slot="autocomplete-status"
       className={cn(
-        "px-5 py-2 text-sm text-muted-foreground pt-1 pb-3 empty:m-0 empty:p-0",
+        "px-4.5 text-sm text-muted-foreground my-3 empty:m-0 empty:p-0",
         className
       )}
       {...props}
@@ -164,7 +164,7 @@ function AutocompleteClear({
       className={cn(className)}
       {...props}
     >
-      {children ?? <XIcon className="w-4 h-4" />}
+      {children ?? <XIcon className="w-4 h-4 text-muted-foreground" />}
     </AutocompletePrimitive.Clear>
   );
 }
