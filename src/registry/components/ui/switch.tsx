@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 function Switch({
   className,
+  children,
   ...props
 }: React.ComponentProps<typeof SwitchPrimitive.Root>) {
   return (
@@ -16,14 +17,25 @@ function Switch({
       )}
       {...props}
     >
-      <SwitchPrimitive.Thumb
-        data-slot="switch-thumb"
-        className={cn(
-          "bg-background dark:data-[unchecked]:bg-foreground dark:data-[checked]:bg-primary-foreground pointer-events-none block size-4 rounded-full ring-0 transition-transform data-[checked]:translate-x-[calc(100%-2px)] data-[unchecked]:translate-x-0"
-        )}
-      />
+      {children ?? <SwitchThumb />}
     </SwitchPrimitive.Root>
   );
 }
 
-export { Switch };
+function SwitchThumb({
+  className,
+  ...props
+}: React.ComponentProps<typeof SwitchPrimitive.Thumb>) {
+  return (
+    <SwitchPrimitive.Thumb
+      data-slot="switch-thumb"
+      className={cn(
+        "bg-background dark:data-[unchecked]:bg-foreground dark:data-[checked]:bg-primary-foreground pointer-events-none block size-4 rounded-full ring-0 transition-transform data-[checked]:translate-x-[calc(100%-2px)] data-[unchecked]:translate-x-0",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+export { Switch, SwitchThumb };
