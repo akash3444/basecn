@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/registry/components/ui/button";
 import {
   Combobox,
   ComboboxEmpty,

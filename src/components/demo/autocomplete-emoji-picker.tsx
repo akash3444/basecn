@@ -4,7 +4,6 @@ import * as React from "react";
 
 import {
   Autocomplete,
-  AutocompleteCollection,
   AutocompleteEmpty,
   AutocompleteGroup,
   AutocompleteGroupLabel,
@@ -16,8 +15,8 @@ import {
   AutocompleteRow,
   AutocompleteTrigger,
 } from "@/registry/components/ui/autocomplete";
-import { Input } from "@/registry/components/ui/input";
 import { Button } from "@/registry/components/ui/button";
+import { Input } from "@/registry/components/ui/input";
 import { Send, Smile } from "lucide-react";
 
 export default function AutocompleteEmojiPicker() {

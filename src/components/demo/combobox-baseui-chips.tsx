@@ -15,7 +15,6 @@ import {
   ComboboxValue,
 } from "@/registry/components/ui/combobox";
 import { Label } from "@/registry/components/ui/label";
-import { XIcon } from "lucide-react";
 import * as React from "react";
 
 export default function ComboboxChipsDemo() {
