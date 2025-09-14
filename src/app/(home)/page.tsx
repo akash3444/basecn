@@ -23,10 +23,12 @@ export default function HomePage() {
           Beautifully crafted shadcn/ui components powered by Base UI, providing
           a solid foundation to build modern and elegant interfaces with speed.
         </p>
-        <Button className="mt-8" size="xl" asChild>
-          <Link href="/docs/components/accordion">
-            Get Started <ArrowUpRight />
-          </Link>
+        <Button
+          className="mt-8"
+          size="xl"
+          render={<Link href="/docs/components/accordion" />}
+        >
+          Get Started <ArrowUpRight />
         </Button>
       </div>
 

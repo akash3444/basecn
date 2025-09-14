@@ -38,10 +38,17 @@ export default function RadixUIIndependentInfo({
         please visit the official shadcn/ui documentation:
       </p>
 
-      <Button asChild className="not-prose !px-5">
-        <Link href={officialDocsUrl} target="_blank" rel="noopener noreferrer">
-          View Official Docs <ArrowUpRightIcon />
-        </Link>
+      <Button
+        render={
+          <Link
+            href={officialDocsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        }
+        className="not-prose !px-5"
+      >
+        View Official Docs <ArrowUpRightIcon />
       </Button>
 
       {showInstallation && (

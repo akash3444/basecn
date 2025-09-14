@@ -49,30 +49,30 @@ export default async function Page(props: {
             <Button
               variant="secondary"
               className="h-6 text-xs !px-2 gap-1.5"
-              asChild
+              render={
+                <Link
+                  href={page.data.links.docs}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
             >
-              <Link
-                href={page.data.links.docs}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Docs <ArrowUpRight className="size-3" />
-              </Link>
+              Docs <ArrowUpRight className="size-3" />
             </Button>
           )}
           {page.data.links?.api && (
             <Button
               variant="secondary"
               className="h-6 text-xs !px-2 gap-1.5"
-              asChild
+              render={
+                <Link
+                  href={page.data.links.api}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
             >
-              <Link
-                href={page.data.links.api}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                API Reference <ArrowUpRight className="size-3" />
-              </Link>
+              API Reference <ArrowUpRight className="size-3" />
             </Button>
           )}
         </div>

@@ -15,8 +15,6 @@
     "@base-ui-components/react": "1.0.0-beta.3",
     "@databuddy/sdk": "^1.4.2",
     "@hookform/resolvers": "^5.2.1",
-    "@radix-ui/react-slot": "^1.2.3",
-    "@radix-ui/react-tabs": "^1.1.12",
     "@tanstack/react-form": "^1.19.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
