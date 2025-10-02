@@ -6,12 +6,16 @@ import { Button } from "@/registry/components/ui/button";
 import { Input } from "@/registry/components/ui/input";
 import { Separator } from "@/registry/components/ui/separator";
 
-function Combobox(props: React.ComponentProps<typeof ComboboxPrimitive.Root>) {
+function Combobox<
+  ItemValue,
+  SelectedValue = ItemValue,
+  Multiple extends boolean | undefined = false,
+>(props: ComboboxPrimitive.Root.Props<ItemValue, SelectedValue, Multiple>) {
   return <ComboboxPrimitive.Root data-slot="combobox" {...props} />;
 }
 
 function ComboboxInput(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Input>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Input>,
 ) {
   return (
     <ComboboxPrimitive.Input
@@ -23,7 +27,7 @@ function ComboboxInput(
 }
 
 function ComboboxTrigger(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Trigger>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Trigger>,
 ) {
   return (
     <ComboboxPrimitive.Trigger
@@ -35,7 +39,7 @@ function ComboboxTrigger(
 }
 
 function ComboboxIcon(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Icon>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Icon>,
 ) {
   return <ComboboxPrimitive.Icon data-slot="combobox-icon" {...props} />;
 }
@@ -49,7 +53,7 @@ function ComboboxClear({
     <ComboboxPrimitive.Clear
       className={cn(
         "flex h-9 w-6 items-center justify-center rounded bg-transparent p-0",
-        className
+        className,
       )}
       aria-label="Clear selection"
       data-slot="combobox-clear"
@@ -61,7 +65,7 @@ function ComboboxClear({
 }
 
 function ComboboxValue(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Value>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Value>,
 ) {
   return <ComboboxPrimitive.Value data-slot="combobox-value" {...props} />;
 }
@@ -76,7 +80,7 @@ function ComboboxChips({
       className={cn(
         "min-h-9 flex flex-wrap items-start gap-1 rounded-md border px-1.5 py-1.5 transition-[color,box-shadow]",
         "focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px]",
-        className
+        className,
       )}
       {...props}
     />
@@ -92,7 +96,7 @@ function ComboboxChip({
       data-slot="combobox-chip"
       className={cn(
         "flex items-center gap-1 rounded-md bg-muted px-1 ps-2 pe-0 text-xs outline-none cursor-default",
-        className
+        className,
       )}
       {...props}
     />
@@ -109,7 +113,7 @@ function ComboboxChipRemove({
       data-slot="combobox-chip-remove"
       className={cn(
         "rounded-md p-1 text-inherit hover:bg-accent-foreground/10",
-        className
+        className,
       )}
       aria-label="Remove"
       {...props}
@@ -128,7 +132,7 @@ function ComboboxPopup({
       data-slot="combobox-popup"
       className={cn(
         "w-(--anchor-width) max-h-[min(var(--available-height),23rem)] max-w-(--available-width) origin-(--transform-origin) overflow-y-auto scroll-pt-2 scroll-pb-2 overscroll-contain rounded-md bg-popover py-2 shadow-md outline-1 outline-border transition-[transform,scale,opacity] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[side=none]:data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none dark:shadow-none",
-        className
+        className,
       )}
       {...props}
     />
@@ -151,7 +155,7 @@ function ComboboxPositioner({
 }
 
 function ComboboxArrow(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Arrow>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Arrow>,
 ) {
   return <ComboboxPrimitive.Arrow data-slot="combobox-arrow" {...props} />;
 }
@@ -165,7 +169,7 @@ function ComboboxStatus({
       data-slot="combobox-status"
       className={cn(
         "px-4.5 py-2 text-sm text-muted-foreground empty:m-0 empty:p-0",
-        className
+        className,
       )}
       {...props}
     />
@@ -181,7 +185,7 @@ function ComboboxEmpty({
       data-slot="combobox-empty"
       className={cn(
         "flex items-center justify-center text-muted-foreground text-sm not-empty:py-1",
-        className
+        className,
       )}
       {...props}
     />
@@ -189,13 +193,13 @@ function ComboboxEmpty({
 }
 
 function ComboboxList(
-  props: React.ComponentProps<typeof ComboboxPrimitive.List>
+  props: React.ComponentProps<typeof ComboboxPrimitive.List>,
 ) {
   return <ComboboxPrimitive.List data-slot="combobox-list" {...props} />;
 }
 
 function ComboboxRow(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Row>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Row>,
 ) {
   return <ComboboxPrimitive.Row data-slot="combobox-row" {...props} />;
 }
@@ -209,7 +213,7 @@ function ComboboxItem({
       data-slot="combobox-item"
       className={cn(
         "grid cursor-default grid-cols-[0.95rem_1fr] items-center gap-2 py-2 pr-8 pl-4 text-sm leading-4 outline-none select-none data-[highlighted]:relative data-[highlighted]:z-0 data-[highlighted]:text-accent-foreground data-[highlighted]:before:absolute data-[highlighted]:before:inset-x-2 data-[highlighted]:before:inset-y-0 data-[highlighted]:before:-z-1 data-[highlighted]:before:rounded-sm data-[highlighted]:before:bg-accent",
-        className
+        className,
       )}
       {...props}
     />
@@ -233,7 +237,7 @@ function ComboboxItemIndicator({
 }
 
 function ComboboxSeparator(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Separator>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Separator>,
 ) {
   return (
     <ComboboxPrimitive.Separator
@@ -266,7 +270,7 @@ function ComboboxGroupLabel({
       data-slot="combobox-group-label"
       className={cn(
         "z-1 sticky top-0 bg-background pl-4 text-sm text-muted-foreground py-2",
-        className
+        className,
       )}
       {...props}
     />
@@ -274,7 +278,7 @@ function ComboboxGroupLabel({
 }
 
 function ComboboxCollection(
-  props: React.ComponentProps<typeof ComboboxPrimitive.Collection>
+  props: React.ComponentProps<typeof ComboboxPrimitive.Collection>,
 ) {
   return (
     <ComboboxPrimitive.Collection data-slot="combobox-collection" {...props} />
