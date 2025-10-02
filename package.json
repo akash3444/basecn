@@ -9,12 +9,17 @@
     "start": "next start",
     "postinstall": "fumadocs-mdx",
     "registry:build": "shadcn build",
-    "knip": "knip"
+    "knip": "knip",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-beta.3",
     "@databuddy/sdk": "^1.4.2",
     "@hookform/resolvers": "^5.2.1",
+    "@opennextjs/cloudflare": "^1.9.1",
     "@tanstack/react-form": "^1.19.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -50,12 +55,18 @@
     "shiki": "^3.11.0",
     "tailwindcss": "^4.1.11",
     "tw-animate-css": "^1.3.6",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "wrangler": "^4.40.3"
   },
   "pnpm": {
     "overrides": {
       "@types/react": "19.1.12",
       "@types/react-dom": "19.1.9"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
   }
 }
