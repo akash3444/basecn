@@ -15,7 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/registry/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/registry/components/ui/textarea";
 
 const FormSchema = z.object({
   bio: z

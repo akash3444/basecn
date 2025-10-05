@@ -312,6 +312,24 @@
       ]
     },
     {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Display additional information or actions to an input or textarea.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "@basecn/button",
+        "@basecn/input",
+        "@basecn/textarea"
+      ],
+      "files": [
+        {
+          "path": "src/registry/components/ui/input-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "item",
       "type": "registry:ui",
       "title": "Item",

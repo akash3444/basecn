@@ -419,6 +419,62 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/input-demo")),
     src: "src/components/demo/input-demo.tsx",
   },
+  "input-group-demo": {
+    component: React.lazy(() => import("@/components/demo/input-group-demo")),
+    src: "src/components/demo/input-group-demo.tsx",
+  },
+  "input-group-button": {
+    component: React.lazy(() => import("@/components/demo/input-group-button")),
+    src: "src/components/demo/input-group-button.tsx",
+  },
+  "input-group-tooltip": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-tooltip")
+    ),
+    src: "src/components/demo/input-group-tooltip.tsx",
+  },
+  "input-group-textarea": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-textarea")
+    ),
+    src: "src/components/demo/input-group-textarea.tsx",
+  },
+  "input-group-text": {
+    component: React.lazy(() => import("@/components/demo/input-group-text")),
+    src: "src/components/demo/input-group-text.tsx",
+  },
+  "input-group-button-group": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-button-group")
+    ),
+    src: "src/components/demo/input-group-button-group.tsx",
+  },
+  "input-group-icon": {
+    component: React.lazy(() => import("@/components/demo/input-group-icon")),
+    src: "src/components/demo/input-group-icon.tsx",
+  },
+  "input-group-label": {
+    component: React.lazy(() => import("@/components/demo/input-group-label")),
+    src: "src/components/demo/input-group-label.tsx",
+  },
+  "input-group-spinner": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-spinner")
+    ),
+    src: "src/components/demo/input-group-spinner.tsx",
+  },
+  "input-group-custom-input": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-custom-input")
+    ),
+    src: "src/components/demo/input-group-custom-input.tsx",
+  },
+  "input-group-dropdown": {
+    component: React.lazy(
+      () => import("@/components/demo/input-group-dropdown")
+    ),
+    src: "src/components/demo/input-group-dropdown.tsx",
+  },
   "item-demo": {
     component: React.lazy(() => import("@/components/demo/item-demo")),
     src: "src/components/demo/item-demo.tsx",

@@ -49,4 +49,9 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
   );
 };
 
-const newPages = ["components/empty", "components/kbd"];
+const newPages = [
+  "components/empty",
+  "components/kbd",
+  "components/input-group",
+  "components/item",
+];

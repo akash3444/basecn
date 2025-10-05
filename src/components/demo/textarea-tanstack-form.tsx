@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/registry/components/ui/textarea";
 import { createFormHook } from "@/registry/components/ui/form-tanstack";
 
 const FormSchema = z.object({
