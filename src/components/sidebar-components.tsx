@@ -54,4 +54,5 @@ const newPages = [
   "components/kbd",
   "components/input-group",
   "components/item",
+  "components/button-group",
 ];

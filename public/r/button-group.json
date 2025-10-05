@@ -1,12 +1,15 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "button",
+  "name": "button-group",
   "type": "registry:ui",
-  "title": "Button",
-  "description": "Displays a button or a component that looks like a button.",
+  "title": "Button Group",
+  "description": "A container that groups related buttons together with consistent styling.",
   "dependencies": [
     "@base-ui-components/react",
     "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "@basecn/separator"
   ],
   "files": [
     {

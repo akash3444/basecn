@@ -219,6 +219,64 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/button-with-icon")),
     src: "src/components/demo/button-with-icon.tsx",
   },
+  "button-group-demo": {
+    component: React.lazy(() => import("@/components/demo/button-group-demo")),
+    src: "src/components/demo/button-group-demo.tsx",
+  },
+  "button-group-orientation": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-orientation")
+    ),
+    src: "src/components/demo/button-group-orientation.tsx",
+  },
+  "button-group-size": {
+    component: React.lazy(() => import("@/components/demo/button-group-size")),
+    src: "src/components/demo/button-group-size.tsx",
+  },
+  "button-group-nested": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-nested")
+    ),
+    src: "src/components/demo/button-group-nested.tsx",
+  },
+  "button-group-separator": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-separator")
+    ),
+    src: "src/components/demo/button-group-separator.tsx",
+  },
+  "button-group-split": {
+    component: React.lazy(() => import("@/components/demo/button-group-split")),
+    src: "src/components/demo/button-group-split.tsx",
+  },
+  "button-group-input": {
+    component: React.lazy(() => import("@/components/demo/button-group-input")),
+    src: "src/components/demo/button-group-input.tsx",
+  },
+  "button-group-input-group": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-input-group")
+    ),
+    src: "src/components/demo/button-group-input-group.tsx",
+  },
+  "button-group-dropdown-menu": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-dropdown-menu")
+    ),
+    src: "src/components/demo/button-group-dropdown-menu.tsx",
+  },
+  "button-group-select": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-select")
+    ),
+    src: "src/components/demo/button-group-select.tsx",
+  },
+  "button-group-popover": {
+    component: React.lazy(
+      () => import("@/components/demo/button-group-popover")
+    ),
+    src: "src/components/demo/button-group-popover.tsx",
+  },
   "calendar-demo": {
     component: React.lazy(() => import("@/components/demo/calendar-demo")),
     src: "src/components/demo/calendar-demo.tsx",
