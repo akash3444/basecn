@@ -31,6 +31,10 @@ export default async function ComponentPreview({
     "@/components/ui/form-tanstack",
     "@/components/ui/form"
   );
+  codeWithUpdatedImports = codeWithUpdatedImports.replaceAll(
+    "@/components/ui/separator-extended",
+    "@/components/ui/separator"
+  );
 
   return (
     <div className="not-prose">

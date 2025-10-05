@@ -506,6 +506,19 @@
       ]
     },
     {
+      "name": "separator-extended",
+      "type": "registry:ui",
+      "title": "Separator (Extended)",
+      "description": "Visually or semantically separates content.",
+      "dependencies": ["@base-ui-components/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/separator-extended.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",

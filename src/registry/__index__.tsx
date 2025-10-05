@@ -711,6 +711,36 @@ export const components: Record<
     ),
     src: "src/components/demo/separator-with-label.tsx",
   },
+  "separator-extended-dotted": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-extended-dotted")
+    ),
+    src: "src/components/demo/separator-extended-dotted.tsx",
+  },
+  "separator-extended-default": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-extended-default")
+    ),
+    src: "src/components/demo/separator-extended-default.tsx",
+  },
+  "separator-extended-double": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-extended-double")
+    ),
+    src: "src/components/demo/separator-extended-double.tsx",
+  },
+  "separator-extended-demo": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-extended-demo")
+    ),
+    src: "src/components/demo/separator-extended-demo.tsx",
+  },
+  "separator-extended-dashed": {
+    component: React.lazy(
+      () => import("@/components/demo/separator-extended-dashed")
+    ),
+    src: "src/components/demo/separator-extended-dashed.tsx",
+  },
   "sheet-demo": {
     component: React.lazy(() => import("@/components/demo/sheet-demo")),
     src: "src/components/demo/sheet-demo.tsx",
