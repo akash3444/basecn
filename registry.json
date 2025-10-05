@@ -272,6 +272,20 @@
       ]
     },
     {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["@basecn/label", "@basecn/separator"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "form",
       "type": "registry:ui",
       "title": "Form",

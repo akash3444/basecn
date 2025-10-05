@@ -52,6 +52,7 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
 const newPages = [
   "components/empty",
   "components/kbd",
+  "components/field",
   "components/input-group",
   "components/item",
   "components/button-group",

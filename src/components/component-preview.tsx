@@ -50,6 +50,7 @@ export default async function ComponentPreview({
             {
               "items-center justify-center": center,
               "max-h-[400px]": constrainHeight,
+              "py-10": !constrainHeight,
             }
           )}
         >

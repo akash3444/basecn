@@ -391,6 +391,50 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
     src: "src/components/demo/dropdown-menu-demo.tsx",
   },
+  "field-demo": {
+    component: React.lazy(() => import("@/components/demo/field-demo")),
+    src: "src/components/demo/field-demo.tsx",
+  },
+  "field-input": {
+    component: React.lazy(() => import("@/components/demo/field-input")),
+    src: "src/components/demo/field-input.tsx",
+  },
+  "field-textarea": {
+    component: React.lazy(() => import("@/components/demo/field-textarea")),
+    src: "src/components/demo/field-textarea.tsx",
+  },
+  "field-select": {
+    component: React.lazy(() => import("@/components/demo/field-select")),
+    src: "src/components/demo/field-select.tsx",
+  },
+  "field-slider": {
+    component: React.lazy(() => import("@/components/demo/field-slider")),
+    src: "src/components/demo/field-slider.tsx",
+  },
+  "field-fieldset": {
+    component: React.lazy(() => import("@/components/demo/field-fieldset")),
+    src: "src/components/demo/field-fieldset.tsx",
+  },
+  "field-checkbox": {
+    component: React.lazy(() => import("@/components/demo/field-checkbox")),
+    src: "src/components/demo/field-checkbox.tsx",
+  },
+  "field-radio": {
+    component: React.lazy(() => import("@/components/demo/field-radio")),
+    src: "src/components/demo/field-radio.tsx",
+  },
+  "field-switch": {
+    component: React.lazy(() => import("@/components/demo/field-switch")),
+    src: "src/components/demo/field-switch.tsx",
+  },
+  "field-choice-card": {
+    component: React.lazy(() => import("@/components/demo/field-choice-card")),
+    src: "src/components/demo/field-choice-card.tsx",
+  },
+  "field-group": {
+    component: React.lazy(() => import("@/components/demo/field-group")),
+    src: "src/components/demo/field-group.tsx",
+  },
   "form-demo": {
     component: React.lazy(() => import("@/components/demo/form-demo")),
     src: "src/components/demo/form-demo.tsx",
