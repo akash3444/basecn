@@ -200,7 +200,6 @@
         }
       ]
     },
-
     {
       "name": "combobox",
       "type": "registry:ui",
@@ -308,6 +307,20 @@
       "files": [
         {
           "path": "src/registry/components/ui/input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "A versatile component that you can use to display any content.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "registryDependencies": ["@basecn/separator"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/item.tsx",
           "type": "registry:component"
         }
       ]

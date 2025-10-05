@@ -49,10 +49,4 @@ export const Item: SidebarComponents["Item"] = ({ item }) => {
   );
 };
 
-const newPages = [
-  "get-started/namespaced-registry",
-  "/llms.txt",
-  "components/autocomplete",
-  "components/combobox-baseui",
-  "components/form-with-tanstack-form",
-];
+const newPages = ["components/empty", "components/kbd"];

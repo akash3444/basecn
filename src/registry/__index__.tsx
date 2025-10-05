@@ -419,6 +419,42 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/input-demo")),
     src: "src/components/demo/input-demo.tsx",
   },
+  "item-demo": {
+    component: React.lazy(() => import("@/components/demo/item-demo")),
+    src: "src/components/demo/item-demo.tsx",
+  },
+  "item-variants": {
+    component: React.lazy(() => import("@/components/demo/item-variants")),
+    src: "src/components/demo/item-variants.tsx",
+  },
+  "item-avatar": {
+    component: React.lazy(() => import("@/components/demo/item-avatar")),
+    src: "src/components/demo/item-avatar.tsx",
+  },
+  "item-dropdown": {
+    component: React.lazy(() => import("@/components/demo/item-dropdown")),
+    src: "src/components/demo/item-dropdown.tsx",
+  },
+  "item-group": {
+    component: React.lazy(() => import("@/components/demo/item-group")),
+    src: "src/components/demo/item-group.tsx",
+  },
+  "item-header": {
+    component: React.lazy(() => import("@/components/demo/item-header")),
+    src: "src/components/demo/item-header.tsx",
+  },
+  "item-link": {
+    component: React.lazy(() => import("@/components/demo/item-link")),
+    src: "src/components/demo/item-link.tsx",
+  },
+  "item-image": {
+    component: React.lazy(() => import("@/components/demo/item-image")),
+    src: "src/components/demo/item-image.tsx",
+  },
+  "item-icon": {
+    component: React.lazy(() => import("@/components/demo/item-icon")),
+    src: "src/components/demo/item-icon.tsx",
+  },
   "label-demo": {
     component: React.lazy(() => import("@/components/demo/label-demo")),
     src: "src/components/demo/label-demo.tsx",
