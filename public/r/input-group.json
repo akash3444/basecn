@@ -10,7 +10,7 @@
   "registryDependencies": [
     "@basecn/button",
     "@basecn/input",
-    "@basecn/textarea"
+    "textarea"
   ],
   "files": [
     {
