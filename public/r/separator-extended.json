@@ -9,9 +9,9 @@
   ],
   "files": [
     {
-      "path": "src/registry/components/ui/separator-extended.tsx",
+      "path": "ui/separator-extended.tsx",
       "content": "import * as React from \"react\";\nimport { Separator as SeparatorPrimitive } from \"@base-ui-components/react/separator\";\n\nimport { cn } from \"@/lib/utils\";\nimport { cva, VariantProps } from \"class-variance-authority\";\n\nconst separatorVariants = cva(\n  \"shrink-0 data-[orientation=horizontal]:border-t data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:border-e\",\n  {\n    variants: {\n      variant: {\n        default: \"border-solid\",\n        dashed: \"border-dashed\",\n        dotted: \"border-dotted\",\n        double:\n          \"border-double p-px data-[orientation=horizontal]:border-y data-[orientation=vertical]:border-x\",\n      },\n    },\n  }\n);\n\nfunction Separator({\n  className,\n  ...props\n}: React.ComponentProps<typeof SeparatorPrimitive> &\n  VariantProps<typeof separatorVariants>) {\n  return (\n    <SeparatorPrimitive\n      data-slot=\"separator\"\n      className={cn(separatorVariants({ variant: props.variant }), className)}\n      {...props}\n    />\n  );\n}\n\nexport { Separator };\n",
-      "type": "registry:component"
+      "type": "registry:ui"
     }
   ]
 }
