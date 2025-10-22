@@ -141,7 +141,7 @@
       "registryDependencies": ["@basecn/separator"],
       "files": [
         {
-          "path": "src/registry/components/ui/button.tsx",
+          "path": "src/registry/components/ui/button-group.tsx",
           "type": "registry:component"
         }
       ]
@@ -348,7 +348,7 @@
       "registryDependencies": [
         "@basecn/button",
         "@basecn/input",
-        "@basecn/textarea"
+        "textarea"
       ],
       "files": [
         {
