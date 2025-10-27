@@ -59,7 +59,7 @@
       "type": "registry:ui",
       "title": "Alert Dialog",
       "description": "A dialog that requires user response to proceed.",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["@basecn/button"],
       "dependencies": ["@base-ui-components/react"],
       "files": [
         {
