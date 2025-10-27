@@ -11,7 +11,7 @@ export default function AccordionTabs() {
     <Accordion
       className="w-full max-w-md mx-auto space-y-2"
       defaultValue={[accordionItems[0].value]}
-      openMultiple={false}
+      multiple={false}
     >
       {accordionItems.map((item) => (
         <AccordionItem

@@ -133,6 +133,20 @@
       ]
     },
     {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "A container that groups related buttons together with consistent styling.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "registryDependencies": ["@basecn/separator"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/button-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
@@ -200,7 +214,6 @@
         }
       ]
     },
-
     {
       "name": "combobox",
       "type": "registry:ui",
@@ -259,6 +272,20 @@
       ]
     },
     {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["@basecn/label", "@basecn/separator"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "form",
       "type": "registry:ui",
       "title": "Form",
@@ -308,6 +335,38 @@
       "files": [
         {
           "path": "src/registry/components/ui/input.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Display additional information or actions to an input or textarea.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [
+        "@basecn/button",
+        "@basecn/input",
+        "textarea"
+      ],
+      "files": [
+        {
+          "path": "src/registry/components/ui/input-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "A versatile component that you can use to display any content.",
+      "dependencies": ["@base-ui-components/react", "class-variance-authority"],
+      "registryDependencies": ["@basecn/separator"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/item.tsx",
           "type": "registry:component"
         }
       ]
@@ -442,6 +501,19 @@
       "files": [
         {
           "path": "src/registry/components/ui/separator.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "separator-extended",
+      "type": "registry:ui",
+      "title": "Separator (Extended)",
+      "description": "Visually or semantically separates content.",
+      "dependencies": ["@base-ui-components/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/separator-extended.tsx",
           "type": "registry:component"
         }
       ]

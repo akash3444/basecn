@@ -10,7 +10,7 @@ export default function AccordionDemo() {
     <Accordion
       className="w-full max-w-sm mx-auto"
       defaultValue={["item-1"]}
-      openMultiple={false}
+      multiple={false}
     >
       <AccordionItem value="item-1">
         <AccordionTrigger>Product Information</AccordionTrigger>
