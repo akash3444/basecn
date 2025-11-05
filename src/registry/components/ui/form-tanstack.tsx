@@ -128,23 +128,35 @@ function FieldMessage({ className, ...props }: React.ComponentProps<"p">) {
   );
 }
 
-const createFormHook = (
-  args?: Parameters<typeof createTanstackFormHook>[0]
-) => {
-  const formHook = createTanstackFormHook({
-    fieldComponents: {
-      ...args?.fieldComponents,
-      Label: FieldLabel,
-      Control: FieldControl,
-      Description: FieldDescription,
-      Message: FieldMessage,
-    },
-    formComponents: { ...args?.formComponents, Item: FormItem },
+function createFormHook<
+  TFieldComponents extends Record<string, ComponentType<any>> = {},
+  TFormComponents extends Record<string, ComponentType<any>> = {},
+>(args?: {
+  fieldComponents?: TFieldComponents
+  formComponents?: TFormComponents
+}) {
+  const mergedFieldComponents = {
+    Control: FieldControl,
+    Description: FieldDescription,
+    Label: FieldLabel,
+    Message: FieldMessage,
+    ...(args?.fieldComponents ?? ({} as TFieldComponents)),
+  };
+
+  const mergedFormComponents = {
+    Item: FormItem,
+    ...(args?.formComponents ?? ({} as TFormComponents)),
+  };
+
+  return createTanstackFormHook<
+    typeof mergedFieldComponents,
+    typeof mergedFormComponents
+  >({
+    fieldComponents: mergedFieldComponents,
     fieldContext,
+    formComponents: mergedFormComponents,
     formContext,
   });
-
-  return formHook;
-};
+}
 
 export { createFormHook };
