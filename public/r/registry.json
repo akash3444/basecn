@@ -12,7 +12,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/accordion.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -50,7 +50,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/autocomplete.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -59,12 +59,12 @@
       "type": "registry:ui",
       "title": "Alert Dialog",
       "description": "A dialog that requires user response to proceed.",
-      "registryDependencies": ["button"],
+      "registryDependencies": ["@basecn/button"],
       "dependencies": ["@base-ui-components/react"],
       "files": [
         {
           "path": "src/registry/components/ui/alert-dialog.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -76,7 +76,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/aspect-ratio.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -89,7 +89,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/avatar.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -102,7 +102,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/badge.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -115,7 +115,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/breadcrumb.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -128,7 +128,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/button.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -141,8 +141,8 @@
       "registryDependencies": ["@basecn/separator"],
       "files": [
         {
-          "path": "src/registry/components/ui/button.tsx",
-          "type": "registry:component"
+          "path": "src/registry/components/ui/button-group.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -156,7 +156,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/carousel.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -170,7 +170,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/calendar.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -183,7 +183,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/checkbox.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -196,7 +196,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/collapsible.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -210,7 +210,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/command.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -228,7 +228,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/combobox.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -241,7 +241,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/context-menu.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -254,7 +254,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/dialog.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -267,7 +267,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/dropdown-menu.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -281,7 +281,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/field.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -295,7 +295,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/form.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -309,7 +309,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/form-tanstack.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -322,7 +322,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/hover-card.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -335,7 +335,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/input.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -345,15 +345,11 @@
       "title": "Input Group",
       "description": "Display additional information or actions to an input or textarea.",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": [
-        "@basecn/button",
-        "@basecn/input",
-        "@basecn/textarea"
-      ],
+      "registryDependencies": ["@basecn/button", "@basecn/input", "textarea"],
       "files": [
         {
           "path": "src/registry/components/ui/input-group.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -367,7 +363,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/item.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -379,7 +375,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/label.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -392,7 +388,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/menubar.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -409,7 +405,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/navigation-menu.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -423,7 +419,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/pagination.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -436,7 +432,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/popover.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -449,7 +445,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/progress.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -462,7 +458,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/radio-group.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -475,7 +471,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/scroll-area.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -488,7 +484,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/select.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -501,7 +497,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/separator.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -514,7 +510,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/separator-extended.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -527,7 +523,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/sheet.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -569,7 +565,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/slider.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -582,7 +578,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/switch.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -595,7 +591,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/tabs.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -608,7 +604,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/toggle.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -622,7 +618,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/toggle-group.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     },
@@ -635,7 +631,7 @@
       "files": [
         {
           "path": "src/registry/components/ui/tooltip.tsx",
-          "type": "registry:component"
+          "type": "registry:ui"
         }
       ]
     }
