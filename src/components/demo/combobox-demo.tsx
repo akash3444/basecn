@@ -64,7 +64,7 @@ export default function ComboboxDemo() {
           : "Select framework..."}
         <ChevronsUpDown className="opacity-50" />
       </PopoverTrigger>
-      <PopoverPositioner>
+      <PopoverPositioner portal={{ keepMounted: true }}>
         <PopoverContent className="w-[200px] p-0">
           <Command>
             <CommandInput placeholder="Search framework..." className="h-9" />

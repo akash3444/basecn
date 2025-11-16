@@ -95,7 +95,7 @@ export default function ComboboxForm() {
                     <ChevronsUpDown className="opacity-50" />
                   </PopoverTrigger>
                 </FormControl>
-                <PopoverPositioner align="start">
+                <PopoverPositioner align="start" portal={{ keepMounted: true }}>
                   <PopoverContent className="p-0">
                     <Command>
                       <CommandInput

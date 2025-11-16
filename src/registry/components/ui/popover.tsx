@@ -17,10 +17,13 @@ function PopoverTrigger({
 
 function PopoverPositioner({
   sideOffset = 4,
+  portal,
   ...props
-}: React.ComponentProps<typeof PopoverPrimitive.Positioner>) {
+}: React.ComponentProps<typeof PopoverPrimitive.Positioner> & {
+  portal?: PopoverPrimitive.Portal.Props;
+}) {
   return (
-    <PopoverPrimitive.Portal>
+    <PopoverPrimitive.Portal {...portal}>
       <PopoverPrimitive.Positioner
         data-slot="popover-positioner"
         sideOffset={sideOffset}
