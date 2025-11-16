@@ -9,7 +9,7 @@ function NavigationMenu({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Root>) {
+}: NavigationMenuPrimitive.Root.Props) {
   return (
     <NavigationMenuPrimitive.Root
       data-slot="navigation-menu"
@@ -27,7 +27,7 @@ function NavigationMenu({
 function NavigationMenuList({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
+}: NavigationMenuPrimitive.List.Props) {
   return (
     <NavigationMenuPrimitive.List
       data-slot="navigation-menu-list"
@@ -43,7 +43,7 @@ function NavigationMenuList({
 function NavigationMenuItem({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Item>) {
+}: NavigationMenuPrimitive.Item.Props) {
   return (
     <NavigationMenuPrimitive.Item
       data-slot="navigation-menu-item"
@@ -61,7 +61,7 @@ function NavigationMenuTrigger({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) {
+}: NavigationMenuPrimitive.Trigger.Props) {
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
@@ -80,7 +80,7 @@ function NavigationMenuTrigger({
 function NavigationMenuContent({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Content>) {
+}: NavigationMenuPrimitive.Content.Props) {
   return (
     <NavigationMenuPrimitive.Content
       data-slot="navigation-menu-content"
@@ -103,7 +103,7 @@ function NavigationMenuPositioner({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Positioner>) {
+}: NavigationMenuPrimitive.Positioner.Props) {
   return (
     <NavigationMenuPrimitive.Portal>
       <NavigationMenuPrimitive.Positioner
@@ -133,7 +133,7 @@ function NavigationMenuPopup({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Popup>) {
+}: NavigationMenuPrimitive.Popup.Props) {
   return (
     <NavigationMenuPrimitive.Popup
       className={cn(
@@ -151,7 +151,7 @@ function NavigationMenuPopup({
 function NavigationMenuViewport({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
+}: NavigationMenuPrimitive.Viewport.Props) {
   return (
     <NavigationMenuPrimitive.Viewport
       className={cn("relative h-full w-full overflow-hidden", className)}
@@ -163,7 +163,7 @@ function NavigationMenuViewport({
 function NavigationMenuLink({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+}: NavigationMenuPrimitive.Link.Props) {
   return (
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
@@ -179,7 +179,7 @@ function NavigationMenuLink({
 function NavigationMenuArrow({
   className,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Arrow>) {
+}: NavigationMenuPrimitive.Arrow.Props) {
   return (
     <NavigationMenuPrimitive.Arrow
       data-slot="navigation-menu-arrow"

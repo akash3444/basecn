@@ -9,7 +9,7 @@ function Progress({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Root>) {
+}: ProgressPrimitive.Root.Props) {
   return (
     <ProgressPrimitive.Root
       data-slot="progress"
@@ -27,10 +27,7 @@ function Progress({
   );
 }
 
-function ProgressTrack({
-  className,
-  ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Track>) {
+function ProgressTrack({ className, ...props }: ProgressPrimitive.Track.Props) {
   return (
     <ProgressPrimitive.Track
       data-slot="progress-track"
@@ -46,7 +43,7 @@ function ProgressTrack({
 function ProgressIndicator({
   className,
   ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Indicator>) {
+}: ProgressPrimitive.Indicator.Props) {
   return (
     <ProgressPrimitive.Indicator
       data-slot="progress-indicator"
@@ -59,10 +56,7 @@ function ProgressIndicator({
   );
 }
 
-function ProgressLabel({
-  className,
-  ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Label>) {
+function ProgressLabel({ className, ...props }: ProgressPrimitive.Label.Props) {
   return (
     <ProgressPrimitive.Label
       data-slot="progress-label"
@@ -72,10 +66,7 @@ function ProgressLabel({
   );
 }
 
-function ProgressValue({
-  className,
-  ...props
-}: React.ComponentProps<typeof ProgressPrimitive.Value>) {
+function ProgressValue({ className, ...props }: ProgressPrimitive.Value.Props) {
   return (
     <ProgressPrimitive.Value
       data-slot="progress-value"

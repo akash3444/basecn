@@ -5,15 +5,9 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/registry/components/ui/button";
 import { Input } from "@/registry/components/ui/input";
 
-function Autocomplete(
-  props: React.ComponentProps<typeof AutocompletePrimitive.Root>
-) {
-  return <AutocompletePrimitive.Root data-slot="autocomplete" {...props} />;
-}
+const Autocomplete = AutocompletePrimitive.Root;
 
-function AutocompleteInput(
-  props: React.ComponentProps<typeof AutocompletePrimitive.Input>
-) {
+function AutocompleteInput(props: AutocompletePrimitive.Input.Props) {
   return (
     <AutocompletePrimitive.Input
       data-slot="autocomplete-input"
@@ -26,7 +20,7 @@ function AutocompleteInput(
 function AutocompletePopup({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Popup>) {
+}: AutocompletePrimitive.Popup.Props) {
   return (
     <AutocompletePrimitive.Popup
       data-slot="autocomplete-popup"
@@ -39,9 +33,7 @@ function AutocompletePopup({
   );
 }
 
-function AutocompletePositioner(
-  props: React.ComponentProps<typeof AutocompletePrimitive.Positioner>
-) {
+function AutocompletePositioner(props: AutocompletePrimitive.Positioner.Props) {
   return (
     <AutocompletePrimitive.Portal>
       <AutocompletePrimitive.Positioner
@@ -55,7 +47,7 @@ function AutocompletePositioner(
 function AutocompleteList({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.List>) {
+}: AutocompletePrimitive.List.Props) {
   return (
     <AutocompletePrimitive.List
       data-slot="autocomplete-list"
@@ -68,7 +60,7 @@ function AutocompleteList({
 function AutocompleteEmpty({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Empty>) {
+}: AutocompletePrimitive.Empty.Props) {
   return (
     <AutocompletePrimitive.Empty
       data-slot="autocomplete-empty"
@@ -84,7 +76,7 @@ function AutocompleteEmpty({
 function AutocompleteItem({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Item>) {
+}: AutocompletePrimitive.Item.Props) {
   return (
     <AutocompletePrimitive.Item
       data-slot="autocomplete-item"
@@ -100,7 +92,7 @@ function AutocompleteItem({
 function AutocompleteGroup({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Group>) {
+}: AutocompletePrimitive.Group.Props) {
   return (
     <AutocompletePrimitive.Group
       data-slot="autocomplete-group"
@@ -113,7 +105,7 @@ function AutocompleteGroup({
 function AutocompleteGroupLabel({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.GroupLabel>) {
+}: AutocompletePrimitive.GroupLabel.Props) {
   return (
     <AutocompletePrimitive.GroupLabel
       data-slot="autocomplete-group-label"
@@ -128,7 +120,7 @@ function AutocompleteGroupLabel({
 
 function AutocompleteCollection({
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Collection>) {
+}: AutocompletePrimitive.Collection.Props) {
   return (
     <AutocompletePrimitive.Collection
       data-slot="autocomplete-collection"
@@ -140,7 +132,7 @@ function AutocompleteCollection({
 function AutocompleteStatus({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Status>) {
+}: AutocompletePrimitive.Status.Props) {
   return (
     <AutocompletePrimitive.Status
       data-slot="autocomplete-status"
@@ -157,7 +149,7 @@ function AutocompleteClear({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Clear>) {
+}: AutocompletePrimitive.Clear.Props) {
   return (
     <AutocompletePrimitive.Clear
       data-slot="autocomplete-clear"
@@ -172,7 +164,7 @@ function AutocompleteClear({
 function AutocompleteRow({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Row>) {
+}: AutocompletePrimitive.Row.Props) {
   return (
     <AutocompletePrimitive.Row
       data-slot="autocomplete-row"
@@ -185,7 +177,7 @@ function AutocompleteRow({
 function AutocompleteTrigger({
   className,
   ...props
-}: React.ComponentProps<typeof AutocompletePrimitive.Trigger>) {
+}: AutocompletePrimitive.Trigger.Props) {
   return (
     <AutocompletePrimitive.Trigger
       data-slot="autocomplete-trigger"
