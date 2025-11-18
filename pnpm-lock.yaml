@@ -33,6 +33,9 @@ importers:
       '@tanstack/react-form':
         specifier: ^1.19.2
         version: 1.19.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@wandry/analytics-sdk':
+        specifier: ^1.11.0
+        version: 1.11.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1784,6 +1787,9 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
+
+  '@wandry/analytics-sdk@1.11.0':
+    resolution: {integrity: sha512-akCqPW2HDf5T0ZZli73ZH+HBChdOMS5VmsHHw3sFjzqILTd4Z9EwA8hCj7TrvZD7Jd62fO9Qv/vyCi+MBcLiIw==}
 
   accepts@2.0.0:
     resolution: {integrity: sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng==}
@@ -6124,6 +6130,8 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
+
+  '@wandry/analytics-sdk@1.11.0': {}
 
   accepts@2.0.0:
     dependencies:
