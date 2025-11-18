@@ -61,9 +61,9 @@ export default function AutocompleteEmojiPicker() {
         onOpenChange={setPickerOpen}
         onOpenChangeComplete={() => setSearchValue("")}
         value={searchValue}
-        onValueChange={(value, details) => {
+        onValueChange={(value: unknown, details) => {
           if (details.reason !== "item-press") {
-            setSearchValue(value);
+            setSearchValue(value as string);
           }
         }}
       >

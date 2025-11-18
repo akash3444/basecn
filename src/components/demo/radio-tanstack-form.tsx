@@ -51,7 +51,7 @@ export default function RadioForm() {
               <field.Label>Notify me about...</field.Label>
               <field.Control>
                 <RadioGroup
-                  onValueChange={(value) => {
+                  onValueChange={(value: unknown) => {
                     field.handleChange(value as FormValues["type"]);
                   }}
                   value={field.state.value ?? ""}

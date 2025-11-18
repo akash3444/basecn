@@ -22,7 +22,7 @@ export default function FieldSlider() {
         </FieldDescription>
         <Slider
           value={value}
-          onValueChange={(value) => setValue(value as number[])}
+          onValueChange={(value: unknown) => setValue(value as number[])}
           max={1000}
           min={0}
           step={10}

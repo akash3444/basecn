@@ -51,7 +51,7 @@ export default function SelectForm() {
             <form.Item>
               <field.Label>Email</field.Label>
               <Select
-                onValueChange={(value) =>
+                onValueChange={(value: unknown) =>
                   field.handleChange(
                     value as z.infer<typeof FormSchema>["email"]
                   )

@@ -38,7 +38,7 @@ export default function CalendarMonthYearSelector() {
         </Label>
         <Select
           value={dropdown}
-          onValueChange={(value) =>
+          onValueChange={(value: unknown) =>
             setDropdown(
               value as React.ComponentProps<typeof Calendar>["captionLayout"]
             )

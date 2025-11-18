@@ -109,7 +109,7 @@ export default function ComboboxCreatableDemo() {
       <Combobox
         items={itemsForView}
         multiple
-        onValueChange={(items) => {
+        onValueChange={(items: unknown) => {
           const selectedItems = items as LabelItem[];
           const last = selectedItems[selectedItems.length - 1];
           if (last && last.creatable) {
@@ -124,8 +124,8 @@ export default function ComboboxCreatableDemo() {
         value={selected}
         inputValue={query}
         onInputValueChange={setQuery}
-        onOpenChange={(_open, details) => {
-          if ("key" in details.event && details.event.key === "Enter") {
+        onOpenChange={(_open: unknown, details: { event: unknown; reason: string }) => {
+          if (details.event && typeof details.event === 'object' && "key" in details.event && (details.event as KeyboardEvent).key === "Enter") {
             if (trimmed === "") {
               return;
             }
@@ -144,8 +144,14 @@ export default function ComboboxCreatableDemo() {
               return;
             }
 
-            pendingQueryRef.current = trimmed;
-            setOpenDialog(true);
+            const newItem: LabelItem = {
+              id: `id-${Date.now()}`,
+              value: trimmed,
+              creatable: trimmed,
+            };
+
+            setSelected((prev) => [...prev, newItem]);
+            setQuery("");
           }
         }}
       >

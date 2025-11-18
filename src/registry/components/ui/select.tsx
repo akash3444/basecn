@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 function Select<Value, Multiple extends boolean | undefined = false>(
   props: SelectPrimitive.Root.Props<Value, Multiple>
 ) {
+  // @ts-expect-error - Base UI doesn't handle data-slot prop correctly
   return <SelectPrimitive.Root data-slot="select" {...props} />;
 }
 
@@ -28,7 +29,7 @@ function SelectValue({
 
   return (
     <SelectPrimitive.Value
-      render={(_, { value }) => {
+      render={(_, { value }: { value: unknown }) => {
         if (value) {
           return <SelectPrimitive.Value data-slot="select-value" {...props} />;
         }

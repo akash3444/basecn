@@ -7,10 +7,10 @@ import { Input } from "@/registry/components/ui/input";
 import { Separator } from "@/registry/components/ui/separator";
 
 function Combobox<
-  ItemValue,
-  SelectedValue = ItemValue,
+  Value,
   Multiple extends boolean | undefined = false,
->(props: ComboboxPrimitive.Root.Props<ItemValue, SelectedValue, Multiple>) {
+>(props: ComboboxPrimitive.Root.Props<Value, Multiple>) {
+  // @ts-expect-error - Base UI doesn't handle data-slot prop correctly
   return <ComboboxPrimitive.Root data-slot="combobox" {...props} />;
 }
 
