@@ -59,13 +59,27 @@ links:
 
     With Base UI, you can pass the boolean `multiple` prop to the `Accordion` component to control the accordion type. When `multiple` is `true`, the accordion behaves as type `multiple`; when `false`, it behaves as type `single`.
     
-    The default value for `multiple` is `true`.
+    The default value for `multiple` is `false`.
 
   ```tsx
   import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
   // [!code highlight]
-  <Accordion multiple={false}> // Same as type="single"
+  <Accordion> // Same as type="single"
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionContent>
+        Yes. It adheres to the WAI-ARIA design pattern.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+  ```
+
+  ```tsx
+  import { Accordion, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+  // [!code highlight]
+  <Accordion multiple> // Same as type="multiple"
     <AccordionItem value="item-1">
       <AccordionTrigger>Is it accessible?</AccordionTrigger>
       <AccordionContent>

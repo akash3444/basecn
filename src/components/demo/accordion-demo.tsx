@@ -7,11 +7,7 @@ import {
 
 export default function AccordionDemo() {
   return (
-    <Accordion
-      className="w-full max-w-sm mx-auto"
-      defaultValue={["item-1"]}
-      multiple={false}
-    >
+    <Accordion className="w-full max-w-sm mx-auto" defaultValue={["item-1"]}>
       <AccordionItem value="item-1">
         <AccordionTrigger>Product Information</AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4">
