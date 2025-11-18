@@ -33,14 +33,14 @@ links:
     </HoverCard>
     ```
 
-    With Base UI, you can pass the `delay` prop to the `HoverCard` component to achieve the same functionality.
+    With Base UI, you can pass the `delay` prop to the `HoverCardTrigger` component to achieve the same functionality.
 
     ```tsx
     import { HoverCard } from "@/components/ui/hover-card"
 
+    <HoverCard>
     // [!code highlight]
-    <HoverCard delay={100}>
-      <HoverCardTrigger>...</HoverCardTrigger>
+      <HoverCardTrigger delay={100}>...</HoverCardTrigger>
       <HoverCardContent>...</HoverCardContent>
     </HoverCard>
     ```
