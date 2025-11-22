@@ -14,7 +14,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/registry/components/ui/command";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 import {
   Popover,
   PopoverContent,
@@ -38,8 +38,6 @@ const FormSchema = z.object({
   language: z.string({ error: "Please select a language." }),
 });
 type FormValues = z.infer<typeof FormSchema>;
-
-const { useAppForm } = createFormHook();
 
 export default function ComboboxForm() {
   const form = useAppForm({

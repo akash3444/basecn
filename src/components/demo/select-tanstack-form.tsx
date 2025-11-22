@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/components/ui/button";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 import {
   Select,
   SelectContent,
@@ -18,8 +18,6 @@ import {
 const FormSchema = z.object({
   email: z.email({ error: "Please select an email to display." }),
 });
-
-const { useAppForm } = createFormHook();
 
 export default function SelectForm() {
   const form = useAppForm({

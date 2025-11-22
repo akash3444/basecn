@@ -5,7 +5,7 @@ import { z } from "zod";
 
 import { Button } from "@/registry/components/ui/button";
 import { Checkbox } from "@/registry/components/ui/checkbox";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 
 const items = [
   {
@@ -39,8 +39,6 @@ const FormSchema = z.object({
     message: "You have to select at least one item.",
   }),
 });
-
-const { useAppForm } = createFormHook();
 
 const defaultValues = {
   items: ["recents", "home"],

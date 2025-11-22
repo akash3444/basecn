@@ -8,7 +8,7 @@ import {
   RadioGroup,
   RadioGroupItem,
 } from "@/registry/components/ui/radio-group";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -17,8 +17,6 @@ const FormSchema = z.object({
 });
 
 type FormValues = z.infer<typeof FormSchema>;
-
-const { useAppForm } = createFormHook();
 
 export default function RadioForm() {
   const form = useAppForm({

@@ -5,7 +5,7 @@ import { z } from "zod";
 
 import { Button } from "@/registry/components/ui/button";
 import { Textarea } from "@/registry/components/ui/textarea";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 
 const FormSchema = z.object({
   bio: z
@@ -17,8 +17,6 @@ const FormSchema = z.object({
       message: "Bio must not be longer than 160 characters.",
     }),
 });
-
-const { useAppForm } = createFormHook();
 
 export default function TextareaForm() {
   const form = useAppForm({

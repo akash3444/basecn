@@ -9,7 +9,7 @@ links:
 
 ---
 
-This guide demonstrates how to build forms using [`@tanstack/react-form`](https://tanstack.com/form) and [`zod`](https://zod.dev). We'll use `createFormHook` to compose accessible forms.
+This guide demonstrates how to build forms using [`@tanstack/react-form`](https://tanstack.com/form) and [`zod`](https://zod.dev). We'll use the `useAppForm` hook to compose accessible forms.
 
 ## Features
 
@@ -44,7 +44,6 @@ This guide demonstrates how to build forms using [`@tanstack/react-form`](https:
 ## Example
 
 ```tsx showLineNumbers
-const { useAppForm } = createFormHook()
 const form = useAppForm({...})
 
 <form.AppForm>
@@ -93,7 +92,7 @@ const formSchema = z.object({
 
 ### Define a form
 
-Use the `createFormHook` function to create a form hook, then use the `useAppForm` hook to define your form with validation and submit handling.
+Use the `useAppForm` hook to define your form with validation and submit handling.
 
 ```tsx showLineNumbers title="components/example-form.tsx"
 "use client"
@@ -101,7 +100,7 @@ Use the `createFormHook` function to create a form hook, then use the `useAppFor
 import { z } from "zod"
 
 // [!code highlight]
-import { createFormHook } from "@/components/ui/form";
+import { useAppForm } from "@/components/ui/form";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -109,17 +108,13 @@ const formSchema = z.object({
   }),
 })
 
-// [!code highlight:2]
-// 1. Create a form hook
-const { useAppForm } = createFormHook()
-
 export function ProfileForm() {
   // [!code highlight:11]
-  // 2. Define your form.
+  // 1. Define your form.
   const form = useAppForm({
     defaultValues: { username: "" } as z.infer<typeof formSchema>,
     validators: { onChange: formSchema },
-    // 3. Define a submit handler.
+    // 2. Define a submit handler.
     onSubmit({ value }) {
       // Do something with the form values.
       // ✅ This will be type-safe and validated.
@@ -139,7 +134,7 @@ Use the `form.AppForm` component to wrap your form.
 import { z } from "zod"
 
 import { Button } from "@/components/ui/button"
-import { createFormHook } from "@/components/ui/form"
+import { useAppForm } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
 const formSchema = z.object({
@@ -147,8 +142,6 @@ const formSchema = z.object({
     message: "Username must be at least 2 characters.",
   })
 })
-
-const { useAppForm } = createFormHook()
 
 export function ProfileForm() {
   // ...
@@ -189,6 +182,32 @@ export function ProfileForm() {
     </form.AppForm>
   );
 }
+```
+
+### Add pre-bound components
+
+Since you own the code, you can add custom field and form components to your form hook. You can read more about using pre-bound components in the [TanStack Form documentation](https://tanstack.com/form/latest/docs/framework/react/guides/form-composition#pre-bound-field-components).
+
+```tsx showLineNumbers title="components/ui/form.tsx"
+const { useAppForm } = createFormHook({
+  fieldComponents: {
+    Label: FieldLabel,
+    Control: FieldControl,
+    Description: FieldDescription,
+    Message: FieldMessage,
+    // [!code highlight:2]
+    Select: FieldSelect,
+    // ...
+  },
+  formComponents: {
+    Item: FormItem,
+    // [!code highlight:2]
+    Submit: SubmitButton,
+    // ...
+  },
+  fieldContext,
+  formContext,
+});
 ```
 
 
@@ -232,18 +251,7 @@ export function ProfileForm() {
   <Step>
     ### Define a form hook
 
-    Create a form hook using the `createFormHook` function imported from `@/components/ui/form`. Ensure this is defined outside of your component.
-
-    ```tsx showLineNumbers
-    // [!code highlight]
-    const { useAppForm } = createFormHook()
-
-    export function ProfileForm() {
-      // ...
-    }
-    ```
-
-    Use the `useAppForm` hook instead of `useForm` to define your form with validation and submit handling.
+    Use the `useAppForm` hook imported from `@/components/ui/form`, instead of `useForm` to define your form with validation and submit handling.
 
     ```tsx showLineNumbers
     export function ProfileForm() {
