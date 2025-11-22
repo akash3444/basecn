@@ -11,9 +11,9 @@ const buttonGroupVariants = cva(
     variants: {
       orientation: {
         horizontal:
-          "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
+          "*:not-[&:nth-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:rounded-l-none *:not-[&:nth-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:border-l-0 *:not-[&:nth-last-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:rounded-r-none",
         vertical:
-          "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
+          "flex-col *:not-[&:nth-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:rounded-t-none *:not-[&:nth-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:border-t-0 *:not-[&:nth-last-child(1_of_:not([aria-hidden],span[data-base-ui-inert]))]:rounded-b-none",
       },
     },
     defaultVariants: {
