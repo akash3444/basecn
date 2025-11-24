@@ -18,6 +18,7 @@ function DropdownMenuTrigger({ ...props }: MenuPrimitive.Trigger.Props) {
 
 function DropdownMenuPositioner({
   sideOffset = 4,
+  className,
   ...props
 }: MenuPrimitive.Positioner.Props) {
   return (
@@ -25,6 +26,7 @@ function DropdownMenuPositioner({
       <MenuPrimitive.Positioner
         data-slot="dropdown-menu-positioner"
         sideOffset={sideOffset}
+        className={cn("z-50", className)}
         {...props}
       />
     </MenuPrimitive.Portal>

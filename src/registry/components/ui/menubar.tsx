@@ -53,6 +53,7 @@ function MenubarPositioner({
   align = "start",
   alignOffset = -4,
   sideOffset = 8,
+  className,
   ...props
 }: MenuPrimitive.Positioner.Props) {
   return (
@@ -62,6 +63,7 @@ function MenubarPositioner({
         align={align}
         alignOffset={alignOffset}
         sideOffset={sideOffset}
+        className={cn("z-50", className)}
         {...props}
       />
     </MenubarPortal>

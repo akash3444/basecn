@@ -67,13 +67,17 @@ function SelectTrigger({
   );
 }
 
-function SelectPositioner(props: SelectPrimitive.Positioner.Props) {
+function SelectPositioner({
+  className,
+  ...props
+}: SelectPrimitive.Positioner.Props) {
   return (
     <SelectPrimitive.Portal>
       <SelectPrimitive.Positioner
         data-slot="select-positioner"
         alignItemWithTrigger={false}
         sideOffset={5}
+        className={cn("z-50", className)}
         {...props}
       />
     </SelectPrimitive.Portal>

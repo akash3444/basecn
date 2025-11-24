@@ -33,11 +33,15 @@ function AutocompletePopup({
   );
 }
 
-function AutocompletePositioner(props: AutocompletePrimitive.Positioner.Props) {
+function AutocompletePositioner({
+  className,
+  ...props
+}: AutocompletePrimitive.Positioner.Props) {
   return (
     <AutocompletePrimitive.Portal>
       <AutocompletePrimitive.Positioner
         data-slot="autocomplete-positioner"
+        className={cn("z-50", className)}
         {...props}
       />
     </AutocompletePrimitive.Portal>

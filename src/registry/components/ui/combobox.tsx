@@ -132,7 +132,7 @@ function ComboboxPositioner({
     <ComboboxPrimitive.Portal>
       <ComboboxPrimitive.Positioner
         data-slot="combobox-positioner"
-        className={cn("outline-none", className)}
+        className={cn("z-50 outline-none", className)}
         {...props}
       />
     </ComboboxPrimitive.Portal>

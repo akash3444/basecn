@@ -14,6 +14,7 @@ function PopoverTrigger({ ...props }: PopoverPrimitive.Trigger.Props) {
 function PopoverPositioner({
   sideOffset = 4,
   portal,
+  className,
   ...props
 }: PopoverPrimitive.Positioner.Props & {
   portal?: PopoverPrimitive.Portal.Props;
@@ -23,6 +24,7 @@ function PopoverPositioner({
       <PopoverPrimitive.Positioner
         data-slot="popover-positioner"
         sideOffset={sideOffset}
+        className={cn("z-50", className)}
         {...props}
       />
     </PopoverPrimitive.Portal>
