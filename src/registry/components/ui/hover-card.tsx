@@ -15,6 +15,7 @@ function HoverCardTrigger({ ...props }: PreviewCardPrimitive.Trigger.Props) {
 
 function HoverCardPositioner({
   sideOffset = 4,
+  className,
   ...props
 }: PreviewCardPrimitive.Positioner.Props) {
   return (
@@ -22,6 +23,7 @@ function HoverCardPositioner({
       <PreviewCardPrimitive.Positioner
         data-slot="hover-card-positioner"
         sideOffset={sideOffset}
+        className={cn("z-50", className)}
         {...props}
       />
     </PreviewCardPrimitive.Portal>

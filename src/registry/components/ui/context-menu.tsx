@@ -222,12 +222,14 @@ function ContextMenuShortcut({
 }
 
 function ContextMenuPositioner({
+  className,
   ...props
 }: ContextMenuPrimitive.Positioner.Props) {
   return (
     <ContextMenuPortal>
       <ContextMenuPrimitive.Positioner
         data-slot="context-menu-positioner"
+        className={cn("z-50", className)}
         {...props}
       />
     </ContextMenuPortal>
