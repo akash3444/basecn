@@ -14,14 +14,12 @@ import {
   PopoverPositioner,
   PopoverTrigger,
 } from "@/registry/components/ui/popover";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 
 const FormSchema = z.object({
   dob: z.date({ error: "A date of birth is required." }),
 });
 type FormValues = z.infer<typeof FormSchema>;
-
-const { useAppForm } = createFormHook();
 
 export default function DatePickerForm() {
   const form = useAppForm({

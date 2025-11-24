@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/registry/components/ui/button";
-import { createFormHook } from "@/registry/components/ui/form-tanstack";
+import { useAppForm } from "@/registry/components/ui/form-tanstack";
 import { Switch } from "@/registry/components/ui/switch";
 
 const FormSchema = z.object({
@@ -14,7 +14,6 @@ const FormSchema = z.object({
 
 type FormValues = z.infer<typeof FormSchema>;
 
-const { useAppForm } = createFormHook();
 const defaultValues: FormValues = { security_emails: true };
 
 export default function SwitchForm() {

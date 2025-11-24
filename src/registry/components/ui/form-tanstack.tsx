@@ -1,16 +1,27 @@
 "use client";
 
 import { useRender } from "@base-ui-components/react/use-render";
-import {
-  createFormHookContexts,
-  createFormHook as createTanstackFormHook,
-} from "@tanstack/react-form";
+import { createFormHookContexts, createFormHook } from "@tanstack/react-form";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { Label } from "@/registry/components/ui/label";
 
 const { fieldContext, formContext, useFieldContext } = createFormHookContexts();
+
+const { useAppForm } = createFormHook({
+  fieldComponents: {
+    Label: FieldLabel,
+    Control: FieldControl,
+    Description: FieldDescription,
+    Message: FieldMessage,
+  },
+  formComponents: {
+    Item: FormItem,
+  },
+  fieldContext,
+  formContext,
+});
 
 const useFormField = () => {
   const itemContext = React.useContext(FormItemContext);
@@ -128,23 +139,4 @@ function FieldMessage({ className, ...props }: React.ComponentProps<"p">) {
   );
 }
 
-const createFormHook = (
-  args?: Parameters<typeof createTanstackFormHook>[0]
-) => {
-  const formHook = createTanstackFormHook({
-    fieldComponents: {
-      ...args?.fieldComponents,
-      Label: FieldLabel,
-      Control: FieldControl,
-      Description: FieldDescription,
-      Message: FieldMessage,
-    },
-    formComponents: { ...args?.formComponents, Item: FormItem },
-    fieldContext,
-    formContext,
-  });
-
-  return formHook;
-};
-
-export { createFormHook };
+export { useAppForm };
