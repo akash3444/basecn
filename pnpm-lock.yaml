@@ -34,8 +34,8 @@ importers:
         specifier: ^1.19.2
         version: 1.19.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@wandry/analytics-sdk':
-        specifier: ^1.11.0
-        version: 1.11.0
+        specifier: ^1.16.0
+        version: 1.16.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1788,8 +1788,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@wandry/analytics-sdk@1.11.0':
-    resolution: {integrity: sha512-akCqPW2HDf5T0ZZli73ZH+HBChdOMS5VmsHHw3sFjzqILTd4Z9EwA8hCj7TrvZD7Jd62fO9Qv/vyCi+MBcLiIw==}
+  '@wandry/analytics-sdk@1.16.0':
+    resolution: {integrity: sha512-YtXDA2SdG+kHfyvAuRr4UFoTOu2mZTuc1JMhGjJK2p7p3LZgvYIp8ySiSMX0ENnIs3C04K7Jg7N+C75gbmIB5Q==}
 
   accepts@2.0.0:
     resolution: {integrity: sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng==}
@@ -6131,7 +6131,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
-  '@wandry/analytics-sdk@1.11.0': {}
+  '@wandry/analytics-sdk@1.16.0': {}
 
   accepts@2.0.0:
     dependencies:
