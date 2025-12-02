@@ -4,6 +4,19 @@
   "homepage": "https://basecn.dev",
   "items": [
     {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Displays a callout for user attention.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
@@ -147,6 +160,18 @@
       ]
     },
     {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
+      "files": [
+        {
+          "path": "src/registry/components/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
@@ -259,6 +284,19 @@
       ]
     },
     {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A drawer component for React.",
+      "dependencies": ["vaul-base"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
@@ -295,6 +333,19 @@
       "files": [
         {
           "path": "src/registry/components/ui/form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "Use the Empty component to display an empty state.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/empty.tsx",
           "type": "registry:ui"
         }
       ]
@@ -393,6 +444,18 @@
       ]
     },
     {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Used to display textual user input from keyboard.",
+      "files": [
+        {
+          "path": "src/registry/components/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "navigation-menu",
       "type": "registry:ui",
       "title": "Navigation Menu",
@@ -458,6 +521,19 @@
       "files": [
         {
           "path": "src/registry/components/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "Accessible resizable panel groups and layouts with keyboard support.",
+      "dependencies": ["lucide-react", "react-resizable-panels"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/resizable.tsx",
           "type": "registry:ui"
         }
       ]
@@ -557,6 +633,18 @@
       ]
     },
     {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Use to show a placeholder while content is loading.",
+      "files": [
+        {
+          "path": "src/registry/components/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
@@ -565,6 +653,19 @@
       "files": [
         {
           "path": "src/registry/components/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "An opinionated toast component for React.",
+      "dependencies": ["lucide-react", "next-themes", "sonner"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/sonner.tsx",
           "type": "registry:ui"
         }
       ]

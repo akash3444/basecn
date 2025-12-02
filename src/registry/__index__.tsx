@@ -7,6 +7,10 @@ export const components: Record<
     src: string;
   }
 > = {
+  "alert-demo": {
+    component: React.lazy(() => import("@/components/demo/alert-demo")),
+    src: "src/components/demo/alert-demo.tsx",
+  },
   "aspect-ratio-demo": {
     component: React.lazy(() => import("@/components/demo/aspect-ratio-demo")),
     src: "src/components/demo/aspect-ratio-demo.tsx",
@@ -303,6 +307,10 @@ export const components: Record<
     ),
     src: "src/components/demo/calendar-date-and-time-picker.tsx",
   },
+  "card-demo": {
+    component: React.lazy(() => import("@/components/demo/card-demo")),
+    src: "src/components/demo/card-demo.tsx",
+  },
   "carousel-demo": {
     component: React.lazy(() => import("@/components/demo/carousel-demo")),
     src: "src/components/demo/carousel-demo.tsx",
@@ -387,9 +395,37 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/dialog-demo")),
     src: "src/components/demo/dialog-demo.tsx",
   },
+  "drawer-demo": {
+    component: React.lazy(() => import("@/components/demo/drawer-demo")),
+    src: "src/components/demo/drawer-demo.tsx",
+  },
   "dropdown-menu-demo": {
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
     src: "src/components/demo/dropdown-menu-demo.tsx",
+  },
+  "empty-demo": {
+    component: React.lazy(() => import("@/components/demo/empty-demo")),
+    src: "src/components/demo/empty-demo.tsx",
+  },
+  "empty-outline": {
+    component: React.lazy(() => import("@/components/demo/empty-outline")),
+    src: "src/components/demo/empty-outline.tsx",
+  },
+  "empty-background": {
+    component: React.lazy(() => import("@/components/demo/empty-background")),
+    src: "src/components/demo/empty-background.tsx",
+  },
+  "empty-avatar": {
+    component: React.lazy(() => import("@/components/demo/empty-avatar")),
+    src: "src/components/demo/empty-avatar.tsx",
+  },
+  "empty-avatar-group": {
+    component: React.lazy(() => import("@/components/demo/empty-avatar-group")),
+    src: "src/components/demo/empty-avatar-group.tsx",
+  },
+  "empty-input-group": {
+    component: React.lazy(() => import("@/components/demo/empty-input-group")),
+    src: "src/components/demo/empty-input-group.tsx",
   },
   "field-demo": {
     component: React.lazy(() => import("@/components/demo/field-demo")),
@@ -613,6 +649,26 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/item-icon")),
     src: "src/components/demo/item-icon.tsx",
   },
+  "kbd-demo": {
+    component: React.lazy(() => import("@/components/demo/kbd-demo")),
+    src: "src/components/demo/kbd-demo.tsx",
+  },
+  "kbd-group": {
+    component: React.lazy(() => import("@/components/demo/kbd-group")),
+    src: "src/components/demo/kbd-group.tsx",
+  },
+  "kbd-button": {
+    component: React.lazy(() => import("@/components/demo/kbd-button")),
+    src: "src/components/demo/kbd-button.tsx",
+  },
+  "kbd-tooltip": {
+    component: React.lazy(() => import("@/components/demo/kbd-tooltip")),
+    src: "src/components/demo/kbd-tooltip.tsx",
+  },
+  "kbd-input-group": {
+    component: React.lazy(() => import("@/components/demo/kbd-input-group")),
+    src: "src/components/demo/kbd-input-group.tsx",
+  },
   "label-demo": {
     component: React.lazy(() => import("@/components/demo/label-demo")),
     src: "src/components/demo/label-demo.tsx",
@@ -693,6 +749,18 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/radio-group-cards")),
     src: "src/components/demo/radio-group-cards.tsx",
   },
+  "resizable-demo": {
+    component: React.lazy(() => import("@/components/demo/resizable-demo")),
+    src: "src/components/demo/resizable-demo.tsx",
+  },
+  "resizable-vertical": {
+    component: React.lazy(() => import("@/components/demo/resizable-vertical")),
+    src: "src/components/demo/resizable-vertical.tsx",
+  },
+  "resizable-handle": {
+    component: React.lazy(() => import("@/components/demo/resizable-handle")),
+    src: "src/components/demo/resizable-handle.tsx",
+  },
   "scroll-area-demo": {
     component: React.lazy(() => import("@/components/demo/scroll-area-demo")),
     src: "src/components/demo/scroll-area-demo.tsx",
@@ -745,6 +813,14 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/sheet-demo")),
     src: "src/components/demo/sheet-demo.tsx",
   },
+  "skeleton-demo": {
+    component: React.lazy(() => import("@/components/demo/skeleton-demo")),
+    src: "src/components/demo/skeleton-demo.tsx",
+  },
+  "skeleton-card": {
+    component: React.lazy(() => import("@/components/demo/skeleton-card")),
+    src: "src/components/demo/skeleton-card.tsx",
+  },
   "sidebar-demo": {
     component: React.lazy(() => import("@/components/demo/sidebar-demo")),
     src: "src/components/demo/sidebar-demo.tsx",
@@ -767,6 +843,7 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/slider-color")),
     src: "src/components/demo/slider-color.tsx",
   },
+
   "slider-thumb-icon": {
     component: React.lazy(() => import("@/components/demo/slider-thumb-icon")),
     src: "src/components/demo/slider-thumb-icon.tsx",
@@ -774,6 +851,14 @@ export const components: Record<
   "slider-rtl": {
     component: React.lazy(() => import("@/components/demo/slider-rtl")),
     src: "src/components/demo/slider-rtl.tsx",
+  },
+  "sonner-demo": {
+    component: React.lazy(() => import("@/components/demo/sonner-demo")),
+    src: "src/components/demo/sonner-demo.tsx",
+  },
+  "sonner-types": {
+    component: React.lazy(() => import("@/components/demo/sonner-types")),
+    src: "src/components/demo/sonner-types.tsx",
   },
   "switch-demo": {
     component: React.lazy(() => import("@/components/demo/switch-demo")),
