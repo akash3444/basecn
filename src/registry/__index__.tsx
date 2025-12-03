@@ -860,6 +860,46 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/sonner-types")),
     src: "src/components/demo/sonner-types.tsx",
   },
+  "spinner-demo": {
+    component: React.lazy(() => import("@/components/demo/spinner-demo")),
+    src: "src/components/demo/spinner-demo.tsx",
+  },
+  "spinner-size": {
+    component: React.lazy(() => import("@/components/demo/spinner-size")),
+    src: "src/components/demo/spinner-size.tsx",
+  },
+  "spinner-color": {
+    component: React.lazy(() => import("@/components/demo/spinner-color")),
+    src: "src/components/demo/spinner-color.tsx",
+  },
+  "spinner-button": {
+    component: React.lazy(() => import("@/components/demo/spinner-button")),
+    src: "src/components/demo/spinner-button.tsx",
+  },
+  "spinner-badge": {
+    component: React.lazy(() => import("@/components/demo/spinner-badge")),
+    src: "src/components/demo/spinner-badge.tsx",
+  },
+  "spinner-input-group": {
+    component: React.lazy(
+      () => import("@/components/demo/spinner-input-group")
+    ),
+    src: "src/components/demo/spinner-input-group.tsx",
+  },
+  "spinner-empty": {
+    component: React.lazy(() => import("@/components/demo/spinner-empty")),
+    src: "src/components/demo/spinner-empty.tsx",
+  },
+  "spinner-item": {
+    component: React.lazy(() => import("@/components/demo/spinner-item")),
+    src: "src/components/demo/spinner-item.tsx",
+  },
+  "spinner-customization": {
+    component: React.lazy(
+      () => import("@/components/demo/spinner-customization")
+    ),
+    src: "src/components/demo/spinner-customization.tsx",
+  },
   "switch-demo": {
     component: React.lazy(() => import("@/components/demo/switch-demo")),
     src: "src/components/demo/switch-demo.tsx",
@@ -876,9 +916,39 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/switch-thumb-icon")),
     src: "src/components/demo/switch-thumb-icon.tsx",
   },
+  "table-demo": {
+    component: React.lazy(() => import("@/components/demo/table-demo")),
+    src: "src/components/demo/table-demo.tsx",
+  },
   "tabs-demo": {
     component: React.lazy(() => import("@/components/demo/tabs-demo")),
     src: "src/components/demo/tabs-demo.tsx",
+  },
+  "textarea-demo": {
+    component: React.lazy(() => import("@/components/demo/textarea-demo")),
+    src: "src/components/demo/textarea-demo.tsx",
+  },
+  "textarea-disabled": {
+    component: React.lazy(() => import("@/components/demo/textarea-disabled")),
+    src: "src/components/demo/textarea-disabled.tsx",
+  },
+  "textarea-with-label": {
+    component: React.lazy(
+      () => import("@/components/demo/textarea-with-label")
+    ),
+    src: "src/components/demo/textarea-with-label.tsx",
+  },
+  "textarea-with-helper-text": {
+    component: React.lazy(
+      () => import("@/components/demo/textarea-with-helper-text")
+    ),
+    src: "src/components/demo/textarea-with-helper-text.tsx",
+  },
+  "textarea-with-button": {
+    component: React.lazy(
+      () => import("@/components/demo/textarea-with-button")
+    ),
+    src: "src/components/demo/textarea-with-button.tsx",
   },
   "toggle-demo": {
     component: React.lazy(() => import("@/components/demo/toggle-demo")),

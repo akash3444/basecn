@@ -671,6 +671,19 @@
       ]
     },
     {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "An indicator that can be used to show a loading state.",
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
@@ -684,6 +697,18 @@
       ]
     },
     {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "A responsive table component.",
+      "files": [
+        {
+          "path": "src/registry/components/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
@@ -692,6 +717,18 @@
       "files": [
         {
           "path": "src/registry/components/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Displays a form textarea or a component that looks like a textarea.",
+      "files": [
+        {
+          "path": "src/registry/components/ui/textarea.tsx",
           "type": "registry:ui"
         }
       ]
