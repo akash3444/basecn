@@ -8,6 +8,7 @@ import {
 } from "@/registry/components/ui/tabs";
 import { CodeBlock } from "./code-block";
 import { BunLogo, NPMLogo, PnpmLogo, YarnLogo } from "./icons";
+import { cn } from "@/lib/utils";
 
 const tabs = [
   {
@@ -73,6 +74,7 @@ export function CodeBlockCommand({
           <CodeBlock
             lang="bash"
             code={getInstallationCommand(tab.value, registryUrl) || ""}
+            className="bg-muted/50 shadow-sm/5 *:first:top-3"
           />
 
           {!isShadcnComponent && (
@@ -96,6 +98,7 @@ export function CodeBlockCommand({
                   getInstallationCommand(tab.value, `@basecn/${component}`) ||
                   ""
                 }
+                className="bg-muted/50 shadow-sm/5 *:first:top-3"
               />
             </>
           )}

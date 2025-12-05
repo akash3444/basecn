@@ -1,7 +1,7 @@
 import "@/app/global.css";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
-import { RootProvider } from "fumadocs-ui/provider";
+import { RootProvider } from "fumadocs-ui/provider/next";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";

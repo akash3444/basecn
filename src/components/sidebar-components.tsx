@@ -2,11 +2,14 @@
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/registry/components/ui/badge";
-import { SidebarComponents } from "fumadocs-ui/components/layout/sidebar";
+import { SidebarPageTreeComponents } from "fumadocs-ui/components/sidebar/page-tree";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export const Folder: SidebarComponents["Folder"] = ({ children, item }) => {
+export const Folder: SidebarPageTreeComponents["Folder"] = ({
+  children,
+  item,
+}) => {
   return (
     <div className="not-first:mt-8 flex flex-col gap-2">
       <div className="px-2 uppercase text-xs font-medium text-muted-foreground">
@@ -19,7 +22,7 @@ export const Folder: SidebarComponents["Folder"] = ({ children, item }) => {
   );
 };
 
-export const Item: SidebarComponents["Item"] = ({ item }) => {
+export const Item: SidebarPageTreeComponents["Item"] = ({ item }) => {
   const pathname = usePathname();
 
   // If the item is a new component, add a new badge to the sidebar

@@ -22,6 +22,7 @@ export default async function Page(props: {
   if (!page) notFound();
 
   const MDXContent = page.data.body;
+  const markdown = await page.data.getText("raw");
 
   return (
     <DocsPage
@@ -35,15 +36,12 @@ export default async function Page(props: {
       <div className="flex flex-col">
         <div className="flex items-center justify-between gap-4">
           <DocsTitle className="text-4xl">{page.data.title}</DocsTitle>
-          <MarkdownActions
-            content={page.data.content}
-            className="hidden lg:flex"
-          />
+          <MarkdownActions content={markdown} className="hidden lg:flex" />
         </div>
         <DocsDescription className="mt-3 mb-5">
           {page.data.description}
         </DocsDescription>
-        <MarkdownActions content={page.data.content} className="lg:hidden" />
+        <MarkdownActions content={markdown} className="lg:hidden" />
         <div className="mb-8 flex items-center gap-2">
           {page.data.links?.docs && (
             <Button

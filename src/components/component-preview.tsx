@@ -65,9 +65,9 @@ export default async function ComponentPreview({
             lang="tsx"
             code={codeWithUpdatedImports}
             className={cn(
-              "bg-background p-0 overflow-hidden rounded-md",
+              "bg-muted/50 p-0 overflow-hidden rounded-md shadow-sm/5",
               "[&_pre]:text-sm [&_pre]:font-normal [&_pre_span]:leading-[1.75]",
-              "[&>div:not(:has(pre))]:top-0 [&>div:not(:has(pre))]:right-0 [&>div:not(:has(pre))]:size-8",
+              "*:first:bg-background *:first:border  *:first:border-border/70 *:first:size-7 *:first:flex *:first:items-center *:first:justify-center",
               "[&>div:has(pre)]:rounded-md [&>div:has(pre)]:py-3 [&>div:has(pre)]:px-2 [&>div:has(pre)]:border-none [&>div:has(pre)]:min-h-[400px] my-0",
               {
                 "[&>div:has(pre)]:max-h-[400px]": constrainHeight,
