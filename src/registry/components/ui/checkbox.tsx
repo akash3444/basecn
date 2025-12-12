@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox";
+import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";

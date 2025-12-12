@@ -5,7 +5,7 @@
   "title": "Command",
   "description": "Fast, composable, unstyled command menu for React.",
   "dependencies": [
-    "@base-ui-components/react",
+    "@base-ui/react",
     "cmdk",
     "lucide-react"
   ],

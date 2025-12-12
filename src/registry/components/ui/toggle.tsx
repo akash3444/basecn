@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Toggle as TogglePrimitive } from "@base-ui-components/react/toggle";
+import { Toggle as TogglePrimitive } from "@base-ui/react/toggle";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";

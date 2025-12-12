@@ -5,12 +5,12 @@
   "title": "Separator",
   "description": "Visually or semantically separates content.",
   "dependencies": [
-    "@base-ui-components/react"
+    "@base-ui/react"
   ],
   "files": [
     {
       "path": "src/registry/components/ui/separator.tsx",
-      "content": "import * as React from \"react\";\nimport { Separator as SeparatorPrimitive } from \"@base-ui-components/react/separator\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Separator({ className, ...props }: SeparatorPrimitive.Props) {\n  return (\n    <SeparatorPrimitive\n      data-slot=\"separator\"\n      className={cn(\n        \"bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Separator };\n",
+      "content": "import * as React from \"react\";\nimport { Separator as SeparatorPrimitive } from \"@base-ui/react/separator\";\n\nimport { cn } from \"@/lib/utils\";\n\nfunction Separator({ className, ...props }: SeparatorPrimitive.Props) {\n  return (\n    <SeparatorPrimitive\n      data-slot=\"separator\"\n      className={cn(\n        \"bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px\",\n        className\n      )}\n      {...props}\n    />\n  );\n}\n\nexport { Separator };\n",
       "type": "registry:ui"
     }
   ]

@@ -1,5 +1,5 @@
 import { RadioGroup } from "@/registry/components/ui/radio-group";
-import { Radio as RadioPrimitive } from "@base-ui-components/react/radio";
+import { Radio as RadioPrimitive } from "@base-ui/react/radio";
 import {
   AppleIcon,
   BananaIcon,

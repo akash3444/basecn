@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
 } from "@/registry/components/ui/accordion";
-import { Accordion as BaseAccordion } from "@base-ui-components/react/accordion";
+import { Accordion as BaseAccordion } from "@base-ui/react/accordion";
 import { Minus, Plus } from "lucide-react";
 
 export default function AccordionTabs() {

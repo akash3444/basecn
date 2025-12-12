@@ -10,7 +10,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/registry/components/ui/alert-dialog";
-import { AlertDialog as AlertDialogPrimitive } from "@base-ui-components/react/alert-dialog";
+import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog";
 import { Button, buttonVariants } from "@/registry/components/ui/button";
 import { OctagonAlert, XIcon } from "lucide-react";
 

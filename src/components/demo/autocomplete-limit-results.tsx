@@ -11,7 +11,7 @@ import {
   AutocompleteStatus,
 } from "@/registry/components/ui/autocomplete";
 import { Label } from "@/registry/components/ui/label";
-import { Autocomplete as AutocompletePrimitive } from "@base-ui-components/react/autocomplete";
+import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
 import React from "react";
 
 const limit = 7;

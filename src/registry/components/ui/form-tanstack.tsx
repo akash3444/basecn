@@ -1,6 +1,6 @@
 "use client";
 
-import { useRender } from "@base-ui-components/react/use-render";
+import { useRender } from "@base-ui/react/use-render";
 import { createFormHookContexts, createFormHook } from "@tanstack/react-form";
 import * as React from "react";
 
