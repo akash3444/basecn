@@ -83,7 +83,7 @@ function ComboboxChip({ className, ...props }: ComboboxPrimitive.Chip.Props) {
     <ComboboxPrimitive.Chip
       data-slot="combobox-chip"
       className={cn(
-        "flex items-center gap-1 rounded-md bg-muted px-1 ps-2 pe-0 text-xs outline-none cursor-default",
+        "flex items-center gap-1 rounded-md bg-muted px-1 ps-2 pe-0 text-xs outline-none cursor-default focus-within:bg-primary focus-within:text-primary-foreground",
         className
       )}
       {...props}
