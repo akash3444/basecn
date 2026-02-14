@@ -297,6 +297,20 @@
       ]
     },
     {
+      "name": "drawer-base",
+      "type": "registry:ui",
+      "title": "Drawer (Base UI)",
+      "description": "A panel that slides in from the edge of the screen.",
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "src/registry/components/ui/drawer-base.tsx",
+          "target": "components/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
