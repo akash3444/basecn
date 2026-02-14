@@ -17,7 +17,7 @@ export default function ExampleDrawerNested() {
 
   return (
     <Drawer
-      swipeDirection="up"
+      swipeDirection="right"
       open={firstOpen}
       onOpenChange={(nextOpen) => {
         setFirstOpen(nextOpen);
@@ -40,7 +40,7 @@ export default function ExampleDrawerNested() {
         <div className="flex items-center justify-end gap-4">
           <div className="mr-auto">
             <Drawer
-              swipeDirection="up"
+              swipeDirection="right"
               open={secondOpen}
               onOpenChange={(nextOpen) => {
                 setSecondOpen(nextOpen);
@@ -67,7 +67,7 @@ export default function ExampleDrawerNested() {
                 <div className="flex items-center justify-end gap-4">
                   <div className="mr-auto">
                     <Drawer
-                      swipeDirection="up"
+                      swipeDirection="right"
                       open={thirdOpen}
                       onOpenChange={setThirdOpen}
                     >
