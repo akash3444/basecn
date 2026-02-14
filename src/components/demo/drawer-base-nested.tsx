@@ -9,15 +9,32 @@ import {
   DrawerTrigger,
 } from "@/registry/components/ui/drawer-base";
 import { Button } from "@/registry/components/ui/button";
+import { Input } from "@/registry/components/ui/input";
+import { Textarea } from "@/registry/components/ui/textarea";
 
 export default function ExampleDrawerNested() {
+  return (
+    <div className="flex items-center gap-2 flex-wrap">
+      <DrawerNested swipeDirection="right" />
+      <DrawerNested swipeDirection="left" />
+      <DrawerNested swipeDirection="up" />
+      <DrawerNested swipeDirection="down" />
+    </div>
+  );
+}
+
+function DrawerNested({
+  swipeDirection,
+}: {
+  swipeDirection: React.ComponentProps<typeof Drawer>["swipeDirection"];
+}) {
   const [firstOpen, setFirstOpen] = React.useState(false);
   const [secondOpen, setSecondOpen] = React.useState(false);
   const [thirdOpen, setThirdOpen] = React.useState(false);
 
   return (
     <Drawer
-      swipeDirection="right"
+      swipeDirection={swipeDirection}
       open={firstOpen}
       onOpenChange={(nextOpen) => {
         setFirstOpen(nextOpen);
@@ -28,7 +45,7 @@ export default function ExampleDrawerNested() {
       }}
     >
       <DrawerTrigger render={<Button variant="outline" />}>
-        Open drawer stack
+        Open drawer ({swipeDirection})
       </DrawerTrigger>
       <DrawerContent className="max-w-lg mx-auto">
         <DrawerTitle className="mb-1 text-lg">Account</DrawerTitle>
@@ -40,7 +57,7 @@ export default function ExampleDrawerNested() {
         <div className="flex items-center justify-end gap-4">
           <div className="mr-auto">
             <Drawer
-              swipeDirection="right"
+              swipeDirection={swipeDirection}
               open={secondOpen}
               onOpenChange={(nextOpen) => {
                 setSecondOpen(nextOpen);
@@ -49,7 +66,7 @@ export default function ExampleDrawerNested() {
                 }
               }}
             >
-              <DrawerTrigger className="text-base font-medium text-blue-800 rounded px-1.5 py-0.5 -m-0.5 hover:bg-blue-800/5 active:bg-blue-800/10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800">
+              <DrawerTrigger className="text-base font-medium text-blue-800 dark:text-blue-400 rounded px-1.5 py-0.5 -m-0.5 hover:bg-blue-800/5 dark:hover:bg-blue-400/15 active:bg-blue-800/10 dark:active:bg-blue-200/10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 dark:focus-visible:outline-blue-200">
                 Security settings
               </DrawerTrigger>
               <DrawerContent className="max-w-lg mx-auto">
@@ -58,7 +75,7 @@ export default function ExampleDrawerNested() {
                   Review sign-in activity and update your security preferences.
                 </DrawerDescription>
 
-                <ul className="mb-6 list-disc pl-5 text-gray-700">
+                <ul className="w-fit mx-auto mb-6 list-disc pl-5 text-muted-foreground">
                   <li>Passkeys enabled</li>
                   <li>2FA via authenticator app</li>
                   <li>3 signed-in devices</li>
@@ -67,11 +84,11 @@ export default function ExampleDrawerNested() {
                 <div className="flex items-center justify-end gap-4">
                   <div className="mr-auto">
                     <Drawer
-                      swipeDirection="right"
+                      swipeDirection={swipeDirection}
                       open={thirdOpen}
                       onOpenChange={setThirdOpen}
                     >
-                      <DrawerTrigger className="text-base font-medium text-blue-800 rounded px-1.5 py-0.5 -m-0.5 hover:bg-blue-800/5 active:bg-blue-800/10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800">
+                      <DrawerTrigger className="text-base font-medium text-blue-800 dark:text-blue-400 rounded px-1.5 py-0.5 -m-0.5 hover:bg-blue-800/5 dark:hover:bg-blue-400/15 active:bg-blue-800/10 dark:active:bg-blue-200/10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 dark:focus-visible:outline-blue-200">
                         Advanced options
                       </DrawerTrigger>
                       <DrawerContent className="max-w-lg mx-auto">
@@ -85,53 +102,45 @@ export default function ExampleDrawerNested() {
 
                         <div className="grid gap-1.5 mb-4">
                           <label
-                            className="text-sm font-medium text-gray-700"
+                            className="text-sm font-medium text-foreground"
                             htmlFor="device-name-tw"
                           >
                             Device name
                           </label>
-                          <input
+                          <Input
                             id="device-name-tw"
-                            className="w-full rounded-md border border-gray-200 bg-gray-50 px-2.5 py-2 text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800"
                             defaultValue="Personal laptop"
                           />
                         </div>
 
                         <div className="grid gap-1.5 mb-6">
                           <label
-                            className="text-sm font-medium text-gray-700"
+                            className="text-sm font-medium text-foreground"
                             htmlFor="notes-tw"
                           >
                             Notes
                           </label>
-                          <textarea
+                          <Textarea
                             id="notes-tw"
-                            className="w-full rounded-md border border-gray-200 bg-gray-50 px-2.5 py-2 text-gray-900 resize-y focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800"
+                            className="resize-y h-28"
                             defaultValue="Rotate recovery codes and revoke older sessions."
-                            rows={3}
                           />
                         </div>
 
                         <div className="flex justify-end">
-                          <DrawerClose className="flex h-10 items-center justify-center rounded-md border border-gray-200 bg-gray-50 px-3.5 text-base font-medium text-gray-900 select-none hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 active:bg-gray-100">
-                            Done
-                          </DrawerClose>
+                          <DrawerClose render={<Button />}>Done</DrawerClose>
                         </div>
                       </DrawerContent>
                     </Drawer>
                   </div>
 
-                  <DrawerClose className="flex h-10 items-center justify-center rounded-md border border-gray-200 bg-gray-50 px-3.5 text-base font-medium text-gray-900 select-none hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 active:bg-gray-100">
-                    Close
-                  </DrawerClose>
+                  <DrawerClose render={<Button />}>Close</DrawerClose>
                 </div>
               </DrawerContent>
             </Drawer>
           </div>
 
-          <DrawerClose className="flex h-10 items-center justify-center rounded-md border border-gray-200 bg-gray-50 px-3.5 text-base font-medium text-gray-900 select-none hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-1 focus-visible:outline-blue-800 active:bg-gray-100">
-            Close
-          </DrawerClose>
+          <DrawerClose render={<Button />}>Close</DrawerClose>
         </div>
       </DrawerContent>
     </Drawer>

@@ -40,10 +40,7 @@ function DrawerClose({ ...props }: DrawerPrimitive.Close.Props) {
   return <DrawerPrimitive.Close data-slot="drawer-close" {...props} />;
 }
 
-function DrawerContent({
-  className,
-  ...props
-}: DrawerPrimitive.Content.Props) {
+function DrawerContent({ className, ...props }: DrawerPrimitive.Content.Props) {
   return (
     <DrawerPortal>
       <DrawerBackdrop />
@@ -89,8 +86,8 @@ function DrawerPopup({
           // Right-only (with stacking transform + transition for box-shadow)
           "rounded-l-2xl -mr-(--bleed) pr-[calc(1.5rem+var(--bleed))] supports-[-webkit-touch-callout:none]:mr-0 supports-[-webkit-touch-callout:none]:pr-6 shadow-[-2px_0_10px_rgb(0_0_0/0.1)] data-ending-style:shadow-[-2px_0_10px_rgb(0_0_0/0)] origin-[calc(100%-var(--bleed))_50%] transform-[translateX(calc(var(--drawer-swipe-movement-x)-var(--stack-peek-offset)-(var(--shrink)*100%)))_scale(var(--scale))] data-swiping:duration-0 [transition:transform_450ms_cubic-bezier(0.32,0.72,0,1),box-shadow_450ms_cubic-bezier(0.32,0.72,0,1)]":
             dir === "right",
-          // Left-only
-          "rounded-r-2xl -ml-(--bleed) pl-[calc(1.5rem+var(--bleed))] supports-[-webkit-touch-callout:none]:ml-0 supports-[-webkit-touch-callout:none]:pl-6 transform-[translateX(var(--drawer-swipe-movement-x))] transition-transform duration-450ms ease-[cubic-bezier(0.32,0.72,0,1)]":
+          // Left-only (with stacking transform + transition for box-shadow)
+          "rounded-r-2xl -ml-(--bleed) pl-[calc(1.5rem+var(--bleed))] supports-[-webkit-touch-callout:none]:ml-0 supports-[-webkit-touch-callout:none]:pl-6 shadow-[2px_0_10px_rgb(0_0_0/0.1)] data-ending-style:shadow-[2px_0_10px_rgb(0_0_0/0)] origin-[var(--bleed)_50%] transform-[translateX(calc(var(--drawer-swipe-movement-x)+var(--stack-peek-offset)+(var(--shrink)*100%)))_scale(var(--scale))] data-swiping:duration-0 [transition:transform_450ms_cubic-bezier(0.32,0.72,0,1),box-shadow_450ms_cubic-bezier(0.32,0.72,0,1)]":
             dir === "left",
           // Right enter/exit
           "data-ending-style:transform-[translateX(calc(100%-var(--bleed)+var(--viewport-padding)))] data-starting-style:transform-[translateX(calc(100%-var(--bleed)+var(--viewport-padding)))]":
@@ -99,7 +96,7 @@ function DrawerPopup({
           "data-ending-style:transform-[translateX(calc(-100%+var(--bleed)-var(--viewport-padding)))] data-starting-style:transform-[translateX(calc(-100%+var(--bleed)-var(--viewport-padding)))]":
             dir === "left",
           // Shared vertical (up & down)
-          "w-full max-h-[calc(80vh+var(--bleed))] px-6 text-center":
+          "w-full max-h-[calc(80vh+var(--bleed))] px-6":
             dir === "up" || dir === "down",
           // Down-only (with stacking transform + transitions for height & box-shadow)
           "rounded-t-2xl -mb-(--bleed) pt-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px)+var(--bleed))] h-(--drawer-height,auto) shadow-[0_2px_10px_rgb(0_0_0/0.1)] data-ending-style:shadow-[0_2px_10px_rgb(0_0_0/0)] origin-[50%_calc(100%-var(--bleed))] transform-[translateY(calc(var(--drawer-swipe-movement-y)-var(--stack-peek-offset)-(var(--shrink)*var(--height))))_scale(var(--scale))] data-swiping:duration-0 data-nested-drawer-open:h-[calc(var(--height)+var(--bleed))] [transition:transform_450ms_cubic-bezier(0.32,0.72,0,1),height_450ms_cubic-bezier(0.32,0.72,0,1),box-shadow_450ms_cubic-bezier(0.32,0.72,0,1)]":
@@ -152,10 +149,18 @@ function DrawerViewport({
 }
 
 function DrawerTitle({ className, ...props }: DrawerPrimitive.Title.Props) {
+  const dir = use(DrawerContext);
+
   return (
     <DrawerPrimitive.Title
       data-slot="drawer-title"
-      className={cn("text-foreground text-base font-medium", className)}
+      className={cn(
+        "text-foreground text-base font-medium",
+        {
+          "text-center": dir === "down" || dir === "up",
+        },
+        className,
+      )}
       {...props}
     />
   );
@@ -165,10 +170,18 @@ function DrawerDescription({
   className,
   ...props
 }: DrawerPrimitive.Description.Props) {
+  const dir = use(DrawerContext);
+
   return (
     <DrawerPrimitive.Description
       data-slot="drawer-description"
-      className={cn("mt-1.5 text-muted-foreground text-sm", className)}
+      className={cn(
+        "mt-1.5 text-muted-foreground text-sm",
+        {
+          "text-center": dir === "down" || dir === "up",
+        },
+        className,
+      )}
       {...props}
     />
   );
