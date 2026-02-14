@@ -25,15 +25,19 @@ export default async function ComponentPreview({
 
   let codeWithUpdatedImports = code.replaceAll(
     "@/registry/components/ui/",
-    "@/components/ui/"
+    "@/components/ui/",
   );
   codeWithUpdatedImports = codeWithUpdatedImports.replaceAll(
     "@/components/ui/form-tanstack",
-    "@/components/ui/form"
+    "@/components/ui/form",
   );
   codeWithUpdatedImports = codeWithUpdatedImports.replaceAll(
     "@/components/ui/separator-extended",
-    "@/components/ui/separator"
+    "@/components/ui/separator",
+  );
+  codeWithUpdatedImports = codeWithUpdatedImports.replaceAll(
+    "@/components/ui/drawer-base",
+    "@/components/ui/drawer",
   );
 
   return (
@@ -55,7 +59,7 @@ export default async function ComponentPreview({
               "items-center justify-center": center,
               "max-h-[400px]": constrainHeight,
               "py-10": !constrainHeight,
-            }
+            },
           )}
         >
           <Component />
@@ -71,7 +75,7 @@ export default async function ComponentPreview({
               "[&>div:has(pre)]:rounded-md [&>div:has(pre)]:py-3 [&>div:has(pre)]:px-2 [&>div:has(pre)]:border-none [&>div:has(pre)]:min-h-[400px] my-0",
               {
                 "[&>div:has(pre)]:max-h-[400px]": constrainHeight,
-              }
+              },
             )}
           />
         </TabsContent>
