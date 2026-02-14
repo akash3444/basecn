@@ -10,9 +10,9 @@ export default function TabsDemo() {
   return (
     <Tabs
       defaultValue="overview"
-      className="mx-auto border rounded-md overflow-hidden"
+      className="mx-auto border rounded-lg overflow-hidden"
     >
-      <TabsList className="border-b w-full gap-1 rounded-b-none">
+      <TabsList className="border-b w-full gap-1 rounded-b-none rounded-t-lg">
         <TabsTrigger value="overview">Overview</TabsTrigger>
         <TabsTrigger value="projects">Projects</TabsTrigger>
         <TabsTrigger value="account">Account</TabsTrigger>
