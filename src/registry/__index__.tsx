@@ -17,7 +17,7 @@ export const components: Record<
   },
   "aspect-ratio-square": {
     component: React.lazy(
-      () => import("@/components/demo/aspect-ratio-square")
+      () => import("@/components/demo/aspect-ratio-square"),
     ),
     src: "src/components/demo/aspect-ratio-square.tsx",
   },
@@ -71,7 +71,7 @@ export const components: Record<
   },
   "accordion-with-icon": {
     component: React.lazy(
-      () => import("@/components/demo/accordion-with-icon")
+      () => import("@/components/demo/accordion-with-icon"),
     ),
     src: "src/components/demo/accordion-with-icon.tsx",
   },
@@ -81,13 +81,13 @@ export const components: Record<
   },
   "accordion-multiple-items-open": {
     component: React.lazy(
-      () => import("@/components/demo/accordion-multiple-items-open")
+      () => import("@/components/demo/accordion-multiple-items-open"),
     ),
     src: "src/components/demo/accordion-multiple-items-open.tsx",
   },
   "accordion-plus-minus-indicator": {
     component: React.lazy(
-      () => import("@/components/demo/accordion-plus-minus-indicator")
+      () => import("@/components/demo/accordion-plus-minus-indicator"),
     ),
     src: "src/components/demo/accordion-plus-minus-indicator.tsx",
   },
@@ -97,25 +97,25 @@ export const components: Record<
   },
   "alert-dialog-with-icon": {
     component: React.lazy(
-      () => import("@/components/demo/alert-dialog-with-icon")
+      () => import("@/components/demo/alert-dialog-with-icon"),
     ),
     src: "src/components/demo/alert-dialog-with-icon.tsx",
   },
   "alert-dialog-destructive": {
     component: React.lazy(
-      () => import("@/components/demo/alert-dialog-destructive")
+      () => import("@/components/demo/alert-dialog-destructive"),
     ),
     src: "src/components/demo/alert-dialog-destructive.tsx",
   },
   "alert-dialog-header": {
     component: React.lazy(
-      () => import("@/components/demo/alert-dialog-header")
+      () => import("@/components/demo/alert-dialog-header"),
     ),
     src: "src/components/demo/alert-dialog-header.tsx",
   },
   "alert-dialog-with-close-button": {
     component: React.lazy(
-      () => import("@/components/demo/alert-dialog-with-close-button")
+      () => import("@/components/demo/alert-dialog-with-close-button"),
     ),
     src: "src/components/demo/alert-dialog-with-close-button.tsx",
   },
@@ -129,13 +129,13 @@ export const components: Record<
   },
   "autocomplete-limit-results": {
     component: React.lazy(
-      () => import("@/components/demo/autocomplete-limit-results")
+      () => import("@/components/demo/autocomplete-limit-results"),
     ),
     src: "src/components/demo/autocomplete-limit-results.tsx",
   },
   "autocomplete-auto-highlight": {
     component: React.lazy(
-      () => import("@/components/demo/autocomplete-auto-highlight")
+      () => import("@/components/demo/autocomplete-auto-highlight"),
     ),
     src: "src/components/demo/autocomplete-auto-highlight.tsx",
   },
@@ -145,7 +145,7 @@ export const components: Record<
   },
   "autocomplete-emoji-picker": {
     component: React.lazy(
-      () => import("@/components/demo/autocomplete-emoji-picker")
+      () => import("@/components/demo/autocomplete-emoji-picker"),
     ),
     src: "src/components/demo/autocomplete-emoji-picker.tsx",
   },
@@ -175,19 +175,19 @@ export const components: Record<
   },
   "breadcrumb-custom-separator": {
     component: React.lazy(
-      () => import("@/components/demo/breadcrumb-custom-separator")
+      () => import("@/components/demo/breadcrumb-custom-separator"),
     ),
     src: "src/components/demo/breadcrumb-custom-separator.tsx",
   },
   "breadcrumb-with-icon": {
     component: React.lazy(
-      () => import("@/components/demo/breadcrumb-with-icon")
+      () => import("@/components/demo/breadcrumb-with-icon"),
     ),
     src: "src/components/demo/breadcrumb-with-icon.tsx",
   },
   "breadcrumb-with-background": {
     component: React.lazy(
-      () => import("@/components/demo/breadcrumb-with-background")
+      () => import("@/components/demo/breadcrumb-with-background"),
     ),
     src: "src/components/demo/breadcrumb-with-background.tsx",
   },
@@ -229,7 +229,7 @@ export const components: Record<
   },
   "button-group-orientation": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-orientation")
+      () => import("@/components/demo/button-group-orientation"),
     ),
     src: "src/components/demo/button-group-orientation.tsx",
   },
@@ -239,13 +239,13 @@ export const components: Record<
   },
   "button-group-nested": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-nested")
+      () => import("@/components/demo/button-group-nested"),
     ),
     src: "src/components/demo/button-group-nested.tsx",
   },
   "button-group-separator": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-separator")
+      () => import("@/components/demo/button-group-separator"),
     ),
     src: "src/components/demo/button-group-separator.tsx",
   },
@@ -259,25 +259,25 @@ export const components: Record<
   },
   "button-group-input-group": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-input-group")
+      () => import("@/components/demo/button-group-input-group"),
     ),
     src: "src/components/demo/button-group-input-group.tsx",
   },
   "button-group-dropdown-menu": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-dropdown-menu")
+      () => import("@/components/demo/button-group-dropdown-menu"),
     ),
     src: "src/components/demo/button-group-dropdown-menu.tsx",
   },
   "button-group-select": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-select")
+      () => import("@/components/demo/button-group-select"),
     ),
     src: "src/components/demo/button-group-select.tsx",
   },
   "button-group-popover": {
     component: React.lazy(
-      () => import("@/components/demo/button-group-popover")
+      () => import("@/components/demo/button-group-popover"),
     ),
     src: "src/components/demo/button-group-popover.tsx",
   },
@@ -291,19 +291,19 @@ export const components: Record<
   },
   "calendar-month-year-selector": {
     component: React.lazy(
-      () => import("@/components/demo/calendar-month-year-selector")
+      () => import("@/components/demo/calendar-month-year-selector"),
     ),
     src: "src/components/demo/calendar-month-year-selector.tsx",
   },
   "calendar-date-of-birth-picker": {
     component: React.lazy(
-      () => import("@/components/demo/calendar-date-of-birth-picker")
+      () => import("@/components/demo/calendar-date-of-birth-picker"),
     ),
     src: "src/components/demo/calendar-date-of-birth-picker.tsx",
   },
   "calendar-date-and-time-picker": {
     component: React.lazy(
-      () => import("@/components/demo/calendar-date-and-time-picker")
+      () => import("@/components/demo/calendar-date-and-time-picker"),
     ),
     src: "src/components/demo/calendar-date-and-time-picker.tsx",
   },
@@ -349,37 +349,37 @@ export const components: Record<
   },
   "combobox-baseui-demo": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-demo")
+      () => import("@/components/demo/combobox-baseui-demo"),
     ),
     src: "src/components/demo/combobox-baseui-demo.tsx",
   },
   "combobox-baseui-chips": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-chips")
+      () => import("@/components/demo/combobox-baseui-chips"),
     ),
     src: "src/components/demo/combobox-baseui-chips.tsx",
   },
   "combobox-baseui-input-inside-popup": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-input-inside-popup")
+      () => import("@/components/demo/combobox-baseui-input-inside-popup"),
     ),
     src: "src/components/demo/combobox-baseui-input-inside-popup.tsx",
   },
   "combobox-baseui-groups": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-groups")
+      () => import("@/components/demo/combobox-baseui-groups"),
     ),
     src: "src/components/demo/combobox-baseui-groups.tsx",
   },
   "combobox-baseui-separator": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-separator")
+      () => import("@/components/demo/combobox-baseui-separator"),
     ),
     src: "src/components/demo/combobox-baseui-separator.tsx",
   },
   "combobox-baseui-creatable": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-baseui-creatable")
+      () => import("@/components/demo/combobox-baseui-creatable"),
     ),
     src: "src/components/demo/combobox-baseui-creatable.tsx",
   },
@@ -398,6 +398,14 @@ export const components: Record<
   "drawer-demo": {
     component: React.lazy(() => import("@/components/demo/drawer-demo")),
     src: "src/components/demo/drawer-demo.tsx",
+  },
+  "drawer-base-demo": {
+    component: React.lazy(() => import("@/components/demo/drawer-base-demo")),
+    src: "src/components/demo/drawer-base-demo.tsx",
+  },
+  "drawer-base-nested": {
+    component: React.lazy(() => import("@/components/demo/drawer-base-nested")),
+    src: "src/components/demo/drawer-base-nested.tsx",
   },
   "dropdown-menu-demo": {
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
@@ -481,7 +489,7 @@ export const components: Record<
   },
   "checkbox-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/checkbox-tanstack-form")
+      () => import("@/components/demo/checkbox-tanstack-form"),
     ),
     src: "src/components/demo/checkbox-tanstack-form.tsx",
   },
@@ -491,7 +499,7 @@ export const components: Record<
   },
   "radio-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/radio-tanstack-form")
+      () => import("@/components/demo/radio-tanstack-form"),
     ),
     src: "src/components/demo/radio-tanstack-form.tsx",
   },
@@ -501,7 +509,7 @@ export const components: Record<
   },
   "select-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/select-tanstack-form")
+      () => import("@/components/demo/select-tanstack-form"),
     ),
     src: "src/components/demo/select-tanstack-form.tsx",
   },
@@ -511,7 +519,7 @@ export const components: Record<
   },
   "switch-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/switch-tanstack-form")
+      () => import("@/components/demo/switch-tanstack-form"),
     ),
     src: "src/components/demo/switch-tanstack-form.tsx",
   },
@@ -521,7 +529,7 @@ export const components: Record<
   },
   "textarea-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/textarea-tanstack-form")
+      () => import("@/components/demo/textarea-tanstack-form"),
     ),
     src: "src/components/demo/textarea-tanstack-form.tsx",
   },
@@ -531,7 +539,7 @@ export const components: Record<
   },
   "combobox-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/combobox-tanstack-form")
+      () => import("@/components/demo/combobox-tanstack-form"),
     ),
     src: "src/components/demo/combobox-tanstack-form.tsx",
   },
@@ -541,7 +549,7 @@ export const components: Record<
   },
   "date-picker-tanstack-form": {
     component: React.lazy(
-      () => import("@/components/demo/date-picker-tanstack-form")
+      () => import("@/components/demo/date-picker-tanstack-form"),
     ),
     src: "src/components/demo/date-picker-tanstack-form.tsx",
   },
@@ -567,13 +575,13 @@ export const components: Record<
   },
   "input-group-tooltip": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-tooltip")
+      () => import("@/components/demo/input-group-tooltip"),
     ),
     src: "src/components/demo/input-group-tooltip.tsx",
   },
   "input-group-textarea": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-textarea")
+      () => import("@/components/demo/input-group-textarea"),
     ),
     src: "src/components/demo/input-group-textarea.tsx",
   },
@@ -583,7 +591,7 @@ export const components: Record<
   },
   "input-group-button-group": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-button-group")
+      () => import("@/components/demo/input-group-button-group"),
     ),
     src: "src/components/demo/input-group-button-group.tsx",
   },
@@ -597,19 +605,19 @@ export const components: Record<
   },
   "input-group-spinner": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-spinner")
+      () => import("@/components/demo/input-group-spinner"),
     ),
     src: "src/components/demo/input-group-spinner.tsx",
   },
   "input-group-custom-input": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-custom-input")
+      () => import("@/components/demo/input-group-custom-input"),
     ),
     src: "src/components/demo/input-group-custom-input.tsx",
   },
   "input-group-dropdown": {
     component: React.lazy(
-      () => import("@/components/demo/input-group-dropdown")
+      () => import("@/components/demo/input-group-dropdown"),
     ),
     src: "src/components/demo/input-group-dropdown.tsx",
   },
@@ -679,13 +687,13 @@ export const components: Record<
   },
   "navigation-menu-demo": {
     component: React.lazy(
-      () => import("@/components/demo/navigation-menu-demo")
+      () => import("@/components/demo/navigation-menu-demo"),
     ),
     src: "src/components/demo/navigation-menu-demo.tsx",
   },
   "navigation-menu-with-arrow": {
     component: React.lazy(
-      () => import("@/components/demo/navigation-menu-with-arrow")
+      () => import("@/components/demo/navigation-menu-with-arrow"),
     ),
     src: "src/components/demo/navigation-menu-with-arrow.tsx",
   },
@@ -711,13 +719,13 @@ export const components: Record<
   },
   "progress-with-value": {
     component: React.lazy(
-      () => import("@/components/demo/progress-with-value")
+      () => import("@/components/demo/progress-with-value"),
     ),
     src: "src/components/demo/progress-with-value.tsx",
   },
   "progress-with-label": {
     component: React.lazy(
-      () => import("@/components/demo/progress-with-label")
+      () => import("@/components/demo/progress-with-label"),
     ),
     src: "src/components/demo/progress-with-label.tsx",
   },
@@ -727,7 +735,7 @@ export const components: Record<
   },
   "radio-group-horizontal": {
     component: React.lazy(
-      () => import("@/components/demo/radio-group-horizontal")
+      () => import("@/components/demo/radio-group-horizontal"),
     ),
     src: "src/components/demo/radio-group-horizontal.tsx",
   },
@@ -741,7 +749,7 @@ export const components: Record<
   },
   "radio-group-variants": {
     component: React.lazy(
-      () => import("@/components/demo/radio-group-variants")
+      () => import("@/components/demo/radio-group-variants"),
     ),
     src: "src/components/demo/radio-group-variants.tsx",
   },
@@ -775,37 +783,37 @@ export const components: Record<
   },
   "separator-with-label": {
     component: React.lazy(
-      () => import("@/components/demo/separator-with-label")
+      () => import("@/components/demo/separator-with-label"),
     ),
     src: "src/components/demo/separator-with-label.tsx",
   },
   "separator-extended-dotted": {
     component: React.lazy(
-      () => import("@/components/demo/separator-extended-dotted")
+      () => import("@/components/demo/separator-extended-dotted"),
     ),
     src: "src/components/demo/separator-extended-dotted.tsx",
   },
   "separator-extended-default": {
     component: React.lazy(
-      () => import("@/components/demo/separator-extended-default")
+      () => import("@/components/demo/separator-extended-default"),
     ),
     src: "src/components/demo/separator-extended-default.tsx",
   },
   "separator-extended-double": {
     component: React.lazy(
-      () => import("@/components/demo/separator-extended-double")
+      () => import("@/components/demo/separator-extended-double"),
     ),
     src: "src/components/demo/separator-extended-double.tsx",
   },
   "separator-extended-demo": {
     component: React.lazy(
-      () => import("@/components/demo/separator-extended-demo")
+      () => import("@/components/demo/separator-extended-demo"),
     ),
     src: "src/components/demo/separator-extended-demo.tsx",
   },
   "separator-extended-dashed": {
     component: React.lazy(
-      () => import("@/components/demo/separator-extended-dashed")
+      () => import("@/components/demo/separator-extended-dashed"),
     ),
     src: "src/components/demo/separator-extended-dashed.tsx",
   },
@@ -831,7 +839,7 @@ export const components: Record<
   },
   "slider-with-multiple-thumbs": {
     component: React.lazy(
-      () => import("@/components/demo/slider-with-multiple-thumbs")
+      () => import("@/components/demo/slider-with-multiple-thumbs"),
     ),
     src: "src/components/demo/slider-with-multiple-thumbs.tsx",
   },
@@ -882,7 +890,7 @@ export const components: Record<
   },
   "spinner-input-group": {
     component: React.lazy(
-      () => import("@/components/demo/spinner-input-group")
+      () => import("@/components/demo/spinner-input-group"),
     ),
     src: "src/components/demo/spinner-input-group.tsx",
   },
@@ -896,7 +904,7 @@ export const components: Record<
   },
   "spinner-customization": {
     component: React.lazy(
-      () => import("@/components/demo/spinner-customization")
+      () => import("@/components/demo/spinner-customization"),
     ),
     src: "src/components/demo/spinner-customization.tsx",
   },
@@ -934,19 +942,19 @@ export const components: Record<
   },
   "textarea-with-label": {
     component: React.lazy(
-      () => import("@/components/demo/textarea-with-label")
+      () => import("@/components/demo/textarea-with-label"),
     ),
     src: "src/components/demo/textarea-with-label.tsx",
   },
   "textarea-with-helper-text": {
     component: React.lazy(
-      () => import("@/components/demo/textarea-with-helper-text")
+      () => import("@/components/demo/textarea-with-helper-text"),
     ),
     src: "src/components/demo/textarea-with-helper-text.tsx",
   },
   "textarea-with-button": {
     component: React.lazy(
-      () => import("@/components/demo/textarea-with-button")
+      () => import("@/components/demo/textarea-with-button"),
     ),
     src: "src/components/demo/textarea-with-button.tsx",
   },

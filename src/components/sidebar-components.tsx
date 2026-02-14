@@ -35,7 +35,7 @@ export const Item: SidebarPageTreeComponents["Item"] = ({ item }) => {
         "flex items-center justify-between py-2 ps-3 pe-2 -ml-1 rounded-lg",
         {
           "bg-muted": pathname === item.url,
-        }
+        },
       )}
     >
       <span>{item.name}</span>
@@ -52,11 +52,4 @@ export const Item: SidebarPageTreeComponents["Item"] = ({ item }) => {
   );
 };
 
-const newPages = [
-  "components/empty",
-  "components/kbd",
-  "components/field",
-  "components/input-group",
-  "components/item",
-  "components/button-group",
-];
+const newPages = ["components/drawer-base"];
