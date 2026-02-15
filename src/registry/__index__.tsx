@@ -407,6 +407,12 @@ export const components: Record<
     component: React.lazy(() => import("@/components/demo/drawer-base-nested")),
     src: "src/components/demo/drawer-base-nested.tsx",
   },
+  "drawer-base-snap-points": {
+    component: React.lazy(
+      () => import("@/components/demo/drawer-base-snap-points"),
+    ),
+    src: "src/components/demo/drawer-base-snap-points.tsx",
+  },
   "dropdown-menu-demo": {
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
     src: "src/components/demo/dropdown-menu-demo.tsx",
