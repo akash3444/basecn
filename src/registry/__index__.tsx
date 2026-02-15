@@ -413,6 +413,12 @@ export const components: Record<
     ),
     src: "src/components/demo/drawer-base-snap-points.tsx",
   },
+  "drawer-base-indent-effect": {
+    component: React.lazy(
+      () => import("@/components/demo/drawer-base-indent-effect"),
+    ),
+    src: "src/components/demo/drawer-base-indent-effect.tsx",
+  },
   "dropdown-menu-demo": {
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
     src: "src/components/demo/dropdown-menu-demo.tsx",

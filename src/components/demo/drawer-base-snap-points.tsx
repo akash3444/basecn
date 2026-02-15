@@ -49,14 +49,14 @@ function SnapPointsDrawer() {
         Open snap drawer
       </DrawerTrigger>
       <DrawerPopup className="pb-[max(0px,calc(var(--drawer-snap-point-offset)+var(--drawer-swipe-movement-y)+var(--bleed)))]! px-0 max-h-dvh flex flex-col  shadow-[0_2px_50px_rgb(0_0_0/0.15)] dark:shadow-[0_2px_200px_rgb(0_0_0/0.9)]">
-        <div className="pb-4 border-b">
+        <div className="pb-4 border-b px-4">
           <DrawerTitle>Snap points</DrawerTitle>
           <DrawerDescription>
             Drag the sheet to snap between a compact peek and a near full-height
             view.
           </DrawerDescription>
         </div>
-        <DrawerContent className="pt-4 flex-1 w-full overflow-y-auto overscroll-contain pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))]">
+        <DrawerContent className="pt-4 px-4 flex-1 w-full overflow-y-auto overscroll-contain pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))]">
           <div className="max-w-lg mx-auto">
             <div className="grid gap-3 mt-4 mb-6" aria-hidden>
               {Array.from({ length: 20 }, (_, index) => (
@@ -139,7 +139,7 @@ function CommentsDrawer() {
             ))}
           </div>
         </DrawerContent>
-        <div className="pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
+        <div className="pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] px-4">
           <div className="max-w-md w-full mx-auto bg-muted px-4 py-3 flex items-center gap-3 rounded-lg">
             <Avatar className="size-8">
               <AvatarImage
@@ -177,7 +177,7 @@ function ReactionsDrawer() {
         Reactions
       </DrawerTrigger>
       <DrawerPopup className="pb-[max(0px,calc(var(--drawer-snap-point-offset)+var(--drawer-swipe-movement-y)+var(--bleed)))]! px-0 max-h-dvh flex flex-col shadow-[0_2px_50px_rgb(0_0_0/0.15)] dark:shadow-[0_2px_200px_rgb(0_0_0/0.9)]">
-        <div className="px-4 pb-4 border-b">
+        <div className="will-change-transform px-4 pb-4 border-b">
           <DrawerTitle className="text-sm">Reactions and plays</DrawerTitle>
           <DrawerDescription className="text-xs">
             <span className="font-medium text-foreground">12,847</span> likes
@@ -185,7 +185,12 @@ function ReactionsDrawer() {
             plays
           </DrawerDescription>
         </div>
-        <DrawerContent className="flex-1 w-full overflow-y-auto overscroll-contain pb-[calc(1rem+env(safe-area-inset-bottom,0px))]">
+        <DrawerContent
+          className="will-change-transform flex-1 w-full overflow-y-auto overscroll-contain pb-[calc(1rem+env(safe-area-inset-bottom,0px))]"
+          style={{
+            scrollbarGutter: "stable",
+          }}
+        >
           <div className="max-w-md mx-auto">
             <div className="px-4 pt-3 pb-2">
               <Input placeholder="Search" className="h-8 text-sm" />
