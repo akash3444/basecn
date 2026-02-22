@@ -250,7 +250,12 @@ function DrawerIndentBackground({
   return (
     <DrawerPrimitive.IndentBackground
       data-slot="drawer-indent-background"
-      className="isolate absolute inset-0 bg-foreground/70"
+      className={(state) =>
+        cn(
+          "isolate absolute inset-0 bg-foreground/70",
+          resolveClassName(className, state),
+        )
+      }
       {...props}
     />
   );

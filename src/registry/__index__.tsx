@@ -1,12 +1,18 @@
 import React from "react";
 
-export const components: Record<
-  string,
-  {
-    component: React.LazyExoticComponent<React.ComponentType<unknown>>;
-    src: string;
-  }
-> = {
+export type ComponentRegistryEntry =
+  | {
+      component: React.LazyExoticComponent<React.ComponentType<unknown>>;
+      src: string;
+      iframe?: undefined;
+    }
+  | {
+      component?: undefined;
+      src: string;
+      iframe: string;
+    };
+
+export const components: Record<string, ComponentRegistryEntry> = {
   "alert-demo": {
     component: React.lazy(() => import("@/components/demo/alert-demo")),
     src: "src/components/demo/alert-demo.tsx",
@@ -422,6 +428,10 @@ export const components: Record<
   "dropdown-menu-demo": {
     component: React.lazy(() => import("@/components/demo/dropdown-menu-demo")),
     src: "src/components/demo/dropdown-menu-demo.tsx",
+  },
+  "drawer-base-instagram-reel": {
+    iframe: "/reel-demo",
+    src: "src/components/demo/drawer-base-instagram-reel.tsx",
   },
   "empty-demo": {
     component: React.lazy(() => import("@/components/demo/empty-demo")),

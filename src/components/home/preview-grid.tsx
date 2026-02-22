@@ -22,8 +22,10 @@ function ComponentCard({ componentKey }: { componentKey: string }) {
   const componentData = components[componentKey];
 
   if (!componentData) return null;
+  if ("iframe" in componentData && componentData.iframe) return null;
 
   const Component = componentData.component;
+  if (!Component) return null;
 
   return (
     <Suspense fallback={null}>

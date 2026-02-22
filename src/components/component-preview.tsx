@@ -19,7 +19,8 @@ export default async function ComponentPreview({
   center?: boolean;
   constrainHeight?: boolean;
 }) {
-  const { component: Component, src } = components[name];
+  const entry = components[name];
+  const { component: Component, src, iframe } = entry;
 
   const code = await fs.readFile(path.join(process.cwd(), src), "utf-8");
 
@@ -56,13 +57,25 @@ export default async function ComponentPreview({
           className={cn(
             "border rounded-lg p-2 min-h-[400px] flex overflow-y-auto",
             {
-              "items-center justify-center": center,
-              "max-h-[400px]": constrainHeight,
-              "py-10": !constrainHeight,
+              "items-center justify-center": center && !iframe,
+              "max-h-[400px]": constrainHeight && !iframe,
+              "py-10": !constrainHeight && !iframe,
+              "p-0": iframe,
             },
           )}
         >
-          <Component />
+          {iframe ? (
+            <iframe
+              src={iframe}
+              title="Demo preview"
+              className={cn(
+                "w-full min-h-[400px] rounded-md border-0 bg-muted",
+                "aspect-[3/5] max-h-[80vh]",
+              )}
+            />
+          ) : (
+            Component && <Component />
+          )}
         </TabsContent>
         <TabsContent value="code">
           <CodeBlock
