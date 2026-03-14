@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { DrawerPreview as DrawerPrimitive } from "@base-ui/react/drawer";
+import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer";
 import {
   Drawer,
   DrawerBackdrop,

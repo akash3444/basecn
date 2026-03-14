@@ -21,7 +21,7 @@ import {
   DrawerViewport,
 } from "@/registry/components/ui/drawer-base";
 import { Input } from "@/registry/components/ui/input";
-import { DrawerPreview as DrawerPrimitive } from "@base-ui/react/drawer";
+import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer";
 import {
   BookmarkIcon,
   EllipsisIcon,
